@@ -1,0 +1,77 @@
+Public distribution scope — 2026-11-08 (version 0.1.0rc3)
+=========================================================
+
+The following document is preserved as a historical record of the original
+full experiment package. References below to nine baselines, ten methods,
+960/1,020-run comparisons, or bundled Anderson/iGMRES ports describe that
+historical package, not the runnable scope of this public distribution.
+
+This public package omits the original AA-I-S-5 and iGMRES-PI implementations
+and their upstream sources. Their archived results, settings, and provenance
+are retained without replacement or new runs. LSQN and seven baselines remain
+runnable: 48 all-method smoke solves, 768 main solves, and 828 solves for the
+three suites combined. Fresh eight-method runs do not receive the paper's
+formal ten-method ranking. See docs/BASELINE_RECORDS.md and README.md.
+
+MIT licensing now applies to the included authors' code; historical statements
+below about an unlicensed private candidate describe its status at that time.
+No license is granted to the omitted third-party implementations.
+
+----- Historical document follows unchanged -----
+
+Nine-baseline portable port notes
+Date: 2026-10-25
+
+PUBLICATION / REDISTRIBUTION STATUS
+This package is an internal author-review candidate. It includes the final recorded AA-I-S-5 Python port and adapted author GMRES-PI code so the authors can review and execute the complete ten-method comparison.
+No standalone license file was found in either local upstream snapshot (SIS_iPI or nonexp_global_aa1). Current upstream redistribution terms have not been verified in this port. The authors must resolve applicable permissions/terms before uploading or distributing those components publicly. A proposed LSQN license does not relicense these sources. Extracting, translating, or adapting a function does not remove its original provenance.
+No license is assigned here. No GitHub repository/upload/public release was made. This note does not assert that the unresolved third-party code is ready for public redistribution.
+
+Third-party sources
+iGMRES-PI upstream: https://gitlab.ethz.ch/gmatilde/SIS_iPI
+iGMRES-PI commit: 1eddae2cd01d961469c349e3931e660796cce7ae
+Functions retained from iPI_solvers.py: Callback and GMRES_PI. Original file hash below. The local recorded adapter is author_igmres.py.
+AA-I-S-5 upstream: https://github.com/cvxgrp/nonexp_global_aa1
+AA-I-S-5 commit: 457996cc6cebcaad606d24531214aa40a636125e
+Original algorithm: codes/algorithms/alg_iter.m, aa1-safe branch.
+Original readme-code.rtf attribution: Copyright (c) 2018 Junzi Zhang
+The Python port is the existing solve_aa1 function in local run_study.py; this release does not claim an independent reimplementation or author-executed MATLAB result.
+
+Source file SHA-256 (paths relative to original research workspace):
+scb_siopt_candidate_2026-09-20/baseline/code/src/ptbe/algorithms.py  f2daaacbc7a120d9e3d29ca27c0b908a05d41fd930a41f4a115d21752d47df3e
+scb_siopt_candidate_2026-09-20/baseline/code/src/ptbe/metrics.py  ee178a8fba7a04b7104a43b834c5da0b73da2ad6f8765815289be6711749fa03
+scb_siopt_candidate_2026-09-20/code/comparators.py  a0a7b61a865bf6c697b9b70d9075fda0b4482e0f724e5e7a89ac93fbbbcc82c8
+scb_section6_rerun_2026-10-10/run_study.py  2ab9f3aed792a596b9b674db666152db1d64a2ebb53f864699e14cded2bcd7a4
+scb_section6_rerun_2026-10-10/author_igmres.py  7d113dcbc0d6419ccc02e78b1c70540aa2d6498b02c8619bc9dc9b26945d23f3
+scb_section6_rerun_2026-10-10/vendor/SIS_iPI/iPI_solvers.py  2e2b2a9a09e3b151934a76e641998901cdc558793186ddddc9dc24956d7504c9
+scb_section6_rerun_2026-10-10/vendor/nonexp_global_aa1/codes/algorithms/alg_iter.m  9d7341f65eda4e3a918438cd66fc607cbe2575b4ece9f2e4ccd9e47ea70a5a13
+scb_section6_rerun_2026-10-10/vendor/nonexp_global_aa1/readme-code.rtf  6cca9cd250b60d576f684416518159d14a544bbd7346de459f036369e4c4751c
+
+Method mapping and static source extraction
+- VI, PI, QPI-U: _basic.py extracts the necessary functions and _PriorInverse from the local algorithms.py. _metrics.py preserves WorkCounter/RunResult. Unused LP, alternative QPI, and old iGMRES implementations are not included.
+- MPI-4/MPI-20: _comparators.solve_mpi_cached, depths 4 and 20.
+- QPI-BT/QPI-S: qpi_gain, secant_transition_update, solve_qpi_bt from the local comparators.py. Numerical rank cutoff, feasibility tolerance, Woodbury conditioning check, backtracking factor and residual reduction test are unchanged. Numerical failures remain failed results.
+- AA-I-S-5: _anderson.solve_aa1 is the final run_study.py Python port: memory5, Powell regularization theta=.01, restart tau=.001, D=1e6, epsilon=1e-6 and damped-VI fallback .1*x+.9*T(x). Its dense-check oracle remains available internally for tests.
+- iGMRES-PI: _igmres.py statically contains Callback/GMRES_PI plus the exact final local adapter. The six recorded replacements are now ordinary source: policy Jacobian supports dense/CSR; SciPy tol becomes rtol with atol=0; common Bellman residual replaces unavailable exact-solution error; stored iterate arrays become scalar placeholders; terminal comparison is <=. Rewards become negative costs, vectorized model operations are supplied, and passive observations are attached.
+- iGMRES uses alpha=.1 and restart=100 exactly as the final experiment; the provisional restart10 implementation is not included. Its SciPy callback behavior and relative tolerance conversion are retained. No LSQN safeguard or additional GMRES acceptance condition is introduced.
+
+Initialization, limits, results, and callback
+Public API: from lsqn_baselines import METHODS, solve; solve(method, mdp, v0=None, tol=1e-8, callback=None). METHODS is VI, PI, MPI-4, MPI-20, QPI-U, QPI-BT, QPI-S, iGMRES-PI, AA-I-S-5.
+The supplied initial vector is passed to the original per-solver copy. There is no separate subsolution shift, matching final run_study.py. Omitted v0 uses mdp.common_lower_bound().
+Outer budgets are 1000 for PI/iGMRES and 30000 for the others. Existing loop/exit conventions are retained, including baseline-native history lengths; VI/PI can include a terminal history entry. These are not LSQN learning histories.
+Normal result dict contains value, policy, iterations, converged, message, history, stats, method, residual, trace, runtime_s. Original numerical failures retain their messages/status; an exception outside a solver returns the last observed value with empty history/stats as in the old study runner.
+Per-call callback records initial, accepted, finished events with k, independent value copy, residual2, residual_inf, elapsed_s, accepted_step, and queries=0 (LSQN inner-learning queries do not apply). TimeoutError propagates; no platform timer is installed by this package.
+Recorder retains each observed outer value. On a rare outer-budget exit after the final observation, final residual metadata is recomputed for the returned value without changing its original recurrence, value, status, or iteration count. Normal converged solves reuse the last residual.
+All imported code is static and package-local. There is no runtime source replacement, sys.path injection, mutable global observer, native helper library, or old workspace requirement.
+
+Validation on development host; no Linux execution claim
+Python3.9.13 / NumPy1.26.4 / SciPy1.13.0 / one BLAS thread.
+Command: PYTHONPATH=src python3 -m unittest discover -s tests -p test_baselines.py -v
+Six automated tests passed: all nine methods on dense and sparse n16 models versus exact PI and independent final Bellman residual; all nine preserve arbitrary supplied initial values and propagate TimeoutError; callback coverage and mutation isolation; author GMRES restart100/alpha.1 tolerance instrumentation; AA compact inverse checked against dense oracle; QPI-S numerical failure retained without fallback.
+A separate read-only comparison imported original run_study.py and installed its final author_igmres.solve adapter. All 36 cases (9 methods x dense/sparse n16 x gamma .9/.99, seed130) matched exactly in value, policy, iterations, converged, message, complete history, stats, independent final residual, and outer trace k/L2/infinity norms. Elapsed times were intentionally excluded.
+The experiment-runner agent also reported 60 smoke runs (10 methods x four n32 synthetic families, FrozenLake17, and synthetic scaling64) all passing independent residual/PI-reference error-bound checks.
+No large benchmark or historical-time reproduction was performed. New run timings include current callback/packaging overhead and must not replace archived values.
+
+Dependencies
+NumPy, SciPy, and the local lsqn model interface. No heavy extra author imports are needed. Tests additionally use threadpoolctl. The old package directories and original vendor clones are not needed at runtime.
+No stable lsqn core files were modified by this baseline extraction.

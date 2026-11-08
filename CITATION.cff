@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "Please cite the associated paper if you use LSQN in your research."
+type: software
+title: "LSQN: Line-Search Quasi-Newton for Discounted Markov Decision Processes"
+version: 0.1.0rc3
+license: MIT
+authors:
+  - family-names: Zhou
+    given-names: Wangzhi
+  - family-names: Mo
+    given-names: Yuanqiu
+  - family-names: Yu
+    given-names: Wenwu
+preferred-citation:
+  type: unpublished
+  title: "A Globally Convergent Line-Search Quasi-Newton Method for Discounted Markov Decision Processes"
+  authors:
+    - family-names: Zhou
+      given-names: Wangzhi
+    - family-names: Mo
+      given-names: Yuanqiu
+    - family-names: Yu
+      given-names: Wenwu
+  year: 2026

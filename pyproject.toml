@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lsqn-mdp"
+version = "0.1.0rc3"
+description = "LSQN solver and reproducible discounted-MDP experiments"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Wangzhi Zhou"},
+    {name = "Yuanqiu Mo"},
+    {name = "Wenwu Yu"},
+]
+requires-python = ">=3.9,<3.13"
+dependencies = [
+    "numpy==1.26.4",
+    "scipy==1.13.0",
+    "threadpoolctl==3.5.0",
+]
+
+[project.optional-dependencies]
+plots = ["matplotlib>=3.9,<3.10", "reportlab>=4,<5"]
+
+[tool.setuptools]
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md", "LICENSES/*.txt"]
+packages = ["lsqn", "lsqn._native", "lsqn_baselines", "experiments"]
+package-dir = {lsqn = "src/lsqn", lsqn_baselines = "src/lsqn_baselines", experiments = "experiments"}
+
+[tool.setuptools.package-data]
+"lsqn._native" = ["sources/*.c", "sources/*.h"]
+experiments = ["data/*.json", "data/public/*.npz", "data/scaling/*.npz", "data/smoke/*.npz"]

@@ -1,0 +1,58 @@
+{
+  "args": {
+    "label": "confirm_garnet_latent16",
+    "seed": 130,
+    "sizes": [
+      512,
+      1024,
+      2048,
+      4096
+    ],
+    "gammas": [
+      0.99,
+      0.999
+    ],
+    "variants": [
+      "reference",
+      "native",
+      "QPI-BT",
+      "QPI-U",
+      "AA-I-S-5"
+    ],
+    "repetitions": 3
+  },
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "external-library/libopenblas64_.0.dylib",
+      "version": "0.3.23.dev",
+      "threading_layer": "pthreads",
+      "architecture": "armv8"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "external-library/libopenblas.0.dylib",
+      "version": "0.3.26.dev",
+      "threading_layer": "pthreads",
+      "architecture": "neoversen1"
+    }
+  ],
+  "source_hashes": {
+    "scb_section6_rerun_2026-10-10/compute_optimization/product_reuse_2026-10-14/run_experiment.py": "5f6c69f2b82bf604158c1f7c6c1c1be8003113481f9b753dcb37a0ad580fb83e",
+    "scb_section6_rerun_2026-10-10/compute_optimization/product_reuse_2026-10-14/candidates.py": "0064cd5569490fa362af8e5ba201bcf4806c162897dbc8334fd7bc2134c1d056",
+    "scb_section6_rerun_2026-10-10/compute_optimization/product_reuse_2026-10-14/kernel_candidate.py": "de015f14f0de6b4e596a9fc53840cfa0f5dbd17a1cb71406cb152810c5b67504",
+    "scb_section6_rerun_2026-10-10/compute_optimization/product_reuse_2026-10-14/native_candidate.py": "2618e5acdcafca3fb6d3718d68e154347bc457c13f7ef220e4bbb685fa302bb1",
+    "scb_section6_rerun_2026-10-10/compute_optimization/product_reuse_2026-10-14/copy_rows.c": "11f80896593515a7cdcd4a8fcfad0a5934ab82f04ee063b76501f9642ad2c892",
+    "scb_siopt_candidate_2026-09-20/code/solver.py": "d8a05c55fb1a2773536ef47e6f94368bc8c5419ee8fb30051f0f6219c1bf97da",
+    "scb_section6_rerun_2026-10-10/compute_optimization/policy_cache_2026-10-14/policy_cache.py": "2410cb49d83bd0fe80b2fc94a589be5e2584e9f73934a52808286772ec628281",
+    "scb_section6_rerun_2026-10-10/compute_optimization/policy_cache_2026-10-14/run_check.py": "1c49e1e8d21e7fc24a7eccc6a8316c6b686e93113f3ced121e0f42b1be3289fa"
+  },
+  "reference": "Latest policy cache and singleton certificate reuse SCB; not the old published implementation.",
+  "timing": "Serial rotated order; all setup timed; one BLAS thread; 30/60 s budgets; no fastest repetition selection."
+}

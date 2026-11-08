@@ -1,0 +1,244 @@
+{
+  "converged": true,
+  "message": "converged",
+  "iterations": 6,
+  "value": [
+    125.40974901940656,
+    125.00327840810934,
+    125.02992794636539,
+    124.9654288690851,
+    124.26726940263806,
+    125.66380053715288,
+    124.83100602717941,
+    125.15778260667,
+    125.63440023798357,
+    125.85387900288622,
+    125.33823243258206,
+    125.51135250342108,
+    125.67213567815925,
+    125.3428693568356,
+    125.43164199577743,
+    124.71566165232487,
+    126.42175664728364,
+    125.44181996962102,
+    125.3063571295621,
+    125.64660843931237,
+    125.11783431240616,
+    124.95064979524702,
+    125.62050888225892,
+    125.3513406473762,
+    125.86136637933096,
+    124.88464207637881,
+    126.58526503302194,
+    128.15707251512336,
+    125.82887347477251,
+    125.58345478757008,
+    124.49532902970154,
+    125.87788260655394
+  ],
+  "policy": [
+    2,
+    1,
+    2,
+    3,
+    3,
+    3,
+    1,
+    3,
+    0,
+    0,
+    2,
+    0,
+    0,
+    2,
+    1,
+    0,
+    1,
+    2,
+    2,
+    3,
+    3,
+    0,
+    0,
+    0,
+    1,
+    3,
+    3,
+    0,
+    1,
+    1,
+    0,
+    0
+  ],
+  "history": [
+    {
+      "iteration": 0,
+      "info": 0,
+      "initial_residual_inf": 7.421445989139716,
+      "attained_residual_inf": 0.13176494282019746,
+      "forcing_ratio": 0.0177546185760858
+    },
+    {
+      "iteration": 1,
+      "info": 0,
+      "initial_residual_inf": 0.4085186854017815,
+      "attained_residual_inf": 0.009874908835162177,
+      "forcing_ratio": 0.024172477754475594
+    },
+    {
+      "iteration": 2,
+      "info": 0,
+      "initial_residual_inf": 0.009874908835162177,
+      "attained_residual_inf": 0.00013528192383227555,
+      "forcing_ratio": 0.013699561797529626
+    },
+    {
+      "iteration": 3,
+      "info": 0,
+      "initial_residual_inf": 0.00013528192383227555,
+      "attained_residual_inf": 2.145010583376461e-06,
+      "forcing_ratio": 0.015855855110664122
+    },
+    {
+      "iteration": 4,
+      "info": 0,
+      "initial_residual_inf": 2.145010583376461e-06,
+      "attained_residual_inf": 4.185109608867421e-08,
+      "forcing_ratio": 0.01951090424122589
+    },
+    {
+      "iteration": 5,
+      "info": 0,
+      "initial_residual_inf": 4.185109608867421e-08,
+      "attained_residual_inf": 1.5969416899963562e-09,
+      "forcing_ratio": 0.03815770288579186
+    }
+  ],
+  "stats": {
+    "bellman_backups": 0.0,
+    "action_matvecs": 0.0,
+    "policy_matvecs": 0.0,
+    "policy_rmatvecs": 0.0,
+    "gmres_matvecs": 0.0,
+    "memory_image_matvecs": 0.0,
+    "prior_matvecs": 0.0,
+    "direct_solve_flops": 0.0,
+    "block_solve_flops": 0.0,
+    "lp_calls": 0,
+    "operator_products": 0.0
+  },
+  "method": "iGMRES-PI",
+  "residual": 1.5969590094755404e-09,
+  "trace": [
+    {
+      "k": 0,
+      "residual2": 26.776484942254097,
+      "residual_inf": 7.421445989139784,
+      "elapsed_s": 6.479100000000848e-05,
+      "event": "initial"
+    },
+    {
+      "k": 1,
+      "residual2": 0.551623214909094,
+      "residual_inf": 0.4085186854018019,
+      "elapsed_s": 0.0011898749999998959,
+      "event": "accepted"
+    },
+    {
+      "k": 2,
+      "residual2": 0.03265785101655949,
+      "residual_inf": 0.009874908835172391,
+      "elapsed_s": 0.002153040999999911,
+      "event": "accepted"
+    },
+    {
+      "k": 3,
+      "residual2": 0.00034037733813902524,
+      "residual_inf": 0.0001352819238320535,
+      "elapsed_s": 0.003278499999999962,
+      "event": "accepted"
+    },
+    {
+      "k": 4,
+      "residual2": 5.736214523284055e-06,
+      "residual_inf": 2.1450105691656063e-06,
+      "elapsed_s": 0.0043765829999999895,
+      "event": "accepted"
+    },
+    {
+      "k": 5,
+      "residual2": 1.0502681368071794e-07,
+      "residual_inf": 4.185108082310762e-08,
+      "elapsed_s": 0.005470207999999976,
+      "event": "accepted"
+    },
+    {
+      "k": 6,
+      "residual2": 4.1046618602406035e-09,
+      "residual_inf": 1.5969590094755404e-09,
+      "elapsed_s": 0.006526790999999976,
+      "event": "finished"
+    }
+  ],
+  "runtime_s": 0.006533957999999895,
+  "implementation": "curves",
+  "backend": "lsqn_baselines:iGMRES-PI",
+  "spec": {
+    "suite": "main",
+    "family": "garnet",
+    "n": 32,
+    "gamma": 0.99,
+    "seed": 130,
+    "initialization": "reward_lower_bound_all_states"
+  },
+  "model": {
+    "n_states": 32,
+    "n_actions": 4,
+    "gamma": 0.99,
+    "name": "sparse_garnet",
+    "storage": "csr",
+    "transition_nnz": 1024,
+    "model_sha256": "b46953d6e6355295a97d15ad0ae37472b1123f699a4e110b774a7b236e678ef4",
+    "hash_schema": "lsqn-model-arrays-v1",
+    "source": "bundled_frozen",
+    "source_id": "original main generator; reduced smoke dimension n32",
+    "file_sha256": "2cdf5a538adf0a1f7889679a8c98105fe328b8b17d5da4a038820427faa93b30",
+    "frozen_model_match": true,
+    "construction": "unchanged original generator at n32"
+  },
+  "wall_seconds": 0.006564082999999998,
+  "wall_budget_seconds": 30.0,
+  "timeout": false,
+  "success": true,
+  "independent_verification": {
+    "passed": true,
+    "residual_inf": 1.5969590094755404e-09,
+    "residual2": 4.1046618602406035e-09,
+    "finite": true,
+    "tolerance": 1e-08,
+    "value_error_bound_inf": 1.596959009475539e-07
+  },
+  "baseline_settings": {
+    "tol": 1e-08,
+    "implementation": "lsqn_baselines",
+    "note": "Method-specific fixed parameters and iteration limits are documented in baselines-port-notes.txt"
+  },
+  "reference_pi": {
+    "status": "complete",
+    "iterations": 2,
+    "verification": {
+      "passed": true,
+      "residual_inf": 4.263256414560601e-14,
+      "residual2": 1.214175959108492e-13,
+      "finite": true,
+      "tolerance": 1e-08,
+      "value_error_bound_inf": 4.263256414560597e-12
+    },
+    "diagnostic_wall_seconds": 0.001794040999999913,
+    "value_difference_inf": 6.958205744922452e-08,
+    "residual_error_bound": 1.5970016420396847e-07,
+    "agrees_with_error_bound": true
+  },
+  "repeat": 0,
+  "run_id": "c6be79e5-9c57-4c7c-a460-12b9571cd6f3"
+}

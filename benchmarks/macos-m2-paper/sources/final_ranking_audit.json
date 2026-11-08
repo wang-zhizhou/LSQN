@@ -1,0 +1,202 @@
+{
+  "cells": 320,
+  "baseline_cells_unchanged": 288,
+  "scb_cells_updated": 8,
+  "scb_cells_retained": 24,
+  "scb": {
+    "method": "SCB",
+    "mean_rank": 3.53125,
+    "successes": 32,
+    "wins": 8,
+    "position": 2
+  },
+  "leaderboard": [
+    {
+      "method": "AA-I-S-5",
+      "mean_rank": 3.453125,
+      "successes": 31,
+      "wins": 0,
+      "position": 1
+    },
+    {
+      "method": "SCB",
+      "mean_rank": 3.53125,
+      "successes": 32,
+      "wins": 8,
+      "position": 2
+    },
+    {
+      "method": "QPI-BT",
+      "mean_rank": 3.5625,
+      "successes": 32,
+      "wins": 13,
+      "position": 3
+    },
+    {
+      "method": "QPI-U",
+      "mean_rank": 4.0625,
+      "successes": 32,
+      "wins": 3,
+      "position": 4
+    },
+    {
+      "method": "PI",
+      "mean_rank": 4.875,
+      "successes": 32,
+      "wins": 8,
+      "position": 5
+    },
+    {
+      "method": "iGMRES-PI",
+      "mean_rank": 5.03125,
+      "successes": 28,
+      "wins": 0,
+      "position": 6
+    },
+    {
+      "method": "MPI-20",
+      "mean_rank": 6.4375,
+      "successes": 30,
+      "wins": 0,
+      "position": 7
+    },
+    {
+      "method": "QPI-S",
+      "mean_rank": 7.015625,
+      "successes": 28,
+      "wins": 0,
+      "position": 8
+    },
+    {
+      "method": "VI",
+      "mean_rank": 8.1875,
+      "successes": 29,
+      "wins": 0,
+      "position": 9
+    },
+    {
+      "method": "MPI-4",
+      "mean_rank": 8.84375,
+      "successes": 30,
+      "wins": 0,
+      "position": 10
+    }
+  ],
+  "family_summary": [
+    {
+      "family": "queue",
+      "mean_scb_rank": 6.125,
+      "wins": 0
+    },
+    {
+      "family": "cluster",
+      "mean_scb_rank": 1.0,
+      "wins": 8
+    },
+    {
+      "family": "garnet",
+      "mean_scb_rank": 3.0,
+      "wins": 0
+    },
+    {
+      "family": "latent",
+      "mean_scb_rank": 4.0,
+      "wins": 0
+    }
+  ],
+  "head_to_head": {
+    "PI": {
+      "both_success": 32,
+      "scb_faster": 24,
+      "baseline_failures": 0
+    },
+    "iGMRES-PI": {
+      "both_success": 28,
+      "scb_faster": 25,
+      "baseline_failures": 4
+    },
+    "QPI-S": {
+      "both_success": 28,
+      "scb_faster": 28,
+      "baseline_failures": 4
+    },
+    "QPI-BT": {
+      "both_success": 32,
+      "scb_faster": 11,
+      "baseline_failures": 0
+    },
+    "QPI-U": {
+      "both_success": 32,
+      "scb_faster": 11,
+      "baseline_failures": 0
+    },
+    "AA-I-S-5": {
+      "both_success": 31,
+      "scb_faster": 17,
+      "baseline_failures": 1
+    }
+  },
+  "changes": [
+    {
+      "family": "queue",
+      "n": 512,
+      "gamma": 0.99,
+      "old_seconds": 0.07489600000000252,
+      "new_seconds": 0.06855591699999997
+    },
+    {
+      "family": "queue",
+      "n": 512,
+      "gamma": 0.999,
+      "old_seconds": 0.0864953329999949,
+      "new_seconds": 0.08066416600000004
+    },
+    {
+      "family": "queue",
+      "n": 1024,
+      "gamma": 0.99,
+      "old_seconds": 0.2832207910000051,
+      "new_seconds": 0.2730427080000002
+    },
+    {
+      "family": "queue",
+      "n": 1024,
+      "gamma": 0.999,
+      "old_seconds": 0.4826734580000078,
+      "new_seconds": 0.4710261669999998
+    },
+    {
+      "family": "queue",
+      "n": 2048,
+      "gamma": 0.99,
+      "old_seconds": 0.5312970829999983,
+      "new_seconds": 0.5219438749999998
+    },
+    {
+      "family": "queue",
+      "n": 2048,
+      "gamma": 0.999,
+      "old_seconds": 7.006990542000011,
+      "new_seconds": 6.880028542000002
+    },
+    {
+      "family": "queue",
+      "n": 4096,
+      "gamma": 0.99,
+      "old_seconds": 0.8097640840000082,
+      "new_seconds": 0.8098579170000022
+    },
+    {
+      "family": "queue",
+      "n": 4096,
+      "gamma": 0.999,
+      "old_seconds": 27.198035791999985,
+      "new_seconds": 26.99711291700001
+    }
+  ],
+  "ranking": "Descriptive mixed-batch ranking only, not a new same-batch comparison.",
+  "failures": "Unsuccessful triples tied below all successful methods, at the mean of their remaining positions.",
+  "selection": "Family-wide fixed implementations; no minimum across repetitions or individual cases.",
+  "baseline_reference": "output/pdf/runtime_updated_scb_2026-10-14/cell_provenance.json",
+  "original_files_modified": false
+}

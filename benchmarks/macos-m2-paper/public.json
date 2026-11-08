@@ -1,0 +1,672 @@
+{
+  "schema": "lsqn-macos-paper-learning-v1",
+  "records": [
+    {
+      "case_id": "public_frozenlake4x4_n17_g0p99_seed0",
+      "suite": "public",
+      "family": "frozenlake4x4",
+      "n": 17,
+      "gamma": 0.99,
+      "seed": 0,
+      "method": "LSQN",
+      "backend": "reference",
+      "all_success": true,
+      "successes": 3,
+      "repetitions": 3,
+      "wall_seconds_all": [
+        0.006171417000000012,
+        0.007156916000000013,
+        0.006613292000000048
+      ],
+      "median_wall_seconds": 0.006613292000000048,
+      "raw_elapsed_median_seconds": 0.006613292000000048,
+      "outer_iterations": 7,
+      "outer_iterations_all": [
+        7,
+        7,
+        7
+      ],
+      "total_queries": 19,
+      "total_queries_all": [
+        19,
+        19,
+        19
+      ],
+      "messages": [
+        "converged",
+        "converged",
+        "converged"
+      ],
+      "success_all": [
+        true,
+        true,
+        true
+      ],
+      "residual_inf_all": [
+        1.1102230246251565e-16,
+        1.1102230246251565e-16,
+        1.1102230246251565e-16
+      ],
+      "queries": [
+        1,
+        2,
+        5,
+        4,
+        2,
+        2,
+        3
+      ],
+      "mean_queries": 2.7142857142857144,
+      "max_queries": 5,
+      "zero_queries": 0,
+      "full_dimension_queries": 0,
+      "source_refs": [
+        {
+          "source_id": "scb_section6_rerun_2026-10-10/supplement/public_official.json.gz",
+          "sha256": "8b487cebe0793b98254f3cf1e9bbd5045f7d5081371acea9240ba7e7f0939378",
+          "original_size_bytes": 44936
+        }
+      ],
+      "archive_query_reference": "experiments/data/archive_reference.json#cases/public_frozenlake4x4_n17_g0p99_seed0"
+    },
+    {
+      "case_id": "public_frozenlake4x4_n17_g0p999_seed0",
+      "suite": "public",
+      "family": "frozenlake4x4",
+      "n": 17,
+      "gamma": 0.999,
+      "seed": 0,
+      "method": "LSQN",
+      "backend": "reference",
+      "all_success": true,
+      "successes": 3,
+      "repetitions": 3,
+      "wall_seconds_all": [
+        0.005932042000000082,
+        0.006065167000000149,
+        0.00579424999999989
+      ],
+      "median_wall_seconds": 0.005932042000000082,
+      "raw_elapsed_median_seconds": 0.005932042000000082,
+      "outer_iterations": 7,
+      "outer_iterations_all": [
+        7,
+        7,
+        7
+      ],
+      "total_queries": 19,
+      "total_queries_all": [
+        19,
+        19,
+        19
+      ],
+      "messages": [
+        "converged",
+        "converged",
+        "converged"
+      ],
+      "success_all": [
+        true,
+        true,
+        true
+      ],
+      "residual_inf_all": [
+        2.220446049250313e-16,
+        2.220446049250313e-16,
+        2.220446049250313e-16
+      ],
+      "queries": [
+        1,
+        2,
+        5,
+        5,
+        3,
+        2,
+        1
+      ],
+      "mean_queries": 2.7142857142857144,
+      "max_queries": 5,
+      "zero_queries": 0,
+      "full_dimension_queries": 0,
+      "source_refs": [
+        {
+          "source_id": "scb_section6_rerun_2026-10-10/supplement/public_official.json.gz",
+          "sha256": "8b487cebe0793b98254f3cf1e9bbd5045f7d5081371acea9240ba7e7f0939378",
+          "original_size_bytes": 44936
+        }
+      ],
+      "archive_query_reference": "experiments/data/archive_reference.json#cases/public_frozenlake4x4_n17_g0p999_seed0"
+    },
+    {
+      "case_id": "public_frozenlake8x8_n65_g0p99_seed0",
+      "suite": "public",
+      "family": "frozenlake8x8",
+      "n": 65,
+      "gamma": 0.99,
+      "seed": 0,
+      "method": "LSQN",
+      "backend": "reference",
+      "all_success": true,
+      "successes": 3,
+      "repetitions": 3,
+      "wall_seconds_all": [
+        0.011349958000000049,
+        0.011516917000000015,
+        0.011173083999999944
+      ],
+      "median_wall_seconds": 0.011349958000000049,
+      "raw_elapsed_median_seconds": 0.011349958000000049,
+      "outer_iterations": 12,
+      "outer_iterations_all": [
+        12,
+        12,
+        12
+      ],
+      "total_queries": 63,
+      "total_queries_all": [
+        63,
+        63,
+        63
+      ],
+      "messages": [
+        "converged",
+        "converged",
+        "converged"
+      ],
+      "success_all": [
+        true,
+        true,
+        true
+      ],
+      "residual_inf_all": [
+        2.4109270135852512e-11,
+        2.4109270135852512e-11,
+        2.4109270135852512e-11
+      ],
+      "queries": [
+        0,
+        2,
+        4,
+        7,
+        6,
+        5,
+        9,
+        6,
+        7,
+        5,
+        5,
+        7
+      ],
+      "mean_queries": 5.25,
+      "max_queries": 9,
+      "zero_queries": 1,
+      "full_dimension_queries": 0,
+      "source_refs": [
+        {
+          "source_id": "scb_section6_rerun_2026-10-10/supplement/public_official.json.gz",
+          "sha256": "8b487cebe0793b98254f3cf1e9bbd5045f7d5081371acea9240ba7e7f0939378",
+          "original_size_bytes": 44936
+        }
+      ],
+      "archive_query_reference": "experiments/data/archive_reference.json#cases/public_frozenlake8x8_n65_g0p99_seed0"
+    },
+    {
+      "case_id": "public_frozenlake8x8_n65_g0p999_seed0",
+      "suite": "public",
+      "family": "frozenlake8x8",
+      "n": 65,
+      "gamma": 0.999,
+      "seed": 0,
+      "method": "LSQN",
+      "backend": "reference",
+      "all_success": true,
+      "successes": 3,
+      "repetitions": 3,
+      "wall_seconds_all": [
+        0.01343629199999996,
+        0.013525624999999986,
+        0.015134709000000024
+      ],
+      "median_wall_seconds": 0.013525624999999986,
+      "raw_elapsed_median_seconds": 0.013525624999999986,
+      "outer_iterations": 14,
+      "outer_iterations_all": [
+        14,
+        14,
+        14
+      ],
+      "total_queries": 76,
+      "total_queries_all": [
+        76,
+        76,
+        76
+      ],
+      "messages": [
+        "converged",
+        "converged",
+        "converged"
+      ],
+      "success_all": [
+        true,
+        true,
+        true
+      ],
+      "residual_inf_all": [
+        1.4992451724538114e-12,
+        1.4992451724538114e-12,
+        1.4992451724538114e-12
+      ],
+      "queries": [
+        0,
+        2,
+        4,
+        7,
+        7,
+        5,
+        6,
+        10,
+        5,
+        3,
+        6,
+        5,
+        8,
+        8
+      ],
+      "mean_queries": 5.428571428571429,
+      "max_queries": 10,
+      "zero_queries": 1,
+      "full_dimension_queries": 0,
+      "source_refs": [
+        {
+          "source_id": "scb_section6_rerun_2026-10-10/supplement/public_official.json.gz",
+          "sha256": "8b487cebe0793b98254f3cf1e9bbd5045f7d5081371acea9240ba7e7f0939378",
+          "original_size_bytes": 44936
+        }
+      ],
+      "archive_query_reference": "experiments/data/archive_reference.json#cases/public_frozenlake8x8_n65_g0p999_seed0"
+    },
+    {
+      "case_id": "public_taxi_n501_g0p99_seed0",
+      "suite": "public",
+      "family": "taxi",
+      "n": 501,
+      "gamma": 0.99,
+      "seed": 0,
+      "method": "LSQN",
+      "backend": "reference",
+      "all_success": true,
+      "successes": 3,
+      "repetitions": 3,
+      "wall_seconds_all": [
+        0.23926179199999997,
+        0.23639337500000002,
+        0.23559083399999992
+      ],
+      "median_wall_seconds": 0.23639337500000002,
+      "raw_elapsed_median_seconds": 0.23639337500000002,
+      "outer_iterations": 41,
+      "outer_iterations_all": [
+        41,
+        41,
+        41
+      ],
+      "total_queries": 991,
+      "total_queries_all": [
+        991,
+        991,
+        991
+      ],
+      "messages": [
+        "converged",
+        "converged",
+        "converged"
+      ],
+      "success_all": [
+        true,
+        true,
+        true
+      ],
+      "residual_inf_all": [
+        8.307079468750089e-10,
+        8.307079468750089e-10,
+        8.307079468750089e-10
+      ],
+      "queries": [
+        6,
+        5,
+        5,
+        4,
+        0,
+        3,
+        0,
+        16,
+        26,
+        11,
+        19,
+        9,
+        29,
+        12,
+        7,
+        6,
+        19,
+        11,
+        18,
+        22,
+        39,
+        61,
+        63,
+        39,
+        43,
+        19,
+        34,
+        19,
+        25,
+        16,
+        15,
+        25,
+        85,
+        15,
+        0,
+        17,
+        37,
+        100,
+        19,
+        38,
+        54
+      ],
+      "mean_queries": 24.170731707317074,
+      "max_queries": 100,
+      "zero_queries": 3,
+      "full_dimension_queries": 0,
+      "source_refs": [
+        {
+          "source_id": "scb_section6_rerun_2026-10-10/supplement/public_official.json.gz",
+          "sha256": "8b487cebe0793b98254f3cf1e9bbd5045f7d5081371acea9240ba7e7f0939378",
+          "original_size_bytes": 44936
+        }
+      ],
+      "archive_query_reference": "experiments/data/archive_reference.json#cases/public_taxi_n501_g0p99_seed0"
+    },
+    {
+      "case_id": "public_taxi_n501_g0p999_seed0",
+      "suite": "public",
+      "family": "taxi",
+      "n": 501,
+      "gamma": 0.999,
+      "seed": 0,
+      "method": "LSQN",
+      "backend": "reference",
+      "all_success": true,
+      "successes": 3,
+      "repetitions": 3,
+      "wall_seconds_all": [
+        0.8979760000000001,
+        0.9073045829999997,
+        0.905432792
+      ],
+      "median_wall_seconds": 0.905432792,
+      "raw_elapsed_median_seconds": 0.905432792,
+      "outer_iterations": 47,
+      "outer_iterations_all": [
+        47,
+        47,
+        47
+      ],
+      "total_queries": 3569,
+      "total_queries_all": [
+        3569,
+        3569,
+        3569
+      ],
+      "messages": [
+        "converged",
+        "converged",
+        "converged"
+      ],
+      "success_all": [
+        true,
+        true,
+        true
+      ],
+      "residual_inf_all": [
+        1.4306351658888161e-09,
+        1.4306351658888161e-09,
+        1.4306351658888161e-09
+      ],
+      "queries": [
+        6,
+        2,
+        3,
+        8,
+        10,
+        25,
+        45,
+        14,
+        16,
+        13,
+        5,
+        7,
+        7,
+        0,
+        101,
+        51,
+        189,
+        91,
+        112,
+        131,
+        141,
+        174,
+        92,
+        180,
+        69,
+        59,
+        158,
+        126,
+        177,
+        37,
+        110,
+        76,
+        22,
+        13,
+        69,
+        58,
+        38,
+        64,
+        43,
+        353,
+        69,
+        81,
+        116,
+        89,
+        105,
+        130,
+        84
+      ],
+      "mean_queries": 75.93617021276596,
+      "max_queries": 353,
+      "zero_queries": 1,
+      "full_dimension_queries": 0,
+      "source_refs": [
+        {
+          "source_id": "scb_section6_rerun_2026-10-10/supplement/public_official.json.gz",
+          "sha256": "8b487cebe0793b98254f3cf1e9bbd5045f7d5081371acea9240ba7e7f0939378",
+          "original_size_bytes": 44936
+        }
+      ],
+      "archive_query_reference": "experiments/data/archive_reference.json#cases/public_taxi_n501_g0p999_seed0"
+    },
+    {
+      "case_id": "public_cliffwalking_n49_g0p99_seed0",
+      "suite": "public",
+      "family": "cliffwalking",
+      "n": 49,
+      "gamma": 0.99,
+      "seed": 0,
+      "method": "LSQN",
+      "backend": "reference",
+      "all_success": true,
+      "successes": 3,
+      "repetitions": 3,
+      "wall_seconds_all": [
+        0.014438709000000216,
+        0.013994750000000167,
+        0.01428891599999993
+      ],
+      "median_wall_seconds": 0.01428891599999993,
+      "raw_elapsed_median_seconds": 0.01428891599999993,
+      "outer_iterations": 21,
+      "outer_iterations_all": [
+        21,
+        21,
+        21
+      ],
+      "total_queries": 37,
+      "total_queries_all": [
+        37,
+        37,
+        37
+      ],
+      "messages": [
+        "converged",
+        "converged",
+        "converged"
+      ],
+      "success_all": [
+        true,
+        true,
+        true
+      ],
+      "residual_inf_all": [
+        5.472955422192172e-12,
+        5.472955422192172e-12,
+        5.472955422192172e-12
+      ],
+      "queries": [
+        1,
+        0,
+        0,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        1,
+        3,
+        0,
+        0,
+        2,
+        2,
+        2,
+        4,
+        4
+      ],
+      "mean_queries": 1.7619047619047619,
+      "max_queries": 4,
+      "zero_queries": 4,
+      "full_dimension_queries": 0,
+      "source_refs": [
+        {
+          "source_id": "scb_section6_rerun_2026-10-10/supplement/public_official.json.gz",
+          "sha256": "8b487cebe0793b98254f3cf1e9bbd5045f7d5081371acea9240ba7e7f0939378",
+          "original_size_bytes": 44936
+        }
+      ],
+      "archive_query_reference": "experiments/data/archive_reference.json#cases/public_cliffwalking_n49_g0p99_seed0"
+    },
+    {
+      "case_id": "public_cliffwalking_n49_g0p999_seed0",
+      "suite": "public",
+      "family": "cliffwalking",
+      "n": 49,
+      "gamma": 0.999,
+      "seed": 0,
+      "method": "LSQN",
+      "backend": "reference",
+      "all_success": true,
+      "successes": 3,
+      "repetitions": 3,
+      "wall_seconds_all": [
+        0.02068883300000035,
+        0.020104874999999467,
+        0.01990445800000007
+      ],
+      "median_wall_seconds": 0.020104874999999467,
+      "raw_elapsed_median_seconds": 0.020104874999999467,
+      "outer_iterations": 25,
+      "outer_iterations_all": [
+        25,
+        25,
+        25
+      ],
+      "total_queries": 74,
+      "total_queries_all": [
+        74,
+        74,
+        74
+      ],
+      "messages": [
+        "converged",
+        "converged",
+        "converged"
+      ],
+      "success_all": [
+        true,
+        true,
+        true
+      ],
+      "residual_inf_all": [
+        1.0724505727921496e-09,
+        1.0724505727921496e-09,
+        1.0724505727921496e-09
+      ],
+      "queries": [
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        0,
+        0,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        5,
+        3,
+        2,
+        2,
+        0,
+        5,
+        6,
+        5
+      ],
+      "mean_queries": 2.96,
+      "max_queries": 6,
+      "zero_queries": 3,
+      "full_dimension_queries": 0,
+      "source_refs": [
+        {
+          "source_id": "scb_section6_rerun_2026-10-10/supplement/public_official.json.gz",
+          "sha256": "8b487cebe0793b98254f3cf1e9bbd5045f7d5081371acea9240ba7e7f0939378",
+          "original_size_bytes": 44936
+        }
+      ],
+      "archive_query_reference": "experiments/data/archive_reference.json#cases/public_cliffwalking_n49_g0p999_seed0"
+    }
+  ],
+  "query_reference": {
+    "package_path": "experiments/data/archive_reference.json",
+    "sha256": "b1dbcc4e236755cfac128f60eea00d48239872beb75fc42b53cdbb38b9e49b06"
+  },
+  "note": "Queries copied from historical raw records and checked exactly against the bundled query archive."
+}

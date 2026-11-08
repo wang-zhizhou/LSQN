@@ -1,0 +1,362 @@
+{
+  "date": "2026-09-30",
+  "source_hash": "d8a05c55fb1a2773536ef47e6f94368bc8c5419ee8fb30051f0f6219c1bf97da",
+  "solver": "scb_siopt_candidate_2026-09-20/code/solver.py",
+  "options": {
+    "tol": 1e-08,
+    "max_outer": 500,
+    "armijo_sigma": 0.0001,
+    "backtrack_beta": 0.5,
+    "max_backtracks": 80,
+    "regularization_scale": 1e-08,
+    "descent_fraction": 0.5,
+    "step_cap_factor": 2.0,
+    "tie_atol": 1e-12,
+    "tie_rtol": 1e-12,
+    "initial_scale": 1.0,
+    "forcing_trigger": 0.5,
+    "max_self_secant_enrichments": 4,
+    "certified_local_completion": true,
+    "local_completion_residual": 0.001,
+    "local_completion_stable_steps": 2,
+    "local_forcing_coefficient": 0.5,
+    "local_forcing_exponent": 0.5,
+    "projection_alignment_fraction": 0.5
+  },
+  "solver_kwargs": {
+    "full_completion": true,
+    "memory_mode": "retain",
+    "persistent": false,
+    "correction": "sign",
+    "width_fraction": 0.1,
+    "cache_proposal": false,
+    "fast_model": true,
+    "buffered_basis": true
+  },
+  "python": "3.9.13 (v3.9.13:6de2ca5339, May 17 2022, 11:37:23) \n[Clang 13.0.0 (clang-1300.0.29.30)]",
+  "numpy": "1.26.4",
+  "platform": "macOS-14.3-arm64-arm-64bit",
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "external-library/libopenblas64_.0.dylib",
+      "version": "0.3.23.dev",
+      "threading_layer": "pthreads",
+      "architecture": "armv8"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "external-library/libopenblas.0.dylib",
+      "version": "0.3.26.dev",
+      "threading_layer": "pthreads",
+      "architecture": "neoversen1"
+    }
+  ],
+  "construction": "independent reconstruction from public source and specifications, not Gymnasium package execution",
+  "terminal_handling": "zero reward absorbing terminal states, add one sink for Taxi and CliffWalking",
+  "time_limit_wrapper": "removed, infinite-horizon discounted version",
+  "initial_sink_value": 0,
+  "action_masking": false,
+  "scaling_generator": "local seeded Bernoulli frozen probability .9, reject maps without a start-goal path",
+  "scope": "fixed public benchmark reconstructions and separately labeled synthetic scaling extensions, not real-world datasets",
+  "instrumentation": "observer calls only, arithmetic/control AST identical after observer removal",
+  "time_definition": "inner time includes proposal and forcing tests, excludes policy/envelope setup, direction correction, backtracking, trajectory update",
+  "wall_budget": 30.0,
+  "repeats": 1,
+  "plan": [
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 8,
+      "seed": 130,
+      "gamma": 0.99,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 8,
+      "seed": 131,
+      "gamma": 0.99,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 8,
+      "seed": 132,
+      "gamma": 0.99,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 16,
+      "seed": 130,
+      "gamma": 0.99,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 16,
+      "seed": 131,
+      "gamma": 0.99,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 16,
+      "seed": 132,
+      "gamma": 0.99,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 24,
+      "seed": 130,
+      "gamma": 0.99,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 24,
+      "seed": 131,
+      "gamma": 0.99,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 24,
+      "seed": 132,
+      "gamma": 0.99,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 32,
+      "seed": 130,
+      "gamma": 0.99,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 32,
+      "seed": 131,
+      "gamma": 0.99,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 32,
+      "seed": 132,
+      "gamma": 0.99,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 48,
+      "seed": 130,
+      "gamma": 0.99,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 48,
+      "seed": 131,
+      "gamma": 0.99,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 48,
+      "seed": 132,
+      "gamma": 0.99,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 64,
+      "seed": 130,
+      "gamma": 0.99,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 64,
+      "seed": 131,
+      "gamma": 0.99,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 64,
+      "seed": 132,
+      "gamma": 0.99,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 8,
+      "seed": 130,
+      "gamma": 0.999,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 8,
+      "seed": 131,
+      "gamma": 0.999,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 8,
+      "seed": 132,
+      "gamma": 0.999,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 16,
+      "seed": 130,
+      "gamma": 0.999,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 16,
+      "seed": 131,
+      "gamma": 0.999,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 16,
+      "seed": 132,
+      "gamma": 0.999,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 24,
+      "seed": 130,
+      "gamma": 0.999,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 24,
+      "seed": 131,
+      "gamma": 0.999,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 24,
+      "seed": 132,
+      "gamma": 0.999,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 32,
+      "seed": 130,
+      "gamma": 0.999,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 32,
+      "seed": 131,
+      "gamma": 0.999,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 32,
+      "seed": 132,
+      "gamma": 0.999,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 48,
+      "seed": 130,
+      "gamma": 0.999,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 48,
+      "seed": 131,
+      "gamma": 0.999,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 48,
+      "seed": 132,
+      "gamma": 0.999,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 64,
+      "seed": 130,
+      "gamma": 0.999,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 64,
+      "seed": 131,
+      "gamma": 0.999,
+      "init": "zero"
+    },
+    {
+      "family": "FrozenLake",
+      "kind": "generated",
+      "side": 64,
+      "seed": 132,
+      "gamma": 0.999,
+      "init": "zero"
+    }
+  ]
+}

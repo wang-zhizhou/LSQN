@@ -1,0 +1,9 @@
+Preparing main_queue_n4096_g0p999_seed130
+main_queue_n4096_g0p999_seed130 method=LSQN repeat=0 success=True residual=1.4551915228366852e-11 queries=5985 time=26.900s
+Preparing main_cluster_n4096_g0p999_seed130
+main_cluster_n4096_g0p999_seed130 method=LSQN repeat=0 success=True residual=7.318590178329032e-13 queries=24 time=0.493s
+Preparing main_garnet_n4096_g0p999_seed130
+main_garnet_n4096_g0p999_seed130 method=LSQN repeat=0 success=True residual=6.730260793119669e-10 queries=27 time=0.011s
+Preparing main_latent_n4096_g0p999_seed130
+main_latent_n4096_g0p999_seed130 method=LSQN repeat=0 success=True residual=1.5688783605583012e-11 queries=3 time=0.143s
+Saved <release-candidate>/validation/mac-installed-large

@@ -1,0 +1,113 @@
+{
+  "date": "2026-10-10",
+  "families": [
+    "queue",
+    "cluster",
+    "garnet",
+    "latent"
+  ],
+  "sizes": [
+    512,
+    1024,
+    2048,
+    4096
+  ],
+  "actions": 4,
+  "gammas": [
+    0.99,
+    0.999
+  ],
+  "seed": 130,
+  "repetitions": 3,
+  "methods": [
+    "SCB",
+    "VI",
+    "PI",
+    "MPI-4",
+    "MPI-20",
+    "QPI-U",
+    "QPI-BT",
+    "QPI-S",
+    "iGMRES-PI",
+    "AA-I-S-5"
+  ],
+  "stopping": "independently checked absolute infinity residual <= 1e-8",
+  "plotted_residual": "actual Euclidean residual, not sqrt(n) times infinity residual",
+  "time_limits": {
+    "512": 30,
+    "1024": 30,
+    "2048": 60,
+    "4096": 60
+  },
+  "timing": "serial; method order rotates each repetition; one BLAS thread; includes passive trace recording and solver setup, excludes problem generation, verification and file writing",
+  "initialization": "same constant minimum reward / (1-gamma), no extra shift",
+  "scb": {
+    "H0": "I",
+    "tau": 0.1,
+    "theta": 0.5,
+    "sigma": 0.0001,
+    "beta": 0.5,
+    "forcing": "min(.5,.5*||F||2**.5)",
+    "outer_limit": 500,
+    "inner_limit": "n",
+    "cache_proposal": false
+  },
+  "iteration_limits": {
+    "SCB": 500,
+    "PI": 1000,
+    "iGMRES_PI": 1000,
+    "others": 30000
+  },
+  "igmres": {
+    "forcing": 0.1,
+    "restart": 10,
+    "criterion": "infinity-norm relative policy residual",
+    "source": "Gargiani et al., arXiv:2211.04299, Algorithm 2; Python reimplementation; parameters fixed here, not claimed identical to their experiment"
+  },
+  "aa": {
+    "memory": 5,
+    "theta": 0.01,
+    "tau": 0.001,
+    "D": 1000000.0,
+    "epsilon": 1e-06,
+    "fallback": ".1*v+.9*T(v), exactly as authors experiment code (damped VI)",
+    "source": "Python port of cvxgrp/nonexp_global_aa1 codes/algorithms/alg_iter.m aa1-safe branch",
+    "commit": "457996cc6cebcaad606d24531214aa40a636125e"
+  },
+  "qpi": "existing equation-based Python reimplementations, not authors code; QPI-S rank/conditioning failures retained",
+  "success": "all three repetitions pass; median of three timings only for successful triples; failures not dropped",
+  "platform": "macOS-14.3-arm64-arm-64bit",
+  "processor": "arm",
+  "python": "3.9.13",
+  "numpy": "1.26.4",
+  "scipy": "1.13.0",
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "external-library/libopenblas64_.0.dylib",
+      "version": "0.3.23.dev",
+      "threading_layer": "pthreads",
+      "architecture": "armv8"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "external-library/libopenblas.0.dylib",
+      "version": "0.3.26.dev",
+      "threading_layer": "pthreads",
+      "architecture": "neoversen1"
+    }
+  ],
+  "source_hashes": {
+    "scb_section6_rerun_2026-10-10/run_study.py": "2ab9f3aed792a596b9b674db666152db1d64a2ebb53f864699e14cded2bcd7a4",
+    "scb_siopt_candidate_2026-09-20/code/solver.py": "d8a05c55fb1a2773536ef47e6f94368bc8c5419ee8fb30051f0f6219c1bf97da",
+    "scb_siopt_candidate_2026-09-20/code/comparators.py": "a0a7b61a865bf6c697b9b70d9075fda0b4482e0f724e5e7a89ac93fbbbcc82c8",
+    "scb_siopt_candidate_2026-09-20/baseline/code/src/ptbe/algorithms.py": "f2daaacbc7a120d9e3d29ca27c0b908a05d41fd930a41f4a115d21752d47df3e",
+    "scb_siopt_candidate_2026-09-20/baseline/code/src/ptbe/benchmarks.py": "eca2b4275d6d902f3e5a794c87d706fa88faac84d0fd9dff80472dfe37025a2e"
+  }
+}

@@ -1,0 +1,49 @@
+LSQN portable core port notes
+Current version: 0.1.0rc2. This note describes the reference layer; optimized-port-notes.txt describes the added figure and final-runtime implementations.
+Date: 2026-10-25
+
+Scope and provenance
+Only new files under this release candidate were written. Archived inputs were not modified.
+All sources below are relative to scb_siopt_candidate_2026-09-20 in the original research workspace.
+This reference-layer extraction did not copy macOS binary helpers or third-party runtimes. The completed release also contains portable native C source (no prebuilt dylib/so), documented separately in optimized-port-notes.txt and native-port-notes.txt. Baseline sources have their own attribution and redistribution notes.
+
+Source SHA-256:
+code/solver.py  d8a05c55fb1a2773536ef47e6f94368bc8c5419ee8fb30051f0f6219c1bf97da
+baseline/code/src/ptbe/mdp.py  957244d5fff24467195e23bb4974134e8b3a9c20ffa05f8995bd7e7836c1bb9a
+baseline/code/src/ptbe/global_broyden.py  48519e843f04e2670e3ce1f83de4dfc38d3a94c030bd2b4a9ff2630db708e310
+baseline/code/src/ptbe/metrics.py  ee178a8fba7a04b7104a43b834c5da0b73da2ad6f8765815289be6711749fa03
+baseline/code/cost_solver.py  7aa2008a1980b6389f98917443af16c4dc732f712860473eecf06a1973bde71c
+
+Files and extraction
+- src/lsqn/_core.py: ColumnBuffer, InverseModel, GroupedEnvelope, and the full solver body from code/solver.py. Local imports replace archive-dependent sys.path changes. The internal function is named solve_core.
+- src/lsqn/options.py: CGBOptions fields from global_broyden.py, exported as SolverOptions. Default tol=1e-8 and max_outer=500 match the original solver/main experiment defaults rather than the older shared CGBOptions defaults. width_fraction=0.1 exposes the original solve keyword (tau).
+- src/lsqn/mdp.py: unchanged copy of the original FiniteMDP source. Public MDP is an alias for this class. It supports dense and CSR action transitions and the original model interface.
+- src/lsqn/_support.py: only WorkCounter, _active_actions, _minimum_norm_generalized_gradient, and Envelope extracted from their original source files. These retain inactive legacy branches of the copied solver without importing any unrelated old solver. The public API fixes grouped support, full protected learning, and sign correction; it does not expose the legacy projection/ablation modes.
+- src/lsqn/solver.py and __init__.py: standalone public interface and exports. v0 shape/finite checks and finite initial_scale checks are boundary validation only.
+
+Algorithm preservation
+The inverse updates, repeated orthogonalization, coordinate fallback, forcing floor and acceptance guard, sign-correction formula and alignment check, descent check, Armijo loop, beta grid, trajectory update, and memory conversion logic are unchanged.
+The explicit backend="reference" uses the original reference implementation defaults: protect=True, full_completion=True, persistent=False, correction=sign, grouped_support=True, memory_mode=retain, cache_proposal=False, fast_model=True, buffered_basis=True.
+No rank truncation, tolerance relaxation, or exact policy-evaluation replacement was introduced. Public solve() now defaults to block32_cache; the paper runner selects its documented implementation profile explicitly.
+H0 is initial_scale times the identity. Zero and negative scales are accepted, as in the original source. No arbitrary initial inverse matrix API is provided.
+v0=None preserves the original solver zero vector. Main and official-public experiment runners must pass mdp.common_lower_bound() explicitly. Synthetic scaling uses zero initialization.
+FiniteMDP/reference_solution validation and helpers are preserved; the automated correctness check independently assembles dense policy-evaluation equations.
+
+Passive diagnostics and interruption interface
+History retains all original fields and adds residual2_before, residual2_after, and slope for checking forcing, descent, and Armijo certificates. Queries are history[i][enrichments] and total stats[enrichments].
+Trace stores scalar k, elapsed_s, residual2, residual_inf for k=0 and every accepted outer iterate; a repeated final k replaces the previous scalar row.
+callback(record) fires at initial, accepted, and finished events. Records contain a value copy, both residual norms, k, elapsed_s, cumulative queries, and accepted_step (only for accepted events). Finished adds converged/message. Caller mutation of the supplied array does not alter the solver.
+A callback-raised TimeoutError propagates. The caller may also install its own operating-system timer and use the last callback value for independent verification. No OS timer is built into this package.
+Normal completion returns the original result dictionary with trace added. Callback and passive trace work is included in runtime. Runner-level independent verification belongs outside the timed solve.
+
+Validation performed on the development host (not a Linux execution claim)
+Python 3.9.13; NumPy 1.26.4; SciPy 1.13.0; one BLAS thread.
+Command from release root: PYTHONPATH=src python3 -m unittest discover -s tests -p test_solver.py -v
+Eight automated tests passed: dense/sparse results against independently assembled exact PI; zero/singular H0; orthogonal secant preservation through conversion to dense storage; a case requiring sign correction and backtracking; callback value isolation; TimeoutError recovery; iteration-limit trace; zero-residual termination. Forcing, descent, Armijo, query budgets, and the backtracking grid are checked.
+A separate local archived-source comparison passed 12 small cases: dense/sparse transitions x initial_scale 0, 1, -0.25 x seeds 130,131 at n=16 and gamma=0.99. value, policy, iterations, stats, converged, residual, message and every original history field matched exactly. Extra passive diagnostic fields and runtime were excluded from the comparison.
+These small checks do not run the full experiment suite, validate historical wall times, or establish Linux/native performance.
+
+Dependencies and limits
+The core imports only the Python standard library, NumPy, and SciPy; tests additionally use threadpoolctl for stable small numerical checks.
+The completed release includes block32_cache and the four October 14 final-runtime backends. New measurements must identify their selected backend and remain separate from archived paper measurements; see optimized-port-notes.txt. Native loading failures are errors, never silent reference substitutions.
+No GitHub upload, repository creation, license assignment, or publication was performed.

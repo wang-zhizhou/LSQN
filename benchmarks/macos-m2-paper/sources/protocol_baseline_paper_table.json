@@ -1,0 +1,152 @@
+{
+  "date": "2026-10-10",
+  "families": [
+    "queue",
+    "cluster",
+    "garnet",
+    "latent"
+  ],
+  "sizes": [
+    512,
+    1024,
+    2048,
+    4096
+  ],
+  "actions": 4,
+  "gammas": [
+    0.99,
+    0.999
+  ],
+  "seed": 130,
+  "repetitions": 3,
+  "methods": [
+    "SCB",
+    "VI",
+    "PI",
+    "MPI-4",
+    "MPI-20",
+    "QPI-U",
+    "QPI-BT",
+    "QPI-S",
+    "iGMRES-PI",
+    "AA-I-S-5"
+  ],
+  "stopping": "independently checked absolute infinity residual <= 1e-8",
+  "plotted_residual": "actual Euclidean residual, not sqrt(n) times infinity residual",
+  "time_limits": {
+    "512": 30,
+    "1024": 30,
+    "2048": 60,
+    "4096": 60
+  },
+  "timing": "Original baseline runs reused without changes. SCB confirmation runs are a separate serial batch with one BLAS thread, same30/60s caps, three repeats and rotating original/optimized order. Tables use medians; curves use the corresponding actual median-runtime trace. All initialization and solver work remain timed.",
+  "initialization": "same constant minimum reward / (1-gamma), no extra shift",
+  "scb": {
+    "H0": "I",
+    "tau": 0.1,
+    "theta": 0.5,
+    "sigma": 0.0001,
+    "beta": 0.5,
+    "forcing": "min(.5,.5*||F||2**.5)",
+    "outer_limit": 500,
+    "inner_limit": "n",
+    "cache_proposal": true,
+    "inverse_model_representation": "dense base plus all pending rank-one updates; BLAS3 flush; no truncation",
+    "panel_size": 32,
+    "results_directory": "compute_optimization/confirm_all32"
+  },
+  "iteration_limits": {
+    "SCB": 500,
+    "PI": 1000,
+    "iGMRES_PI": 1000,
+    "others": 30000
+  },
+  "igmres": {
+    "forcing": 0.1,
+    "restart": 100,
+    "source": "https://gitlab.ethz.ch/gmatilde/SIS_iPI",
+    "commit": "1eddae2cd01d961469c349e3931e660796cce7ae",
+    "tolerance": "author code: GMRES rtol = alpha * ||initial policy residual||inf / ||policy reward||2",
+    "adaptations": "max reward via negative costs; common vectorized MDP interface and dense/sparse storage; tol renamed rtol; common residual stopping and wall budget; scalar trace logging",
+    "replaces": "all 96 provisional restart10 runs; none mixed",
+    "results_directory": "results_igmres_paper"
+  },
+  "aa": {
+    "memory": 5,
+    "theta": 0.01,
+    "tau": 0.001,
+    "D": 1000000.0,
+    "epsilon": 1e-06,
+    "fallback": ".1*v+.9*T(v), exactly as authors experiment code (damped VI)",
+    "source": "Python port of cvxgrp/nonexp_global_aa1 codes/algorithms/alg_iter.m aa1-safe branch",
+    "commit": "457996cc6cebcaad606d24531214aa40a636125e"
+  },
+  "qpi": "existing equation-based Python reimplementations, not authors code; QPI-S rank/conditioning failures retained",
+  "success": "all three repetitions pass; median of three timings only for successful triples; failures not dropped",
+  "platform": "macOS-14.3-arm64-arm-64bit",
+  "processor": "arm",
+  "python": "3.9.13",
+  "numpy": "1.26.4",
+  "scipy": "1.13.0",
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "external-library/libopenblas64_.0.dylib",
+      "version": "0.3.23.dev",
+      "threading_layer": "pthreads",
+      "architecture": "armv8"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "external-library/libopenblas.0.dylib",
+      "version": "0.3.26.dev",
+      "threading_layer": "pthreads",
+      "architecture": "neoversen1"
+    }
+  ],
+  "source_hashes": {
+    "scb_section6_rerun_2026-10-10/run_study.py": "2ab9f3aed792a596b9b674db666152db1d64a2ebb53f864699e14cded2bcd7a4",
+    "scb_siopt_candidate_2026-09-20/code/solver.py": "d8a05c55fb1a2773536ef47e6f94368bc8c5419ee8fb30051f0f6219c1bf97da",
+    "scb_siopt_candidate_2026-09-20/code/comparators.py": "a0a7b61a865bf6c697b9b70d9075fda0b4482e0f724e5e7a89ac93fbbbcc82c8",
+    "scb_siopt_candidate_2026-09-20/baseline/code/src/ptbe/algorithms.py": "f2daaacbc7a120d9e3d29ca27c0b908a05d41fd930a41f4a115d21752d47df3e",
+    "scb_siopt_candidate_2026-09-20/baseline/code/src/ptbe/benchmarks.py": "eca2b4275d6d902f3e5a794c87d706fa88faac84d0fd9dff80472dfe37025a2e"
+  },
+  "formal_run_count": 960,
+  "supplement_script_sha256": "4dba0f50642355ec7fb2095de020a80ce76c7c1ccc82dadc729b5e6d424f452c",
+  "author_igmres_adapter_sha256": "7d113dcbc0d6419ccc02e78b1c70540aa2d6498b02c8619bc9dc9b26945d23f3",
+  "author_igmres_source_sha256": "2e2b2a9a09e3b151934a76e641998901cdc558793186ddddc9dc24956d7504c9",
+  "original_batch_note": "protocol.json records the initial batch; provisional restart10 iGMRES records are not final main-table runs",
+  "scb_implementation_selection": {
+    "variant": "block32_cache",
+    "uniform_over_all_32_instances": true,
+    "authorization": "User requested the optimized version for every SCB curve and timing on 2026-10-11.",
+    "earlier_selection_superseded": {
+      "cache_proposal": false,
+      "rule": "select cached implementation only if heldout geometric-mean median time ratio < .95 and all heldout runs pass",
+      "ratio": 1.0269654463142868,
+      "selection_data": "n256, seed131 only; no final-table instance",
+      "parameters": "identical H0, tau, theta, sigma, beta, forcing and budgets"
+    },
+    "exploratory_study": "compute_optimization/confirm_all32/protocol.json",
+    "statement": "One implementation for all SCB instances; not per-instance or per-repeat winner selection."
+  },
+  "release_date": "2026-10-11",
+  "record_composition": {
+    "optimized_scb": 96,
+    "unchanged_baselines": 864
+  },
+  "scope": "Main32-instance comparison only. Public Gymnasium supplementary experiments are outside this release; old standard-SCB supplemental timings are not mixed into the updated main tables.",
+  "optimization_source_hashes": {
+    "scb_section6_rerun_2026-10-10/compute_optimization/test_implementations.py": "cc2919dd976295be9e88fbcc852275d553386a1ddd808c741bc2c58984b363c5",
+    "scb_section6_rerun_2026-10-10/compute_optimization/blocked_model.py": "0a7b66d392ca058dc0c7b4ca8f38b05c253379c70beda96f73e60c2d8e9130c9",
+    "scb_section6_rerun_2026-10-10/compute_optimization/blas_model.py": "ca99eb14341109fb7f8e9bb8cf65593a63c473246a995679f773a20a2a96934f",
+    "scb_siopt_candidate_2026-09-20/code/solver.py": "d8a05c55fb1a2773536ef47e6f94368bc8c5419ee8fb30051f0f6219c1bf97da"
+  },
+  "publish_script_sha256": "93ee73c6c53b8922de2c0f1cf6e8bb5681ffc6d804f120ee275f525e3e3f2d40"
+}

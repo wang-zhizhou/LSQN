@@ -1,0 +1,101 @@
+{
+  "mac-optimized-smoke": {
+    "executions": 60,
+    "all_success": true,
+    "independent_residual_and_pi": true,
+    "lsqn_certificates": true,
+    "source_changes_since_run": [
+      "src/lsqn/__init__.py",
+      "experiments/run.py"
+    ],
+    "backends": {
+      "garnet": "fused_sparse",
+      "latent": "native",
+      "queue": "native_query",
+      "cluster": "cache_reuse",
+      "frozenlake4x4": "reference",
+      "frozenlake": "reference"
+    },
+    "subsequent_source_changes_at_final_packaging": [
+      "experiments/run.py",
+      "src/lsqn/__init__.py",
+      "src/lsqn/_runtime.py"
+    ]
+  },
+  "mac-curves-smoke": {
+    "executions": 60,
+    "all_success": true,
+    "independent_residual_and_pi": true,
+    "lsqn_certificates": true,
+    "source_changes_since_run": [
+      "src/lsqn/__init__.py",
+      "experiments/run.py"
+    ],
+    "backends": {
+      "garnet": "block32_cache",
+      "latent": "block32_cache",
+      "queue": "block32_cache",
+      "cluster": "block32_cache",
+      "frozenlake4x4": "reference",
+      "frozenlake": "reference"
+    },
+    "subsequent_source_changes_at_final_packaging": [
+      "experiments/run.py",
+      "src/lsqn/__init__.py",
+      "src/lsqn/_runtime.py"
+    ]
+  },
+  "mac-reference-smoke": {
+    "executions": 6,
+    "all_success": true,
+    "independent_residual_and_pi": true,
+    "lsqn_certificates": true,
+    "source_changes_since_run": [
+      "src/lsqn/__init__.py",
+      "experiments/run.py"
+    ],
+    "backends": {
+      "garnet": "reference",
+      "latent": "reference",
+      "queue": "reference",
+      "cluster": "reference",
+      "frozenlake4x4": "reference",
+      "frozenlake": "reference"
+    },
+    "subsequent_source_changes_at_final_packaging": [
+      "experiments/run.py",
+      "src/lsqn/__init__.py",
+      "src/lsqn/_runtime.py"
+    ]
+  },
+  "mac-optimized-main-small": {
+    "executions": 8,
+    "all_success": true,
+    "independent_residual_and_pi": true,
+    "lsqn_certificates": true,
+    "source_changes_since_run": [
+      "src/lsqn/__init__.py",
+      "experiments/run.py"
+    ],
+    "backends": {
+      "latent": "native",
+      "garnet": "fused_sparse",
+      "cluster": "cache_reuse",
+      "queue": "native_query"
+    },
+    "subsequent_source_changes_at_final_packaging": [
+      "experiments/run.py",
+      "src/lsqn/__init__.py",
+      "src/lsqn/_runtime.py"
+    ]
+  },
+  "backend_mismatch_rejected": true,
+  "unprepared_native_refused_without_fallback": true,
+  "source_scope": "134 local optimized/profile verification solves, not a full 960-run comparison; historical timings are excluded.",
+  "post_run_numerically_inert_changes": {
+    "experiments/run.py": "Only module docstring changed; restoring the original docstring exactly reproduces recorded source hash.",
+    "src/lsqn/__init__.py": "Only __version__=0.1.0rc2 was added; removing the version assignment exactly reproduces recorded source hash."
+  },
+  "final_installed_validation": "mac-checks.json; current source hashes verified for 60 installed smoke runs and four n4096/gamma.999 runs",
+  "subsequent_core_edits": "CSR contiguous-array/shape validation and coordinate-completion diagnostic accounting; verified by final installed unit tests and runs."
+}

@@ -1,0 +1,211 @@
+Public distribution scope — 2026-11-08 (version 0.1.0rc3)
+=========================================================
+
+The following document is preserved as a historical record of the original
+full experiment package. References below to nine baselines, ten methods,
+960/1,020-run comparisons, or bundled Anderson/iGMRES ports describe that
+historical package, not the runnable scope of this public distribution.
+
+This public package omits the original AA-I-S-5 and iGMRES-PI implementations
+and their upstream sources. Their archived results, settings, and provenance
+are retained without replacement or new runs. LSQN and seven baselines remain
+runnable: 48 all-method smoke solves, 768 main solves, and 828 solves for the
+three suites combined. Fresh eight-method runs do not receive the paper's
+formal ten-method ranking. See docs/BASELINE_RECORDS.md and README.md.
+
+MIT licensing now applies to the included authors' code; historical statements
+below about an unlicensed private candidate describe its status at that time.
+No license is granted to the omitted third-party implementations.
+
+----- Historical document follows unchanged -----
+
+Experiment scope and provenance
+==============================
+
+This package runs LSQN on all three paper experiment suites
+and the main comparison with nine baselines. The default is LSQN-only, so the
+first CPU cross-check remains manageable. Use --suite main --methods all for
+the complete ten-method comparison. The methods are LSQN, VI, PI, MPI-4,
+MPI-20, QPI-U, QPI-BT, QPI-S, iGMRES-PI, and AA-I-S-5. See the baseline port
+notes for individual sources, fixed parameters and preserved failure behavior.
+Optional reference PI is a separate value-correctness diagnostic. Its runtime
+is excluded from every method's solve time and comparison table. The PI
+selected by --methods is a timed baseline and is a distinct run.
+New timings are measured locally; archived timings are never mixed into them.
+
+Implementation profiles
+-----------------------
+--implementation paper (default) selects the final runtime-table implementation:
+Queue=native_query, Cluster=cache_reuse, Garnet=fused_sparse, Latent=native.
+--implementation curves selects block32_cache for all four main families,
+matching the four final residual figures. --implementation reference selects
+the original uncached implementation. All profiles fix public/scaling to
+reference, their historical query-count implementation. Smoke uses the same
+per-model rule. No failed native backend is silently replaced by a reference.
+
+experiments/data/implementation_sources.json gives all 32 figure-source and
+all 32 runtime-cell mappings, raw-record hashes, source/protocol hashes and
+optimization details. The four figure PDFs are byte-identical to those in the
+final manuscript directories. The figures use the 2026-10-11 block32_cache
+batch; the final 2026-10-14 table overlays use the family-specific backends.
+Later table overlays did not change the figure traces. The historical table
+mixes batches; fresh formal comparison ranks require all ten methods in one
+new run with three repetitions. Reassociated floating-point operations may
+change trajectories even when mathematical parameters are unchanged.
+
+Native backends must be explicitly prepared with scripts/prepare_backend.py
+before running the paper main/smoke profile. Preparation compiles and validates
+the local library. Runner startup imports/loads the selected backend outside
+timing; all model-dependent cache construction stays inside each timed solve.
+
+Suite sizes and defaults
+-----------------------
+main: 4 families x 4 dimensions x 2 discounts = 32 configurations.
+      Queue, Cluster, Garnet, Latent; n512/1024/2048/4096; gamma .99/.999;
+      seed130; 4 actions; 3 repetitions = 96 solves.
+public: 4 environments x 2 discounts = 8 configurations; 3 repetitions = 24.
+scaling: 6 dimensions x 3 seeds x 2 discounts = 36 configurations;
+         n64/256/576/1024/2304/4096; seeds130/131/132; one solve per instance.
+all: 76 configurations, 156 solves with the defaults above.
+main --methods all: 32 configurations x 10 methods x 3 repeats = 960 solves.
+smoke: 4 main families at n32/gamma.99, official FrozenLake4x4 at n17,
+       and synthetic FrozenLake n64/seed130; exactly six solves, one each.
+smoke --methods all: six small models x ten methods = 60 diagnostic solves.
+
+The default limit is 30 seconds per solve, except main n2048/n4096 use 60.
+--time-limit overrides it. The runner is serial and uses one BLAS thread by
+default. --threads is available, but changing it changes the paper protocol.
+Each result independently recomputes the final Bellman residual and reports
+failures/timeouts. LSQN additionally checks its forcing/descent/Armijo
+certificates; these certificates and learning-query counts do not apply to
+the baselines. Success requires the method's convergence flag and independent
+infinity residual <=1e-8, plus LSQN certificates where applicable. If reference PI was requested and
+fails its diagnostic, success is also false; large skipped references are
+explicitly labeled. Both residual norms are recorded from actual vectors.
+
+Input models
+------------
+experiments/data/manifest.json records NPZ and canonical array SHA256 values,
+construction, source IDs, source-code hashes and model dimensions. The bundle
+contains 48 small compressed model files: 8 official, 36 scaling, 4 smoke.
+The 36 scaling NPZ files are byte-for-byte copies of the archived inputs.
+Every loaded frozen input must pass both file and array checks before solving.
+
+Official public models use Gymnasium 1.1.1 transition tuples and a new terminal
+sink. Counts are FrozenLake4x4=17, FrozenLake8x8=65, Taxi=501, CliffWalking=49.
+All states, including the sink, start at min(reward)/(1-gamma). This differs
+from the older independent benchmark reconstructions and is necessary for the
+archived Taxi .999 mean/max 75.93617021276596/353. No TimeLimit, rollout
+sampling, initial-state filtering or action masking is used. Taxi has six
+actions; the others have four. Gymnasium is not needed to run frozen models.
+
+Synthetic scaling uses the original independent FrozenLake transition rules,
+connected slippery maps, frozen-cell probability .9, and zero initial values.
+Hole/goal states are absorbing in place, so no extra state is added. The
+optional regeneration source is included separately from official public code.
+
+Main models use the original seeded generator functions. Queue/Garnet retain
+CSR sparse storage; Cluster/Latent retain dense storage, including weights @
+latent construction. No low-rank operator substitution is made. Main models
+are generated one at a time, outside timing, and receive canonical array hashes.
+Dense model arrays are not pre-generated for the whole main suite. Floating
+point matrix multiplication can differ across BLAS implementations, so a seed
+alone does not promise cross-platform byte identity. For strict identical
+inputs, generate and share a frozen input directory as described below.
+
+Standalone commands (after installing this package)
+--------------------------------------------------
+python -m experiments.validate
+python -m experiments.run --suite smoke --output results/smoke
+python -m experiments.run --suite all --output results/all
+python -m experiments.run --suite smoke --methods all --output results/all-methods-smoke
+python -m experiments.run --suite main --methods all --output results/comparison
+python -m experiments.summarize results/all
+
+All output paths must be new or empty. Existing output is refused before any
+write. Use a fresh directory for another run; no automatic resume is claimed.
+--families, --sizes, --gammas and --seeds accept space- or comma-separated
+values. Public family names are frozenlake4x4/frozenlake8x8/taxi/cliffwalking;
+scaling family is frozenlake. Public --sizes includes the absorbing state.
+--repetitions controls main/public; --scaling-repetitions separately controls
+scaling; smoke always uses one repetition. --reference-pi enables optional PI
+checks up to --reference-max-states (default1024); smoke enables PI checks.
+--methods accepts LSQN, all, or a list such as LSQN VI PI. The public, scaling
+and all suites require LSQN; use main for comparisons. The smoke health check
+can apply all ten methods to its six small models. Method order rotates by
+repetition and all runs are serial. --max-outer applies only to LSQN; baseline
+iteration limits remain those of their archived methods.
+
+Freeze without solving, then load precisely those inputs:
+python -m experiments.run --suite smoke --prepare-only --output results/prepared
+python -m experiments.run --suite smoke --input-models results/prepared/inputs --output results/frozen-smoke
+
+--save-models saves input arrays while running. --prepare-only implies saving
+and does no solve. The same options work for full main/all suites, but storing
+dense inputs can require gigabytes of disk. --input-models is strict: every
+selected case must exist and pass its manifest hashes; missing cases fail.
+
+Regeneration checks without running any solver:
+python -m experiments.validate --regenerate-scaling
+python -m experiments.validate --regenerate-public
+The latter alone requires optional gymnasium==1.1.1. Standard runs do not.
+
+Results and interpretation
+--------------------------
+protocol.json: settings, complete plan, package/source hashes and runtime/BLAS.
+*_METHOD_rN.json: value, trace, LSQN queries/certificates, model identity, timings,
+          independent residual, failure/timeout status and optional PI check.
+summary.json: every execution, including failures.
+analysis.json: per-case/per-method summaries and LSQN archived query comparisons;
+               scaling fits only when all six sizes and all three seeds pass.
+               Comparison ranks require this same run directory, identical
+               model hashes, all ten methods attempted, main suite and all three repetitions succeeding
+               for each ranked method. Failed or missing repetitions/methods
+               remain explicit. Smoke and other repeat counts get no formal
+               comparison ranks. No platform batches are combined.
+Every execution carries the protocol's run_id. Mixed-run records invalidate
+the analysis and suppress formal rankings; an incomplete three-repeat group
+has no successful median and is excluded from ranking.
+
+Archive references are query sequences, not baseline timing measurements.
+The original official 8 configurations had 174 outer iterations and 13 zero-
+query iterations. Scaling fits use the mean of the three per-instance means,
+not pooled outer iterations. Archived fits are 2.6535908*n^0.1643091 and
+1.3248961*n^0.3342482. They are descriptive query fits, not runtime exponents
+or asymptotic complexity claims. New-platform sequences can differ because
+of floating point arithmetic; correctness is checked independently.
+
+Portability and local preflight
+------------------------------
+The paper runtime profile includes a native helper compiled for the local
+platform and BLAS ABI. Curves/reference need no compiled helper. The experiment
+runner uses POSIX SIGALRM/setitimer and supports Linux/macOS, not Windows.
+Its wall limit is soft: a noninterruptible BLAS call can delay signal delivery
+until it returns. Model preparation and verification occur outside that timer.
+
+The initial reference-only rc1 preparation (before runtime-backend integration)
+checked all 48 frozen hashes, regenerated all 36
+scaling and 8 official inputs with matching arrays, passed six smoke cases
+including PI error bounds, and matched all eight official archived query
+sequences in one local repetition per case. Taxi .999 reproduced 75.93617/353.
+External input loading, prepare-only, timeout recording and refusal to overwrite
+were checked. The complete ten-method smoke (60 solves) also passed independent
+residual and reference-PI bounds. One Latent n512/gamma.99 configuration with
+LSQN and PI passed three repeats each to exercise grouped medians. Formal ranks
+now additionally require all ten methods in the same batch.
+Missing-repeat and mixed-batch detection were checked on temporary test copies.
+These are local macOS/Python3.9/NumPy1.26.4/SciPy1.13.0 checks,
+not a completed Linux run. Full 32-instance main and full scaling solver runs
+and the full 960-run comparison have not been executed by this preparation audit.
+
+The final implementation-profile integration additionally checked 134 solves:
+paper smoke with all ten methods (60), curves smoke with all ten methods (60),
+reference LSQN smoke (6), and paper main at n512 for four families and both
+discounts (8). Every solve passed independent residual and reference-PI error
+bounds; LSQN certificates passed. The eight main query totals match their
+historical final-table implementations: Queue501/510, Cluster26/29,
+Garnet22/26, Latent4/6 (gamma.99/.999). This is a correctness check, not a
+complete 960-run timing comparison. See validation/implementation-checks.json.
+Missing native preparation stops before any solve, and a disposable test copy
+with a wrong backend is rejected by the summarizer. Original result records
+were not edited for those negative checks.

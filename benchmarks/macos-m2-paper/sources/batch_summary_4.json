@@ -1,0 +1,274 @@
+[
+  {
+    "n": 512,
+    "gamma": 0.99,
+    "variants": {
+      "reference": {
+        "median": 0.07450712500000001,
+        "all_checks": true,
+        "iterations": [
+          9,
+          9,
+          9
+        ],
+        "queries": [
+          501,
+          501,
+          501
+        ]
+      },
+      "native_query": {
+        "median": 0.06855591699999997,
+        "all_checks": true,
+        "iterations": [
+          9,
+          9,
+          9
+        ],
+        "queries": [
+          501,
+          501,
+          501
+        ]
+      }
+    }
+  },
+  {
+    "n": 512,
+    "gamma": 0.999,
+    "variants": {
+      "reference": {
+        "median": 0.08576804200000021,
+        "all_checks": true,
+        "iterations": [
+          13,
+          13,
+          13
+        ],
+        "queries": [
+          510,
+          510,
+          510
+        ]
+      },
+      "native_query": {
+        "median": 0.08066416600000004,
+        "all_checks": true,
+        "iterations": [
+          13,
+          13,
+          13
+        ],
+        "queries": [
+          510,
+          510,
+          510
+        ]
+      }
+    }
+  },
+  {
+    "n": 1024,
+    "gamma": 0.99,
+    "variants": {
+      "reference": {
+        "median": 0.2871202500000001,
+        "all_checks": true,
+        "iterations": [
+          10,
+          10,
+          10
+        ],
+        "queries": [
+          755,
+          755,
+          755
+        ]
+      },
+      "native_query": {
+        "median": 0.2730427080000002,
+        "all_checks": true,
+        "iterations": [
+          10,
+          10,
+          10
+        ],
+        "queries": [
+          755,
+          755,
+          755
+        ]
+      }
+    }
+  },
+  {
+    "n": 1024,
+    "gamma": 0.999,
+    "variants": {
+      "reference": {
+        "median": 0.48136199999999985,
+        "all_checks": true,
+        "iterations": [
+          15,
+          15,
+          15
+        ],
+        "queries": [
+          1023,
+          1023,
+          1023
+        ]
+      },
+      "native_query": {
+        "median": 0.4710261669999998,
+        "all_checks": true,
+        "iterations": [
+          15,
+          15,
+          15
+        ],
+        "queries": [
+          1023,
+          1023,
+          1023
+        ]
+      }
+    }
+  },
+  {
+    "n": 2048,
+    "gamma": 0.99,
+    "variants": {
+      "reference": {
+        "median": 0.5442551249999994,
+        "all_checks": true,
+        "iterations": [
+          10,
+          10,
+          10
+        ],
+        "queries": [
+          774,
+          774,
+          774
+        ]
+      },
+      "native_query": {
+        "median": 0.5219438749999998,
+        "all_checks": true,
+        "iterations": [
+          10,
+          10,
+          10
+        ],
+        "queries": [
+          774,
+          774,
+          774
+        ]
+      }
+    }
+  },
+  {
+    "n": 2048,
+    "gamma": 0.999,
+    "variants": {
+      "reference": {
+        "median": 7.014283500000001,
+        "all_checks": true,
+        "iterations": [
+          333,
+          333,
+          333
+        ],
+        "queries": [
+          5098,
+          5098,
+          5098
+        ]
+      },
+      "native_query": {
+        "median": 6.880028542000002,
+        "all_checks": true,
+        "iterations": [
+          343,
+          343,
+          343
+        ],
+        "queries": [
+          5140,
+          5140,
+          5140
+        ]
+      }
+    }
+  },
+  {
+    "n": 4096,
+    "gamma": 0.99,
+    "variants": {
+      "reference": {
+        "median": 0.8102434999999986,
+        "all_checks": true,
+        "iterations": [
+          10,
+          10,
+          10
+        ],
+        "queries": [
+          668,
+          668,
+          668
+        ]
+      },
+      "native_query": {
+        "median": 0.8098579170000022,
+        "all_checks": true,
+        "iterations": [
+          10,
+          10,
+          10
+        ],
+        "queries": [
+          668,
+          668,
+          668
+        ]
+      }
+    }
+  },
+  {
+    "n": 4096,
+    "gamma": 0.999,
+    "variants": {
+      "reference": {
+        "median": 27.257620417,
+        "all_checks": true,
+        "iterations": [
+          206,
+          206,
+          206
+        ],
+        "queries": [
+          5988,
+          5988,
+          5988
+        ]
+      },
+      "native_query": {
+        "median": 26.99711291700001,
+        "all_checks": true,
+        "iterations": [
+          203,
+          203,
+          203
+        ],
+        "queries": [
+          5985,
+          5985,
+          5985
+        ]
+      }
+    }
+  }
+]

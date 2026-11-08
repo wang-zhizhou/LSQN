@@ -1,0 +1,33 @@
+Native helper portability record — 2026-10-25
+
+Scope: selected final runtime helper arithmetic is preserved from the archived October 14 sources. The four October 16 residual figures use block32_cache and do not require these C helpers.
+
+Original and packaged source SHA-256:
+scb_section6_rerun_2026-10-10/compute_optimization/product_reuse_2026-10-14/copy_rows.c
+  original: 11f80896593515a7cdcd4a8fcfad0a5934ab82f04ee063b76501f9642ad2c892
+src/lsqn/_native/sources/copy_rows.c
+  packaged: fa4d107ba817cee93cff6e172cd99b32cf0febc946a3cc10d0c75f83be9d01b5
+scb_section6_rerun_2026-10-10/compute_optimization/operator_reuse_2026-10-14/selected_rows.c
+  original: c41e5bc701aa6cfc80dee98ba757bc74addaf1c5376c92ee2f5fbc26856d0df0
+src/lsqn/_native/sources/selected_rows.c
+  packaged: 7b1e6aa7527a855c988aa9443c67943d4123317a03c36c655f9173ae9cd3a528
+scb_section6_rerun_2026-10-10/compute_optimization/queue_fusion_2026-10-14/query.c
+  original: 00dde9e1316d6e5a202b189bbe6c04ada27c393dcf4af71a4577111b1503c958
+src/lsqn/_native/sources/query.c
+  packaged: 31042c195399e548eec3d8db624d50103fcc6aa3fff33a4e7cb94b685eb0a9ef
+
+Port changes: provenance comments/header includes; BLAS callback integer types use lsqn_blas_int selected at compile time. Public C kernel arguments retain their original int64_t/size_t signatures. Numerical expressions and loops are unchanged. blas_abi.h selects int32_t for LP64 or int64_t for ILP64; abi.c reports the compiled width. query_banded.c and the unselected Accelerate variants are intentionally excluded.
+
+BLAS detection: load NumPy multiarray extension and resolve its dependent cblas_ddot/cblas_dgemv/openblas_get_config symbols (with 64_ suffix for the original ILP64 wheel). dladdr must identify the same actual shared library for all three symbols. OpenBLAS own USE64BITINT configuration must agree with the symbol ABI. There is no numpy.libs directory-name assumption and no cast between LP64 and ILP64 callback signatures. Unsupported or ambiguous MKL/Accelerate/symbol configurations fail explicitly. Production uses NumPy BLAS; SciPy LP64 is an isolated test fixture only.
+
+Preparation: lsqn._native.prepare(force=False, cache_dir=None), then lsqn._native.selftest(). Runtime get_library() only loads an existing matching build and never compiles or switches backend. blas_pointers() returns (dot, gemv). prepare_backend should run before timing. Solver-dependent matrices and caches remain inside solve timing.
+
+Linux compiler argv: selected CC (or cc, clang, gcc), -std=c99 -O3 -ffp-contract=off -fPIC -DLSQN_BLAS_BITS=32|64 -shared, the four C sources, -o output, -lm. macOS changes -shared to -dynamiclib. No fast-math, architecture-specific tuning, GPU dependency, sudo, or automatic compiler installation. Missing compiler/BLAS/build failures are explicit. The library uses callback pointers, so it does not separately link a guessed BLAS library.
+
+Build identity records platform, machine, NumPy version, actual BLAS path/hash/config/symbols/integer width, and all C/header source hashes. build.json also records compiler argv/version, compiler flags, and output binary hash. Runtime verifies the identity, binary hash and compiled ABI width. LSQN_NATIVE_CACHE changes the cache root.
+
+Local validation: macOS 14.3 arm64, CPython 3.9.13, NumPy 1.26.4, SciPy 1.13.0, Apple clang 15.0.0. Both the actual NumPy OpenBLAS ILP64 and actual SciPy OpenBLAS LP64 branches compiled and passed all 15 independent numerical identities, including dense/sparse products, certificates, projections/protection, complete low-rank application, and query low-rank/dense+pending cases. Five test_native.py unit tests passed with no skips; each uses a separate temporary cache. Shared development preparation uses LSQN_NATIVE_CACHE=/private/tmp/lsqn-native-release.
+
+Linux status: compiler argument and loaded-library discovery paths reviewed; no Linux host execution has been performed here. A Linux run must execute scripts/prepare_backend.py (numerical self-test included), smoke/profile validation, and retain the generated environment/build metadata. Different BLAS implementations, instruction sets and summation orders can change floating-point trajectories; no bitwise cross-platform equivalence is claimed.
+
+Record for a published run: code/package revision and source hashes; Python/NumPy/SciPy/threadpoolctl versions; platform/architecture/CPU; BLAS path/version/config/integer ABI/thread count; compiler/version/flags; native binary hash and self-test result; selected actual backend/profile; random seeds; tolerance/stopping/time-limit configuration; residual/success/failure and raw per-repeat runtime.

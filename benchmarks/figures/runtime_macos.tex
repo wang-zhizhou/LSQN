@@ -1,0 +1,64 @@
+% Requires \usepackage{booktabs,pdflscape}.
+% Generated from released benchmark records by scripts/plot_runtime_tables.py.
+\begin{landscape}
+\begin{table}[p]
+\centering
+\begingroup
+\fontsize{8}{9}\selectfont
+\setlength{\tabcolsep}{3.8pt}
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{@{}lrr*{10}{r}@{}}
+\toprule
+Problem & $n$ & $\gamma$ & \textbf{LSQN} & VI & PI & MPI-4 & MPI-20 & QPI-U & QPI-BT & QPI-S & iGMRES-PI & AA-I-S-5 \\
+\midrule
+Queue & 512 & 0.99 & 0.0686 & 0.0913 & \textbf{0.0095} & 0.3627 & 0.0819 & 0.1231 & 0.1083 & 1.6564 & 0.1334 & 0.0557 \\
+ &  & 0.999 & 0.0807 & 0.9008 & \textbf{0.0070} & 3.7084 & 0.8271 & 0.6086 & 1.9123 & 12.2657 & TO & F(0/3) \\
+ & 1024 & 0.99 & 0.2730 & 0.1235 & \textbf{0.0108} & 0.3938 & 0.0924 & 0.1570 & 0.1416 & 8.1624 & 0.1648 & 0.0811 \\
+ &  & 0.999 & 0.4710 & 1.2390 & \textbf{0.0073} & 4.0788 & 0.9317 & 1.1310 & 2.6634 & TO & TO & 0.5668 \\
+ & 2048 & 0.99 & 0.5219 & 0.2096 & \textbf{0.0131} & 0.4503 & 0.1127 & 0.2128 & 0.1950 & 35.9137 & 0.1981 & 0.1866 \\
+ &  & 0.999 & 6.8800 & 1.9889 & \textbf{0.0113} & 4.6928 & 1.1415 & 2.0538 & 3.0101 & TO & TO & 1.2727 \\
+ & 4096 & 0.99 & 0.8099 & 0.3668 & \textbf{0.0177} & 0.5883 & 0.1448 & 0.3720 & 0.3487 & TO & 0.3105 & 0.2391 \\
+ &  & 0.999 & 26.9971 & 3.6819 & \textbf{0.0154} & 5.9282 & 1.4268 & 3.9456 & 3.7362 & TO & TO & 3.0200 \\
+\midrule
+Cluster & 512 & 0.99 & \textbf{0.0084} & 0.3660 & 0.0086 & 0.2656 & 0.1229 & 0.1465 & 0.1420 & 0.0583 & 0.0114 & 0.0141 \\
+ &  & 0.999 & \textbf{0.0090} & 3.6804 & 0.0132 & 2.6734 & 1.2522 & 0.2718 & 0.2616 & 0.0623 & 0.0143 & 0.0285 \\
+ & 1024 & 0.99 & \textbf{0.0255} & 1.4226 & 0.0775 & 1.4510 & 0.5529 & 0.4859 & 0.4806 & 0.2918 & 0.0454 & 0.0339 \\
+ &  & 0.999 & \textbf{0.0294} & 14.1915 & 0.0738 & 14.1705 & 5.4892 & 0.8586 & 0.8876 & 0.4003 & 0.0514 & 0.0885 \\
+ & 2048 & 0.99 & \textbf{0.0903} & 5.5261 & 0.5014 & 4.6893 & 2.0326 & 1.9925 & 1.9293 & 0.8835 & 0.1715 & 0.1198 \\
+ &  & 0.999 & \textbf{0.1059} & 55.6762 & 0.5217 & 46.4943 & 19.9631 & 3.5692 & 3.5188 & 3.0827 & 0.1999 & 0.2670 \\
+ & 4096 & 0.99 & \textbf{0.3225} & 21.4234 & 4.0320 & 19.7953 & 8.4453 & 6.9703 & 6.9987 & 4.0106 & 1.2034 & 0.5047 \\
+ &  & 0.999 & \textbf{0.4126} & TO & 3.7347 & TO & TO & 13.8129 & 13.5234 & 4.6227 & 1.0582 & 0.7782 \\
+\midrule
+Garnet & 512 & 0.99 & 0.0030 & 0.1031 & 0.0282 & 0.3897 & 0.0889 & 0.0026 & \textbf{0.0023} & 0.0367 & 0.0264 & 0.0061 \\
+ &  & 0.999 & 0.0032 & 1.0393 & 0.0279 & 3.9141 & 0.8929 & 0.0025 & \textbf{0.0022} & 0.0364 & 0.0126 & 0.0050 \\
+ & 1024 & 0.99 & 0.0040 & 0.1460 & 0.2276 & 0.4509 & 0.1045 & 0.0033 & \textbf{0.0029} & 0.1911 & 0.0120 & 0.0075 \\
+ &  & 0.999 & 0.0043 & 1.4631 & 0.2280 & 4.4497 & 1.0279 & 0.0033 & \textbf{0.0030} & 0.1915 & 0.0138 & 0.0070 \\
+ & 2048 & 0.99 & 0.0060 & 0.2643 & 1.7037 & 0.5586 & 0.1356 & \textbf{0.0046} & 0.0048 & 0.8312 & 0.0157 & 0.0164 \\
+ &  & 0.999 & 0.0066 & 2.6097 & 1.7375 & 5.4970 & 1.3149 & 0.0051 & \textbf{0.0044} & 0.8387 & 0.0168 & 0.0149 \\
+ & 4096 & 0.99 & 0.0101 & 0.4474 & 13.2972 & 0.7759 & 0.1887 & 0.0078 & \textbf{0.0073} & 3.4203 & 0.0180 & 0.0214 \\
+ &  & 0.999 & 0.0121 & 4.3800 & 13.3319 & 7.6461 & 1.8568 & 0.0084 & \textbf{0.0072} & 3.4289 & 0.0198 & 0.0224 \\
+\midrule
+Latent & 512 & 0.99 & 0.0031 & 0.3763 & 0.0084 & 0.2760 & 0.1296 & 0.0017 & \textbf{0.0017} & 0.0089 & 0.0064 & 0.0025 \\
+ &  & 0.999 & 0.0028 & 3.8107 & 0.0104 & 2.6855 & 1.2602 & 0.0017 & \textbf{0.0016} & 0.0106 & 0.0067 & 0.0024 \\
+ & 1024 & 0.99 & 0.0079 & 1.4637 & 0.0546 & 1.4426 & 0.5730 & 0.0044 & \textbf{0.0044} & 0.0378 & 0.0264 & 0.0065 \\
+ &  & 0.999 & 0.0088 & 14.3604 & 0.0554 & 13.9815 & 5.4525 & \textbf{0.0044} & 0.0044 & 0.0359 & 0.0213 & 0.0073 \\
+ & 2048 & 0.99 & 0.0314 & 5.5946 & 0.3667 & 4.7967 & 2.0799 & 0.0163 & \textbf{0.0159} & 0.1491 & 0.0770 & 0.0239 \\
+ &  & 0.999 & 0.0288 & F(2/3) & 0.3658 & 50.9477 & 21.4017 & 0.0170 & \textbf{0.0167} & 0.1567 & 0.0730 & 0.0231 \\
+ & 4096 & 0.99 & 0.1404 & 21.6557 & 2.5239 & 17.8190 & 7.9514 & \textbf{0.0645} & 0.0666 & 0.7618 & 0.4790 & 0.0946 \\
+ &  & 0.999 & 0.1105 & TO & 2.9200 & TO & TO & 0.0636 & \textbf{0.0626} & 0.8865 & 0.3115 & 0.1071 \\
+\midrule
+\multicolumn{3}{@{}l}{Mean rank $\downarrow$} & 3.5312 & 8.1875 & 4.8750 & 8.8438 & 6.4375 & 4.0625 & 3.5625 & 7.0156 & 5.0312 & 3.4531 \\
+\multicolumn{3}{@{}l}{Overall rank} & 2 & 9 & 5 & 10 & 7 & 4 & 3 & 8 & 6 & 1 \\
+\multicolumn{3}{@{}l}{Successful instances} & 32/32 & 29/32 & 32/32 & 30/32 & 30/32 & 32/32 & 32/32 & 28/32 & 28/32 & 31/32 \\
+\bottomrule
+\end{tabular}
+\endgroup
+\caption{Runtime comparison on 32 discounted MDP instances (seconds): Apple M2 / macOS.}
+\label{tab:runtime-macos}
+\vspace{2pt}
+\begin{minipage}{0.96\linewidth}
+\fontsize{8}{9}\selectfont
+\textit{Notes.} Entries are median seconds from three runs. Bold marks the lowest successful time in each row, using unrounded values. Success requires all three runs to satisfy the independent residual check (infinity norm at most $10^{-8}$). TO: all three runs timed out; F(s/3): only s runs succeeded. Per-run limits: 30 s for n at most 1024; 60 s otherwise. Ranks use unrounded times; unsuccessful methods tie below successful ones. These historical paper values combine multiple timing batches; per-cell provenance is retained. Ranks are descriptive. These measurements are not an isolated CPU-performance comparison; see the archive metadata.
+\end{minipage}
+\end{table}
+\end{landscape}

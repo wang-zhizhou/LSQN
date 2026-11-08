@@ -1,0 +1,53 @@
+LSQN optimized backend port notes
+Version: 0.1.0rc2
+Date: 2026-10-25
+
+Scope and source provenance
+Only the new release candidate was modified. Archived research sources/results were read, never rewritten. This package does not upload or publish a repository. The sources below are the authors' research implementations; provenance paths are relative to the original research workspace. Native build and ABI details are recorded in native-port-notes.txt. No platform-specific prebuilt binary is distributed.
+
+Original source SHA-256:
+d8a05c55fb1a2773536ef47e6f94368bc8c5419ee8fb30051f0f6219c1bf97da  scb_siopt_candidate_2026-09-20/code/solver.py
+d8ff60d04ecb12270639e197fe08ee472054d14d34795d8ef4419467c593cad9  scb_section6_rerun_2026-10-10/compute_optimization/optimized_solver.py
+0a7b66d392ca058dc0c7b4ca8f38b05c253379c70beda96f73e60c2d8e9130c9  scb_section6_rerun_2026-10-10/compute_optimization/blocked_model.py
+2410cb49d83bd0fe80b2fc94a589be5e2584e9f73934a52808286772ec628281  scb_section6_rerun_2026-10-10/compute_optimization/policy_cache_2026-10-14/policy_cache.py
+1c49e1e8d21e7fc24a7eccc6a8316c6b686e93113f3ced121e0f42b1be3289fa  scb_section6_rerun_2026-10-10/compute_optimization/policy_cache_2026-10-14/run_check.py
+0064cd5569490fa362af8e5ba201bcf4806c162897dbc8334fd7bc2134c1d056  scb_section6_rerun_2026-10-10/compute_optimization/product_reuse_2026-10-14/candidates.py
+de015f14f0de6b4e596a9fc53840cfa0f5dbd17a1cb71406cb152810c5b67504  scb_section6_rerun_2026-10-10/compute_optimization/product_reuse_2026-10-14/kernel_candidate.py
+2618e5acdcafca3fb6d3718d68e154347bc457c13f7ef220e4bbb685fa302bb1  scb_section6_rerun_2026-10-10/compute_optimization/product_reuse_2026-10-14/native_candidate.py
+f72e5950cccc812def19ef044e7a8c0cf4c188bd8de8ad3d47b0fc0b34ba7606  scb_section6_rerun_2026-10-10/compute_optimization/operator_reuse_2026-10-14/operators.py
+c05e09e953c9488fcbe29a877488e14fc9b5833d7d825dc9e47a1e6e52ce00ae  scb_section6_rerun_2026-10-10/compute_optimization/operator_reuse_2026-10-14/fused_basis.py
+76065953a368d141ba6fd1c1e292a844c0771c551897937fe3041eb5facadd99  scb_section6_rerun_2026-10-10/compute_optimization/queue_fusion_2026-10-14/native_query.py
+11f80896593515a7cdcd4a8fcfad0a5934ab82f04ee063b76501f9642ad2c892  scb_section6_rerun_2026-10-10/compute_optimization/product_reuse_2026-10-14/copy_rows.c
+c41e5bc701aa6cfc80dee98ba757bc74addaf1c5376c92ee2f5fbc26856d0df0  scb_section6_rerun_2026-10-10/compute_optimization/operator_reuse_2026-10-14/selected_rows.c
+00dde9e1316d6e5a202b189bbe6c04ada27c393dcf4af71a4577111b1503c958  scb_section6_rerun_2026-10-10/compute_optimization/queue_fusion_2026-10-14/query.c
+
+Two distinct paper implementation profiles
+1. The four October 16 residual figures were generated from the October 11 block32_cache record set. All 32 LSQN curve sources use block32_cache: the nontruncating block32 inverse representation, BLAS-3 merging of full panels, incremental proposal products, and explicit full-model refresh before accepting forcing. This is the standalone solve() default and the runner's curves profile.
+2. The final October 14 runtime table uses Queue=native_query, Cluster=cache_reuse, Garnet=fused_sparse, Latent=native. This is the runner's paper profile for main/smoke cases. These backends include block32 and proposal reuse plus the family-selected runtime implementations described below.
+The profiles must not be conflated: the four archived plots do not depict the final runtime backends' trajectories. Public/scaling experiments retain their own historical reference implementation. New wall times, BLAS environments, or iteration trajectories are not promised to equal archived records.
+
+Static implementation and mapping
+- _blocked.py is the original blocked_model.py with all updates retained. The low-rank-to-dense conversion, Fortran layout, panel capacity 32, pending-update storage, BLAS-3 merge and model products are unchanged.
+- _policy_cache.py is the original policy_cache.py. A fresh cache is constructed for each solve; changed dense policy rows are copied exactly and sparse policy rows are selected from a stacked CSR matrix. No cache is shared between different solve calls or models.
+- _runtime.py statically ports the selected configurations. _core.py accepts explicit per-solve factories/hooks in place of the original modules' source-string replacements and global monkeypatching. No archived directory or external sys.path is needed.
+- cache_reuse: block32 + proposal reuse + exact policy cache; singleton support uses the already computed f@jp certificate.
+- native: native changed-row memcpy for dense policy matrices; exact first-query image reuse; the original sparse CSR kernel dispatch; cached certificate using selected active rows. Its row threshold remains active_count-n > n//2.
+- fused_sparse: the original operators.configure('adaptive', sparse_fast=True) plus fused_basis.configure(model=False). The selected final configuration uses the ordinary BlockedInverseModel, NOT the optional trial FusedModel. Native CSR policy J products and sparse support certificates operate directly on action rows; native projection and image protection retain both orthogonalization passes. The additional n-element projection workspace is included in the original allocation statistic.
+- native_query: the original queue_fusion query kernel, direct sparse J/certificate path and ordinary BlockedInverseModel. Its workspace is 4*n+max(n,32), including n<32 cases. The kernel computes the query, protected image and inverse-model change; it leaves inverse updates, proposed-step refresh and every forcing/acceptance guard in the Python outer loop. Return code 1 invokes the original coordinate-completion branch with the original expressions. This mathematical guard is preserved; it is not an availability fallback. An additional coordinate_completion_queries statistic counts this branch explicitly.
+The trial image-basis, carry, banded-query and fused-low-rank model candidates are not the final selected backends and are not used.
+
+Algorithm and layout invariants
+All mathematical options, initial scale, tie/width policy, learning budget, two-pass orthogonalization, coordinate fallback, full protected updates, forcing floor, forcing refresh/check, sign correction/alignment, descent bound, Armijo acceptance and residual stopping criterion are preserved. No tolerance relaxation, rank truncation, fixed-query approximation or direct policy solve was introduced into LSQN.
+Floating-point reassociation by BLAS/native kernels may change trajectories between backends or platforms. Correctness checks independently inspect residuals, forcing, descent and Armijo records.
+Native paths require square float64 C-contiguous dense transitions or float64 CSR with int32 indices/indptr and contiguous data, index and row-pointer arrays. native_query requires sparse transitions. Dimensions are explicitly restricted to [0,2**31-1], compatible with both supported BLAS integer ABIs. Unsupported layouts raise instead of quietly selecting a different backend. Valid paper generator outputs already satisfy these layouts.
+prepare_backend(name) imports/loads the required library before a timed benchmark. It never compiles, materializes policy rows, or builds model data. Explicit _native.prepare() / scripts/prepare_backend.py builds and tests native code first. All data-dependent pointer arrays, policy-row assembly, query buffers and inverse models are created within the solve call measured by the runner. Missing/incompatible native builds are errors.
+Callbacks and return dictionaries use the same diagnostics across all six backends; TimeoutError propagates with the last accepted callback value. Source-era statistics (including fused query counters) are retained. Other cache/setup storage is not newly relabeled as part of the historical basis/model storage statistics.
+
+Validation performed on the development host (macOS, not a Linux execution claim)
+Python 3.9.13, NumPy 1.26.4, SciPy 1.13.0; one BLAS thread; native helpers rebuilt locally from the distributed C sources.
+- The original 8 core tests still pass after introducing per-solve hooks and the block32 default.
+- tests/test_optimized.py: 8 tests pass covering retention through multiple panel flushes, n<32 buffers, F layouts, protected secants, block32 default, dense/sparse singular H0, fresh-cache isolation, native exact policy-row copies, J/support certificates, fused query low-rank/dense/pending branches and coordinate completion, strict layout failures, callback timeout recovery, independent residuals and accepted-step forcing/descent/Armijo bounds.
+- 12 block32 small cases against original optimized_solver.py matched exactly in value, policy, iterations, status, statistics and every history field (dense/sparse, n16/n32, and H0=0,1,-0.25 cases as recorded during port checks).
+- 24 final-runtime source comparisons matched exactly: four selected families/backends x n16/32 x H0=0,1,-0.25 at gamma=.999, seed=130. Compared value, policy, iterations, converged/message, residual, all original stats and every history entry; timing/trace timestamps and the newly added coordinate_completion_queries diagnostic were excluded. Original native_candidate/fused_basis(model=False,sparse_fast=True)/native_query and policy-cache configure functions were loaded read-only for these development comparisons; they are not runtime dependencies of this package.
+- The native loader has separate compile/ABI/kernel tests in tests/test_native.py, with its own provenance notes.
+These checks do not constitute a complete rerun of the paper or a measured Linux performance claim. Runner validation records separately document any larger smoke/main checks.

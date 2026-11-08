@@ -1,0 +1,40 @@
+{
+  "schema": "lsqn-cross-platform-package-checks-v1",
+  "date": "2026-10-25",
+  "solver_source_change": "None: every original solver, baseline, experiment and test source file is byte-identical to the delivered 0.1.0rc2 archive.",
+  "source_archive_sha256": "69a209bf72115c3155644116706c3cc854a091583160700c7dd71c86363f7dae",
+  "linux_raw_records": 1020,
+  "linux_raw_payloads_match_original_bytes": true,
+  "linux_source_status": {
+    "successful": 966,
+    "timeout": 51,
+    "other_failure": 3
+  },
+  "macos_main_cells": 320,
+  "macos_main_runs": 960,
+  "macos_cells_match_final_paper_table": true,
+  "curve_checks": {
+    "macos_curves": 320,
+    "linux_curves": 320,
+    "macos_points": 604802,
+    "linux_points": 602000,
+    "median_time_repetitions_verified": true,
+    "macos_original_raw_traces_spot_checked": 8,
+    "failed_mac_triples_retained": 16,
+    "failed_linux_triples_retained": 18,
+    "display_floor_or_nonfinite_handling_triggered": false
+  },
+  "assets": {
+    "residual_pdf": 8,
+    "residual_png_dpi": 300,
+    "runtime_pdf": 2,
+    "runtime_latex_compile": "Both one page; no overfull boxes",
+    "runtime_mac_display_cells_match_paper": 320,
+    "visual_review": "All eight residual PNGs and both runtime tables inspected; the assembled PDF was rendered with Poppler."
+  },
+  "summary_regeneration_check": "passed",
+  "readme_local_links": "all exist",
+  "new_scripts_parse": "passed",
+  "specific_personal_path_scan": "passed",
+  "scope": "Archive import, metadata, plotting and documentation checks. No solver experiment was rerun during this packaging step; saved-record validation is detailed in benchmarks/audit.json."
+}

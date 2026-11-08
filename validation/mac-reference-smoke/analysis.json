@@ -1,0 +1,309 @@
+{
+  "configurations": 6,
+  "method_configurations": 6,
+  "executions": 6,
+  "methods": [
+    "LSQN"
+  ],
+  "implementation": "reference",
+  "run_id": "eb462d02-ff4d-4d5a-a12f-82afd438a236",
+  "mixed_run_records": [],
+  "implementation_mismatches": [],
+  "missing_case_methods": [],
+  "all_success": true,
+  "counts_use": "First repetition per configuration; never triple-count timing repetitions",
+  "scope": "Methods from this one run and requested implementation profile only; optional reference PI diagnostic is excluded from timing comparisons",
+  "cases": [
+    {
+      "case_id": "main_cluster_n32_g0p99_seed130",
+      "method": "LSQN",
+      "spec": {
+        "suite": "main",
+        "family": "cluster",
+        "n": 32,
+        "gamma": 0.99,
+        "seed": 130,
+        "initialization": "reward_lower_bound_all_states"
+      },
+      "repetitions": 1,
+      "implementation": "reference",
+      "backend": "reference",
+      "same_backend_across_repeats": true,
+      "matches_requested_backend": true,
+      "expected_repetitions": 1,
+      "all_repetitions_present": true,
+      "same_run_id": true,
+      "all_success": true,
+      "same_query_sequence_across_repeats": true,
+      "same_model_across_repeats": true,
+      "model_sha256": "cd53584a926a3c14aa8073eff847bd6f6cfcc5fd9f6f92a760f5361c31cc6204",
+      "median_wall_seconds": 0.001968375000000022,
+      "wall_seconds_all": [
+        0.001968375000000022
+      ],
+      "failed_repeats": [],
+      "query_summary": {
+        "completed_outer_iterations": 7,
+        "mean": 4.857142857142857,
+        "maximum": 7,
+        "total": 34,
+        "zero": 0,
+        "full_dimension": 0
+      },
+      "maximum_final_residual": 4.4155790135391726e-10
+    },
+    {
+      "case_id": "main_garnet_n32_g0p99_seed130",
+      "method": "LSQN",
+      "spec": {
+        "suite": "main",
+        "family": "garnet",
+        "n": 32,
+        "gamma": 0.99,
+        "seed": 130,
+        "initialization": "reward_lower_bound_all_states"
+      },
+      "repetitions": 1,
+      "implementation": "reference",
+      "backend": "reference",
+      "same_backend_across_repeats": true,
+      "matches_requested_backend": true,
+      "expected_repetitions": 1,
+      "all_repetitions_present": true,
+      "same_run_id": true,
+      "all_success": true,
+      "same_query_sequence_across_repeats": true,
+      "same_model_across_repeats": true,
+      "model_sha256": "b46953d6e6355295a97d15ad0ae37472b1123f699a4e110b774a7b236e678ef4",
+      "median_wall_seconds": 0.00695733300000001,
+      "wall_seconds_all": [
+        0.00695733300000001
+      ],
+      "failed_repeats": [],
+      "query_summary": {
+        "completed_outer_iterations": 8,
+        "mean": 1.75,
+        "maximum": 4,
+        "total": 14,
+        "zero": 3,
+        "full_dimension": 0
+      },
+      "maximum_final_residual": 5.620165666186949e-09
+    },
+    {
+      "case_id": "main_latent_n32_g0p99_seed130",
+      "method": "LSQN",
+      "spec": {
+        "suite": "main",
+        "family": "latent",
+        "n": 32,
+        "gamma": 0.99,
+        "seed": 130,
+        "initialization": "reward_lower_bound_all_states"
+      },
+      "repetitions": 1,
+      "implementation": "reference",
+      "backend": "reference",
+      "same_backend_across_repeats": true,
+      "matches_requested_backend": true,
+      "expected_repetitions": 1,
+      "all_repetitions_present": true,
+      "same_run_id": true,
+      "all_success": true,
+      "same_query_sequence_across_repeats": true,
+      "same_model_across_repeats": true,
+      "model_sha256": "15f4b3bdb3c454f230f0b4fb65665f5e2d43765c9c04db58d0958df7f9796ef2",
+      "median_wall_seconds": 0.0007845409999999997,
+      "wall_seconds_all": [
+        0.0007845409999999997
+      ],
+      "failed_repeats": [],
+      "query_summary": {
+        "completed_outer_iterations": 5,
+        "mean": 0.8,
+        "maximum": 2,
+        "total": 4,
+        "zero": 3,
+        "full_dimension": 0
+      },
+      "maximum_final_residual": 1.390674242429668e-10
+    },
+    {
+      "case_id": "main_queue_n32_g0p99_seed130",
+      "method": "LSQN",
+      "spec": {
+        "suite": "main",
+        "family": "queue",
+        "n": 32,
+        "gamma": 0.99,
+        "seed": 130,
+        "initialization": "reward_lower_bound_all_states"
+      },
+      "repetitions": 1,
+      "implementation": "reference",
+      "backend": "reference",
+      "same_backend_across_repeats": true,
+      "matches_requested_backend": true,
+      "expected_repetitions": 1,
+      "all_repetitions_present": true,
+      "same_run_id": true,
+      "all_success": true,
+      "same_query_sequence_across_repeats": true,
+      "same_model_across_repeats": true,
+      "model_sha256": "f5e642162cb2e8bce0c6e56e95b7ca58835aa2ef96d82962cfee87db6cf9e301",
+      "median_wall_seconds": 0.012604583000000003,
+      "wall_seconds_all": [
+        0.012604583000000003
+      ],
+      "failed_repeats": [],
+      "query_summary": {
+        "completed_outer_iterations": 13,
+        "mean": 5.461538461538462,
+        "maximum": 22,
+        "total": 71,
+        "zero": 0,
+        "full_dimension": 0
+      },
+      "maximum_final_residual": 3.169020601490047e-12
+    },
+    {
+      "case_id": "public_frozenlake4x4_n17_g0p99_seed0",
+      "method": "LSQN",
+      "spec": {
+        "suite": "public",
+        "family": "frozenlake4x4",
+        "n": 17,
+        "gamma": 0.99,
+        "seed": 0,
+        "initialization": "reward_lower_bound_all_states"
+      },
+      "repetitions": 1,
+      "implementation": "reference",
+      "backend": "reference",
+      "same_backend_across_repeats": true,
+      "matches_requested_backend": true,
+      "expected_repetitions": 1,
+      "all_repetitions_present": true,
+      "same_run_id": true,
+      "all_success": true,
+      "same_query_sequence_across_repeats": true,
+      "same_model_across_repeats": true,
+      "model_sha256": "228b23637a465f5e40bf18e71dedc5013b7e7141345536cfe3643920beecf4d7",
+      "median_wall_seconds": 0.006367208000000013,
+      "wall_seconds_all": [
+        0.006367208000000013
+      ],
+      "failed_repeats": [],
+      "query_summary": {
+        "completed_outer_iterations": 7,
+        "mean": 2.7142857142857144,
+        "maximum": 5,
+        "total": 19,
+        "zero": 0,
+        "full_dimension": 0
+      },
+      "maximum_final_residual": 1.1102230246251565e-16,
+      "archive_query_comparison": {
+        "source_id": "scb_section6_rerun_2026-10-10/supplement/public_official.json.gz",
+        "archived_mean": 2.7142857142857144,
+        "archived_maximum": 5,
+        "exact_sequence_match": true,
+        "note": "Cross-platform floating-point trajectories can differ; convergence is checked independently. Archived timing is not compared."
+      }
+    },
+    {
+      "case_id": "scaling_frozenlake_n64_g0p99_seed130",
+      "method": "LSQN",
+      "spec": {
+        "suite": "scaling",
+        "family": "frozenlake",
+        "n": 64,
+        "side": 8,
+        "gamma": 0.99,
+        "seed": 130,
+        "initialization": "zero"
+      },
+      "repetitions": 1,
+      "implementation": "reference",
+      "backend": "reference",
+      "same_backend_across_repeats": true,
+      "matches_requested_backend": true,
+      "expected_repetitions": 1,
+      "all_repetitions_present": true,
+      "same_run_id": true,
+      "all_success": true,
+      "same_query_sequence_across_repeats": true,
+      "same_model_across_repeats": true,
+      "model_sha256": "008b6577e10cdb3f03e7db351ce8b194eb32ca5e4f41881bf64bdfe9f3412169",
+      "median_wall_seconds": 0.01231312499999998,
+      "wall_seconds_all": [
+        0.01231312499999998
+      ],
+      "failed_repeats": [],
+      "query_summary": {
+        "completed_outer_iterations": 12,
+        "mean": 5.083333333333333,
+        "maximum": 14,
+        "total": 61,
+        "zero": 0,
+        "full_dimension": 0
+      },
+      "maximum_final_residual": 8.128390183159695e-10,
+      "archive_query_comparison": {
+        "source_id": "scb_public_benchmarks_2026-09-30/results/scale/run_000_0.json",
+        "archived_mean": 5.083333333333333,
+        "archived_maximum": 14,
+        "exact_sequence_match": true,
+        "note": "Cross-platform floating-point trajectories can differ; convergence is checked independently. Archived timing is not compared."
+      }
+    }
+  ],
+  "main_comparisons": [
+    {
+      "case_id": "main_cluster_n32_g0p99_seed130",
+      "same_inputs_across_methods": true,
+      "ranking_requires": "all ten methods attempted in the same main-suite batch and model, three successful repetitions per ranked method",
+      "rankings": [],
+      "failed_or_incomplete_methods": [],
+      "missing_methods": [],
+      "note": "Smoke, selected-method or non-three-repeat runs are validation/exploration and are not assigned formal comparison ranks."
+    },
+    {
+      "case_id": "main_garnet_n32_g0p99_seed130",
+      "same_inputs_across_methods": true,
+      "ranking_requires": "all ten methods attempted in the same main-suite batch and model, three successful repetitions per ranked method",
+      "rankings": [],
+      "failed_or_incomplete_methods": [],
+      "missing_methods": [],
+      "note": "Smoke, selected-method or non-three-repeat runs are validation/exploration and are not assigned formal comparison ranks."
+    },
+    {
+      "case_id": "main_latent_n32_g0p99_seed130",
+      "same_inputs_across_methods": true,
+      "ranking_requires": "all ten methods attempted in the same main-suite batch and model, three successful repetitions per ranked method",
+      "rankings": [],
+      "failed_or_incomplete_methods": [],
+      "missing_methods": [],
+      "note": "Smoke, selected-method or non-three-repeat runs are validation/exploration and are not assigned formal comparison ranks."
+    },
+    {
+      "case_id": "main_queue_n32_g0p99_seed130",
+      "same_inputs_across_methods": true,
+      "ranking_requires": "all ten methods attempted in the same main-suite batch and model, three successful repetitions per ranked method",
+      "rankings": [],
+      "failed_or_incomplete_methods": [],
+      "missing_methods": [],
+      "note": "Smoke, selected-method or non-three-repeat runs are validation/exploration and are not assigned formal comparison ranks."
+    }
+  ],
+  "scaling": [
+    {
+      "gamma": 0.99,
+      "n": 64,
+      "instances": 1,
+      "complete_seed_group": false,
+      "mean_instance_queries": null
+    }
+  ],
+  "descriptive_fits": {}
+}

@@ -1,0 +1,2539 @@
+{
+  "schema": "lsqn-cross-platform-archive-comparison-v1",
+  "totals": {
+    "main": {
+      "runs": 960,
+      "successful": 906,
+      "timeouts": 51,
+      "other_unsuccessful": 3,
+      "lsqn_runs": 96,
+      "lsqn_successful": 96
+    },
+    "public": {
+      "runs": 24,
+      "successful": 24,
+      "timeouts": 0,
+      "other_unsuccessful": 0,
+      "lsqn_runs": 24,
+      "lsqn_successful": 24
+    },
+    "scaling": {
+      "runs": 36,
+      "successful": 36,
+      "timeouts": 0,
+      "other_unsuccessful": 0,
+      "lsqn_runs": 36,
+      "lsqn_successful": 36
+    }
+  },
+  "macos_main": {
+    "overall": [
+      {
+        "method": "AA-I-S-5",
+        "mean_rank": 3.453125,
+        "successful_configurations": 31,
+        "fastest_configurations": 0
+      },
+      {
+        "method": "LSQN",
+        "mean_rank": 3.53125,
+        "successful_configurations": 32,
+        "fastest_configurations": 8
+      },
+      {
+        "method": "QPI-BT",
+        "mean_rank": 3.5625,
+        "successful_configurations": 32,
+        "fastest_configurations": 13
+      },
+      {
+        "method": "QPI-U",
+        "mean_rank": 4.0625,
+        "successful_configurations": 32,
+        "fastest_configurations": 3
+      },
+      {
+        "method": "PI",
+        "mean_rank": 4.875,
+        "successful_configurations": 32,
+        "fastest_configurations": 8
+      },
+      {
+        "method": "iGMRES-PI",
+        "mean_rank": 5.03125,
+        "successful_configurations": 28,
+        "fastest_configurations": 0
+      },
+      {
+        "method": "MPI-20",
+        "mean_rank": 6.4375,
+        "successful_configurations": 30,
+        "fastest_configurations": 0
+      },
+      {
+        "method": "QPI-S",
+        "mean_rank": 7.015625,
+        "successful_configurations": 28,
+        "fastest_configurations": 0
+      },
+      {
+        "method": "VI",
+        "mean_rank": 8.1875,
+        "successful_configurations": 29,
+        "fastest_configurations": 0
+      },
+      {
+        "method": "MPI-4",
+        "mean_rank": 8.84375,
+        "successful_configurations": 30,
+        "fastest_configurations": 0
+      }
+    ],
+    "by_family": {
+      "cluster": {
+        "LSQN": 1.0,
+        "VI": 9.75,
+        "PI": 3.5,
+        "MPI-4": 9.125,
+        "MPI-20": 7.875,
+        "QPI-U": 6.875,
+        "QPI-BT": 6.375,
+        "QPI-S": 4.875,
+        "iGMRES-PI": 2.75,
+        "AA-I-S-5": 2.875
+      },
+      "garnet": {
+        "LSQN": 3.0,
+        "VI": 8.125,
+        "PI": 8.25,
+        "MPI-4": 9.375,
+        "MPI-20": 6.875,
+        "QPI-U": 1.875,
+        "QPI-BT": 1.125,
+        "QPI-S": 7.375,
+        "iGMRES-PI": 4.625,
+        "AA-I-S-5": 4.375
+      },
+      "latent": {
+        "LSQN": 4.0,
+        "VI": 9.875,
+        "PI": 6.75,
+        "MPI-4": 9.0,
+        "MPI-20": 8.125,
+        "QPI-U": 1.75,
+        "QPI-BT": 1.25,
+        "QPI-S": 6.25,
+        "iGMRES-PI": 5.0,
+        "AA-I-S-5": 3.0
+      },
+      "queue": {
+        "LSQN": 6.125,
+        "VI": 5.0,
+        "PI": 1.0,
+        "MPI-4": 7.875,
+        "MPI-20": 2.875,
+        "QPI-U": 5.75,
+        "QPI-BT": 5.5,
+        "QPI-S": 9.5625,
+        "iGMRES-PI": 7.75,
+        "AA-I-S-5": 3.5625
+      }
+    },
+    "cases": [
+      {
+        "family": "cluster",
+        "n": 512,
+        "gamma": 0.99,
+        "ranks": {
+          "LSQN": 1.0,
+          "PI": 2.0,
+          "iGMRES-PI": 3.0,
+          "AA-I-S-5": 4.0,
+          "QPI-S": 5.0,
+          "MPI-20": 6.0,
+          "QPI-BT": 7.0,
+          "QPI-U": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "cluster",
+        "n": 512,
+        "gamma": 0.999,
+        "ranks": {
+          "LSQN": 1.0,
+          "PI": 2.0,
+          "iGMRES-PI": 3.0,
+          "AA-I-S-5": 4.0,
+          "QPI-S": 5.0,
+          "QPI-BT": 6.0,
+          "QPI-U": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "cluster",
+        "n": 1024,
+        "gamma": 0.99,
+        "ranks": {
+          "LSQN": 1.0,
+          "AA-I-S-5": 2.0,
+          "iGMRES-PI": 3.0,
+          "PI": 4.0,
+          "QPI-S": 5.0,
+          "QPI-BT": 6.0,
+          "QPI-U": 7.0,
+          "MPI-20": 8.0,
+          "VI": 9.0,
+          "MPI-4": 10.0
+        }
+      },
+      {
+        "family": "cluster",
+        "n": 1024,
+        "gamma": 0.999,
+        "ranks": {
+          "LSQN": 1.0,
+          "iGMRES-PI": 2.0,
+          "PI": 3.0,
+          "AA-I-S-5": 4.0,
+          "QPI-S": 5.0,
+          "QPI-U": 6.0,
+          "QPI-BT": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "cluster",
+        "n": 2048,
+        "gamma": 0.99,
+        "ranks": {
+          "LSQN": 1.0,
+          "AA-I-S-5": 2.0,
+          "iGMRES-PI": 3.0,
+          "PI": 4.0,
+          "QPI-S": 5.0,
+          "QPI-BT": 6.0,
+          "QPI-U": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "cluster",
+        "n": 2048,
+        "gamma": 0.999,
+        "ranks": {
+          "LSQN": 1.0,
+          "iGMRES-PI": 2.0,
+          "AA-I-S-5": 3.0,
+          "PI": 4.0,
+          "QPI-S": 5.0,
+          "QPI-BT": 6.0,
+          "QPI-U": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "cluster",
+        "n": 4096,
+        "gamma": 0.99,
+        "ranks": {
+          "LSQN": 1.0,
+          "AA-I-S-5": 2.0,
+          "iGMRES-PI": 3.0,
+          "QPI-S": 4.0,
+          "PI": 5.0,
+          "QPI-U": 6.0,
+          "QPI-BT": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "cluster",
+        "n": 4096,
+        "gamma": 0.999,
+        "ranks": {
+          "LSQN": 1.0,
+          "AA-I-S-5": 2.0,
+          "iGMRES-PI": 3.0,
+          "PI": 4.0,
+          "QPI-S": 5.0,
+          "QPI-BT": 6.0,
+          "QPI-U": 7.0,
+          "VI": 9.0,
+          "MPI-4": 9.0,
+          "MPI-20": 9.0
+        }
+      },
+      {
+        "family": "garnet",
+        "n": 512,
+        "gamma": 0.99,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "LSQN": 3.0,
+          "AA-I-S-5": 4.0,
+          "iGMRES-PI": 5.0,
+          "PI": 6.0,
+          "QPI-S": 7.0,
+          "MPI-20": 8.0,
+          "VI": 9.0,
+          "MPI-4": 10.0
+        }
+      },
+      {
+        "family": "garnet",
+        "n": 512,
+        "gamma": 0.999,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "LSQN": 3.0,
+          "AA-I-S-5": 4.0,
+          "iGMRES-PI": 5.0,
+          "PI": 6.0,
+          "QPI-S": 7.0,
+          "MPI-20": 8.0,
+          "VI": 9.0,
+          "MPI-4": 10.0
+        }
+      },
+      {
+        "family": "garnet",
+        "n": 1024,
+        "gamma": 0.99,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "LSQN": 3.0,
+          "AA-I-S-5": 4.0,
+          "iGMRES-PI": 5.0,
+          "MPI-20": 6.0,
+          "VI": 7.0,
+          "QPI-S": 8.0,
+          "PI": 9.0,
+          "MPI-4": 10.0
+        }
+      },
+      {
+        "family": "garnet",
+        "n": 1024,
+        "gamma": 0.999,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "LSQN": 3.0,
+          "AA-I-S-5": 4.0,
+          "iGMRES-PI": 5.0,
+          "QPI-S": 6.0,
+          "PI": 7.0,
+          "MPI-20": 8.0,
+          "VI": 9.0,
+          "MPI-4": 10.0
+        }
+      },
+      {
+        "family": "garnet",
+        "n": 2048,
+        "gamma": 0.99,
+        "ranks": {
+          "QPI-U": 1.0,
+          "QPI-BT": 2.0,
+          "LSQN": 3.0,
+          "iGMRES-PI": 4.0,
+          "AA-I-S-5": 5.0,
+          "MPI-20": 6.0,
+          "VI": 7.0,
+          "MPI-4": 8.0,
+          "QPI-S": 9.0,
+          "PI": 10.0
+        }
+      },
+      {
+        "family": "garnet",
+        "n": 2048,
+        "gamma": 0.999,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "LSQN": 3.0,
+          "AA-I-S-5": 4.0,
+          "iGMRES-PI": 5.0,
+          "QPI-S": 6.0,
+          "MPI-20": 7.0,
+          "PI": 8.0,
+          "VI": 9.0,
+          "MPI-4": 10.0
+        }
+      },
+      {
+        "family": "garnet",
+        "n": 4096,
+        "gamma": 0.99,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "LSQN": 3.0,
+          "iGMRES-PI": 4.0,
+          "AA-I-S-5": 5.0,
+          "MPI-20": 6.0,
+          "VI": 7.0,
+          "MPI-4": 8.0,
+          "QPI-S": 9.0,
+          "PI": 10.0
+        }
+      },
+      {
+        "family": "garnet",
+        "n": 4096,
+        "gamma": 0.999,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "LSQN": 3.0,
+          "iGMRES-PI": 4.0,
+          "AA-I-S-5": 5.0,
+          "MPI-20": 6.0,
+          "QPI-S": 7.0,
+          "VI": 8.0,
+          "MPI-4": 9.0,
+          "PI": 10.0
+        }
+      },
+      {
+        "family": "latent",
+        "n": 512,
+        "gamma": 0.99,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "AA-I-S-5": 3.0,
+          "LSQN": 4.0,
+          "iGMRES-PI": 5.0,
+          "PI": 6.0,
+          "QPI-S": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "latent",
+        "n": 512,
+        "gamma": 0.999,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "AA-I-S-5": 3.0,
+          "LSQN": 4.0,
+          "iGMRES-PI": 5.0,
+          "PI": 6.0,
+          "QPI-S": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "latent",
+        "n": 1024,
+        "gamma": 0.99,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "AA-I-S-5": 3.0,
+          "LSQN": 4.0,
+          "iGMRES-PI": 5.0,
+          "QPI-S": 6.0,
+          "PI": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "latent",
+        "n": 1024,
+        "gamma": 0.999,
+        "ranks": {
+          "QPI-U": 1.0,
+          "QPI-BT": 2.0,
+          "AA-I-S-5": 3.0,
+          "LSQN": 4.0,
+          "iGMRES-PI": 5.0,
+          "QPI-S": 6.0,
+          "PI": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "latent",
+        "n": 2048,
+        "gamma": 0.99,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "AA-I-S-5": 3.0,
+          "LSQN": 4.0,
+          "iGMRES-PI": 5.0,
+          "QPI-S": 6.0,
+          "PI": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "latent",
+        "n": 2048,
+        "gamma": 0.999,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "AA-I-S-5": 3.0,
+          "LSQN": 4.0,
+          "iGMRES-PI": 5.0,
+          "QPI-S": 6.0,
+          "PI": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "latent",
+        "n": 4096,
+        "gamma": 0.99,
+        "ranks": {
+          "QPI-U": 1.0,
+          "QPI-BT": 2.0,
+          "AA-I-S-5": 3.0,
+          "LSQN": 4.0,
+          "iGMRES-PI": 5.0,
+          "QPI-S": 6.0,
+          "PI": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "latent",
+        "n": 4096,
+        "gamma": 0.999,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "AA-I-S-5": 3.0,
+          "LSQN": 4.0,
+          "iGMRES-PI": 5.0,
+          "QPI-S": 6.0,
+          "PI": 7.0,
+          "VI": 9.0,
+          "MPI-4": 9.0,
+          "MPI-20": 9.0
+        }
+      },
+      {
+        "family": "queue",
+        "n": 512,
+        "gamma": 0.99,
+        "ranks": {
+          "PI": 1.0,
+          "AA-I-S-5": 2.0,
+          "LSQN": 3.0,
+          "MPI-20": 4.0,
+          "VI": 5.0,
+          "QPI-BT": 6.0,
+          "QPI-U": 7.0,
+          "iGMRES-PI": 8.0,
+          "MPI-4": 9.0,
+          "QPI-S": 10.0
+        }
+      },
+      {
+        "family": "queue",
+        "n": 512,
+        "gamma": 0.999,
+        "ranks": {
+          "PI": 1.0,
+          "LSQN": 2.0,
+          "QPI-U": 3.0,
+          "MPI-20": 4.0,
+          "VI": 5.0,
+          "QPI-BT": 6.0,
+          "MPI-4": 7.0,
+          "QPI-S": 8.0,
+          "iGMRES-PI": 9.5,
+          "AA-I-S-5": 9.5
+        }
+      },
+      {
+        "family": "queue",
+        "n": 1024,
+        "gamma": 0.99,
+        "ranks": {
+          "PI": 1.0,
+          "AA-I-S-5": 2.0,
+          "MPI-20": 3.0,
+          "VI": 4.0,
+          "QPI-BT": 5.0,
+          "QPI-U": 6.0,
+          "iGMRES-PI": 7.0,
+          "LSQN": 8.0,
+          "MPI-4": 9.0,
+          "QPI-S": 10.0
+        }
+      },
+      {
+        "family": "queue",
+        "n": 1024,
+        "gamma": 0.999,
+        "ranks": {
+          "PI": 1.0,
+          "LSQN": 2.0,
+          "AA-I-S-5": 3.0,
+          "MPI-20": 4.0,
+          "QPI-U": 5.0,
+          "VI": 6.0,
+          "QPI-BT": 7.0,
+          "MPI-4": 8.0,
+          "QPI-S": 9.5,
+          "iGMRES-PI": 9.5
+        }
+      },
+      {
+        "family": "queue",
+        "n": 2048,
+        "gamma": 0.99,
+        "ranks": {
+          "PI": 1.0,
+          "MPI-20": 2.0,
+          "AA-I-S-5": 3.0,
+          "QPI-BT": 4.0,
+          "iGMRES-PI": 5.0,
+          "VI": 6.0,
+          "QPI-U": 7.0,
+          "MPI-4": 8.0,
+          "LSQN": 9.0,
+          "QPI-S": 10.0
+        }
+      },
+      {
+        "family": "queue",
+        "n": 2048,
+        "gamma": 0.999,
+        "ranks": {
+          "PI": 1.0,
+          "MPI-20": 2.0,
+          "AA-I-S-5": 3.0,
+          "VI": 4.0,
+          "QPI-U": 5.0,
+          "QPI-BT": 6.0,
+          "MPI-4": 7.0,
+          "LSQN": 8.0,
+          "QPI-S": 9.5,
+          "iGMRES-PI": 9.5
+        }
+      },
+      {
+        "family": "queue",
+        "n": 4096,
+        "gamma": 0.99,
+        "ranks": {
+          "PI": 1.0,
+          "MPI-20": 2.0,
+          "AA-I-S-5": 3.0,
+          "iGMRES-PI": 4.0,
+          "QPI-BT": 5.0,
+          "VI": 6.0,
+          "QPI-U": 7.0,
+          "MPI-4": 8.0,
+          "LSQN": 9.0,
+          "QPI-S": 10.0
+        }
+      },
+      {
+        "family": "queue",
+        "n": 4096,
+        "gamma": 0.999,
+        "ranks": {
+          "PI": 1.0,
+          "MPI-20": 2.0,
+          "AA-I-S-5": 3.0,
+          "VI": 4.0,
+          "QPI-BT": 5.0,
+          "QPI-U": 6.0,
+          "MPI-4": 7.0,
+          "LSQN": 8.0,
+          "QPI-S": 9.5,
+          "iGMRES-PI": 9.5
+        }
+      }
+    ]
+  },
+  "linux_main": {
+    "overall": [
+      {
+        "method": "AA-I-S-5",
+        "mean_rank": 3.296875,
+        "successful_configurations": 31,
+        "fastest_configurations": 0
+      },
+      {
+        "method": "LSQN",
+        "mean_rank": 3.5,
+        "successful_configurations": 32,
+        "fastest_configurations": 8
+      },
+      {
+        "method": "QPI-BT",
+        "mean_rank": 3.6875,
+        "successful_configurations": 32,
+        "fastest_configurations": 15
+      },
+      {
+        "method": "QPI-U",
+        "mean_rank": 4.125,
+        "successful_configurations": 32,
+        "fastest_configurations": 1
+      },
+      {
+        "method": "iGMRES-PI",
+        "mean_rank": 4.96875,
+        "successful_configurations": 28,
+        "fastest_configurations": 0
+      },
+      {
+        "method": "PI",
+        "mean_rank": 5.09375,
+        "successful_configurations": 32,
+        "fastest_configurations": 8
+      },
+      {
+        "method": "MPI-20",
+        "mean_rank": 6.4375,
+        "successful_configurations": 30,
+        "fastest_configurations": 0
+      },
+      {
+        "method": "QPI-S",
+        "mean_rank": 6.953125,
+        "successful_configurations": 28,
+        "fastest_configurations": 0
+      },
+      {
+        "method": "VI",
+        "mean_rank": 8.109375,
+        "successful_configurations": 28,
+        "fastest_configurations": 0
+      },
+      {
+        "method": "MPI-4",
+        "mean_rank": 8.828125,
+        "successful_configurations": 29,
+        "fastest_configurations": 0
+      }
+    ],
+    "by_family": {
+      "cluster": {
+        "AA-I-S-5": 2.75,
+        "LSQN": 1.0,
+        "MPI-20": 7.625,
+        "MPI-4": 9.0625,
+        "PI": 4.125,
+        "QPI-BT": 6.75,
+        "QPI-S": 4.75,
+        "QPI-U": 6.75,
+        "VI": 9.8125,
+        "iGMRES-PI": 2.375
+      },
+      "garnet": {
+        "AA-I-S-5": 4.0,
+        "LSQN": 3.0,
+        "MPI-20": 6.875,
+        "MPI-4": 9.375,
+        "PI": 8.25,
+        "QPI-BT": 1.0,
+        "QPI-S": 7.5,
+        "QPI-U": 2.0,
+        "VI": 8.0,
+        "iGMRES-PI": 5.0
+      },
+      "latent": {
+        "AA-I-S-5": 3.0,
+        "LSQN": 4.0,
+        "MPI-20": 8.125,
+        "MPI-4": 9.0,
+        "PI": 7.0,
+        "QPI-BT": 1.125,
+        "QPI-S": 6.0,
+        "QPI-U": 1.875,
+        "VI": 9.875,
+        "iGMRES-PI": 5.0
+      },
+      "queue": {
+        "AA-I-S-5": 3.4375,
+        "LSQN": 6.0,
+        "MPI-20": 3.125,
+        "MPI-4": 7.875,
+        "PI": 1.0,
+        "QPI-BT": 5.875,
+        "QPI-S": 9.5625,
+        "QPI-U": 5.875,
+        "VI": 4.75,
+        "iGMRES-PI": 7.5
+      }
+    },
+    "cases": [
+      {
+        "family": "cluster",
+        "n": 512,
+        "gamma": 0.99,
+        "ranks": {
+          "LSQN": 1.0,
+          "iGMRES-PI": 2.0,
+          "AA-I-S-5": 3.0,
+          "PI": 4.0,
+          "QPI-S": 5.0,
+          "MPI-20": 6.0,
+          "QPI-BT": 7.0,
+          "QPI-U": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "cluster",
+        "n": 512,
+        "gamma": 0.999,
+        "ranks": {
+          "LSQN": 1.0,
+          "iGMRES-PI": 2.0,
+          "PI": 3.0,
+          "AA-I-S-5": 4.0,
+          "QPI-S": 5.0,
+          "QPI-BT": 6.0,
+          "QPI-U": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "cluster",
+        "n": 1024,
+        "gamma": 0.99,
+        "ranks": {
+          "LSQN": 1.0,
+          "AA-I-S-5": 2.0,
+          "iGMRES-PI": 3.0,
+          "PI": 4.0,
+          "QPI-S": 5.0,
+          "MPI-20": 6.0,
+          "QPI-BT": 7.0,
+          "QPI-U": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "cluster",
+        "n": 1024,
+        "gamma": 0.999,
+        "ranks": {
+          "LSQN": 1.0,
+          "iGMRES-PI": 2.0,
+          "AA-I-S-5": 3.0,
+          "PI": 4.0,
+          "QPI-S": 5.0,
+          "QPI-BT": 6.0,
+          "QPI-U": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "cluster",
+        "n": 2048,
+        "gamma": 0.99,
+        "ranks": {
+          "LSQN": 1.0,
+          "AA-I-S-5": 2.0,
+          "iGMRES-PI": 3.0,
+          "PI": 4.0,
+          "QPI-S": 5.0,
+          "QPI-U": 6.0,
+          "QPI-BT": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "cluster",
+        "n": 2048,
+        "gamma": 0.999,
+        "ranks": {
+          "LSQN": 1.0,
+          "iGMRES-PI": 2.0,
+          "AA-I-S-5": 3.0,
+          "PI": 4.0,
+          "QPI-S": 5.0,
+          "QPI-U": 6.0,
+          "QPI-BT": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.5,
+          "VI": 9.5
+        }
+      },
+      {
+        "family": "cluster",
+        "n": 4096,
+        "gamma": 0.99,
+        "ranks": {
+          "LSQN": 1.0,
+          "AA-I-S-5": 2.0,
+          "iGMRES-PI": 3.0,
+          "QPI-S": 4.0,
+          "PI": 5.0,
+          "QPI-U": 6.0,
+          "QPI-BT": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "cluster",
+        "n": 4096,
+        "gamma": 0.999,
+        "ranks": {
+          "LSQN": 1.0,
+          "iGMRES-PI": 2.0,
+          "AA-I-S-5": 3.0,
+          "QPI-S": 4.0,
+          "PI": 5.0,
+          "QPI-U": 6.0,
+          "QPI-BT": 7.0,
+          "MPI-20": 9.0,
+          "MPI-4": 9.0,
+          "VI": 9.0
+        }
+      },
+      {
+        "family": "garnet",
+        "n": 512,
+        "gamma": 0.99,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "LSQN": 3.0,
+          "AA-I-S-5": 4.0,
+          "iGMRES-PI": 5.0,
+          "PI": 6.0,
+          "QPI-S": 7.0,
+          "MPI-20": 8.0,
+          "VI": 9.0,
+          "MPI-4": 10.0
+        }
+      },
+      {
+        "family": "garnet",
+        "n": 512,
+        "gamma": 0.999,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "LSQN": 3.0,
+          "AA-I-S-5": 4.0,
+          "iGMRES-PI": 5.0,
+          "PI": 6.0,
+          "QPI-S": 7.0,
+          "MPI-20": 8.0,
+          "VI": 9.0,
+          "MPI-4": 10.0
+        }
+      },
+      {
+        "family": "garnet",
+        "n": 1024,
+        "gamma": 0.99,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "LSQN": 3.0,
+          "AA-I-S-5": 4.0,
+          "iGMRES-PI": 5.0,
+          "MPI-20": 6.0,
+          "VI": 7.0,
+          "QPI-S": 8.0,
+          "PI": 9.0,
+          "MPI-4": 10.0
+        }
+      },
+      {
+        "family": "garnet",
+        "n": 1024,
+        "gamma": 0.999,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "LSQN": 3.0,
+          "AA-I-S-5": 4.0,
+          "iGMRES-PI": 5.0,
+          "QPI-S": 6.0,
+          "PI": 7.0,
+          "MPI-20": 8.0,
+          "VI": 9.0,
+          "MPI-4": 10.0
+        }
+      },
+      {
+        "family": "garnet",
+        "n": 2048,
+        "gamma": 0.99,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "LSQN": 3.0,
+          "AA-I-S-5": 4.0,
+          "iGMRES-PI": 5.0,
+          "MPI-20": 6.0,
+          "VI": 7.0,
+          "MPI-4": 8.0,
+          "QPI-S": 9.0,
+          "PI": 10.0
+        }
+      },
+      {
+        "family": "garnet",
+        "n": 2048,
+        "gamma": 0.999,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "LSQN": 3.0,
+          "AA-I-S-5": 4.0,
+          "iGMRES-PI": 5.0,
+          "QPI-S": 6.0,
+          "MPI-20": 7.0,
+          "PI": 8.0,
+          "VI": 9.0,
+          "MPI-4": 10.0
+        }
+      },
+      {
+        "family": "garnet",
+        "n": 4096,
+        "gamma": 0.99,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "LSQN": 3.0,
+          "AA-I-S-5": 4.0,
+          "iGMRES-PI": 5.0,
+          "MPI-20": 6.0,
+          "VI": 7.0,
+          "MPI-4": 8.0,
+          "QPI-S": 9.0,
+          "PI": 10.0
+        }
+      },
+      {
+        "family": "garnet",
+        "n": 4096,
+        "gamma": 0.999,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "LSQN": 3.0,
+          "AA-I-S-5": 4.0,
+          "iGMRES-PI": 5.0,
+          "MPI-20": 6.0,
+          "VI": 7.0,
+          "QPI-S": 8.0,
+          "MPI-4": 9.0,
+          "PI": 10.0
+        }
+      },
+      {
+        "family": "latent",
+        "n": 512,
+        "gamma": 0.99,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "AA-I-S-5": 3.0,
+          "LSQN": 4.0,
+          "iGMRES-PI": 5.0,
+          "QPI-S": 6.0,
+          "PI": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "latent",
+        "n": 512,
+        "gamma": 0.999,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "AA-I-S-5": 3.0,
+          "LSQN": 4.0,
+          "iGMRES-PI": 5.0,
+          "QPI-S": 6.0,
+          "PI": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "latent",
+        "n": 1024,
+        "gamma": 0.99,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "AA-I-S-5": 3.0,
+          "LSQN": 4.0,
+          "iGMRES-PI": 5.0,
+          "QPI-S": 6.0,
+          "PI": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "latent",
+        "n": 1024,
+        "gamma": 0.999,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "AA-I-S-5": 3.0,
+          "LSQN": 4.0,
+          "iGMRES-PI": 5.0,
+          "QPI-S": 6.0,
+          "PI": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "latent",
+        "n": 2048,
+        "gamma": 0.99,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "AA-I-S-5": 3.0,
+          "LSQN": 4.0,
+          "iGMRES-PI": 5.0,
+          "QPI-S": 6.0,
+          "PI": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "latent",
+        "n": 2048,
+        "gamma": 0.999,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "AA-I-S-5": 3.0,
+          "LSQN": 4.0,
+          "iGMRES-PI": 5.0,
+          "QPI-S": 6.0,
+          "PI": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "latent",
+        "n": 4096,
+        "gamma": 0.99,
+        "ranks": {
+          "QPI-U": 1.0,
+          "QPI-BT": 2.0,
+          "AA-I-S-5": 3.0,
+          "LSQN": 4.0,
+          "iGMRES-PI": 5.0,
+          "QPI-S": 6.0,
+          "PI": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "latent",
+        "n": 4096,
+        "gamma": 0.999,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "AA-I-S-5": 3.0,
+          "LSQN": 4.0,
+          "iGMRES-PI": 5.0,
+          "QPI-S": 6.0,
+          "PI": 7.0,
+          "MPI-20": 9.0,
+          "MPI-4": 9.0,
+          "VI": 9.0
+        }
+      },
+      {
+        "family": "queue",
+        "n": 512,
+        "gamma": 0.99,
+        "ranks": {
+          "PI": 1.0,
+          "LSQN": 2.0,
+          "AA-I-S-5": 3.0,
+          "MPI-20": 4.0,
+          "VI": 5.0,
+          "QPI-BT": 6.0,
+          "QPI-U": 7.0,
+          "iGMRES-PI": 8.0,
+          "MPI-4": 9.0,
+          "QPI-S": 10.0
+        }
+      },
+      {
+        "family": "queue",
+        "n": 512,
+        "gamma": 0.999,
+        "ranks": {
+          "PI": 1.0,
+          "LSQN": 2.0,
+          "QPI-U": 3.0,
+          "MPI-20": 4.0,
+          "VI": 5.0,
+          "QPI-BT": 6.0,
+          "MPI-4": 7.0,
+          "QPI-S": 8.0,
+          "AA-I-S-5": 9.5,
+          "iGMRES-PI": 9.5
+        }
+      },
+      {
+        "family": "queue",
+        "n": 1024,
+        "gamma": 0.99,
+        "ranks": {
+          "PI": 1.0,
+          "AA-I-S-5": 2.0,
+          "MPI-20": 3.0,
+          "VI": 4.0,
+          "QPI-BT": 5.0,
+          "iGMRES-PI": 6.0,
+          "QPI-U": 7.0,
+          "LSQN": 8.0,
+          "MPI-4": 9.0,
+          "QPI-S": 10.0
+        }
+      },
+      {
+        "family": "queue",
+        "n": 1024,
+        "gamma": 0.999,
+        "ranks": {
+          "PI": 1.0,
+          "LSQN": 2.0,
+          "AA-I-S-5": 3.0,
+          "MPI-20": 4.0,
+          "QPI-U": 5.0,
+          "VI": 6.0,
+          "QPI-BT": 7.0,
+          "MPI-4": 8.0,
+          "QPI-S": 9.5,
+          "iGMRES-PI": 9.5
+        }
+      },
+      {
+        "family": "queue",
+        "n": 2048,
+        "gamma": 0.99,
+        "ranks": {
+          "PI": 1.0,
+          "AA-I-S-5": 2.0,
+          "MPI-20": 3.0,
+          "iGMRES-PI": 4.0,
+          "VI": 5.0,
+          "QPI-BT": 6.0,
+          "QPI-U": 7.0,
+          "MPI-4": 8.0,
+          "LSQN": 9.0,
+          "QPI-S": 10.0
+        }
+      },
+      {
+        "family": "queue",
+        "n": 2048,
+        "gamma": 0.999,
+        "ranks": {
+          "PI": 1.0,
+          "AA-I-S-5": 2.0,
+          "MPI-20": 3.0,
+          "VI": 4.0,
+          "QPI-U": 5.0,
+          "QPI-BT": 6.0,
+          "MPI-4": 7.0,
+          "LSQN": 8.0,
+          "QPI-S": 9.5,
+          "iGMRES-PI": 9.5
+        }
+      },
+      {
+        "family": "queue",
+        "n": 4096,
+        "gamma": 0.99,
+        "ranks": {
+          "PI": 1.0,
+          "MPI-20": 2.0,
+          "AA-I-S-5": 3.0,
+          "iGMRES-PI": 4.0,
+          "VI": 5.0,
+          "QPI-BT": 6.0,
+          "QPI-U": 7.0,
+          "MPI-4": 8.0,
+          "LSQN": 9.0,
+          "QPI-S": 10.0
+        }
+      },
+      {
+        "family": "queue",
+        "n": 4096,
+        "gamma": 0.999,
+        "ranks": {
+          "PI": 1.0,
+          "MPI-20": 2.0,
+          "AA-I-S-5": 3.0,
+          "VI": 4.0,
+          "QPI-BT": 5.0,
+          "QPI-U": 6.0,
+          "MPI-4": 7.0,
+          "LSQN": 8.0,
+          "QPI-S": 9.5,
+          "iGMRES-PI": 9.5
+        }
+      }
+    ]
+  },
+  "main_ls": [
+    {
+      "family": "queue",
+      "n": 512,
+      "gamma": 0.99,
+      "macos_seconds": 0.06855591699999997,
+      "linux_seconds": 0.04129491001367569,
+      "linux_over_macos": 0.6023536963800763,
+      "macos_outer_iterations": 9,
+      "linux_outer_iterations": 9,
+      "macos_total_queries": 501,
+      "linux_total_queries": 501,
+      "same_counts": true
+    },
+    {
+      "family": "queue",
+      "n": 512,
+      "gamma": 0.999,
+      "macos_seconds": 0.08066416600000004,
+      "linux_seconds": 0.0479402489727363,
+      "linux_over_macos": 0.5943190309899972,
+      "macos_outer_iterations": 13,
+      "linux_outer_iterations": 13,
+      "macos_total_queries": 510,
+      "linux_total_queries": 510,
+      "same_counts": true
+    },
+    {
+      "family": "queue",
+      "n": 1024,
+      "gamma": 0.99,
+      "macos_seconds": 0.2730427080000002,
+      "linux_seconds": 0.15899564698338509,
+      "linux_over_macos": 0.5823105408967193,
+      "macos_outer_iterations": 10,
+      "linux_outer_iterations": 10,
+      "macos_total_queries": 755,
+      "linux_total_queries": 755,
+      "same_counts": true
+    },
+    {
+      "family": "queue",
+      "n": 1024,
+      "gamma": 0.999,
+      "macos_seconds": 0.4710261669999998,
+      "linux_seconds": 0.26957055600360036,
+      "linux_over_macos": 0.5723048418318563,
+      "macos_outer_iterations": 15,
+      "linux_outer_iterations": 15,
+      "macos_total_queries": 1023,
+      "linux_total_queries": 1023,
+      "same_counts": true
+    },
+    {
+      "family": "queue",
+      "n": 2048,
+      "gamma": 0.99,
+      "macos_seconds": 0.5219438749999998,
+      "linux_seconds": 0.373529938980937,
+      "linux_over_macos": 0.7156515419994863,
+      "macos_outer_iterations": 10,
+      "linux_outer_iterations": 10,
+      "macos_total_queries": 774,
+      "linux_total_queries": 774,
+      "same_counts": true
+    },
+    {
+      "family": "queue",
+      "n": 2048,
+      "gamma": 0.999,
+      "macos_seconds": 6.880028542000002,
+      "linux_seconds": 6.511319879035,
+      "linux_over_macos": 0.9464088468944317,
+      "macos_outer_iterations": 343,
+      "linux_outer_iterations": 341,
+      "macos_total_queries": 5140,
+      "linux_total_queries": 5204,
+      "same_counts": false
+    },
+    {
+      "family": "queue",
+      "n": 4096,
+      "gamma": 0.99,
+      "macos_seconds": 0.8098579170000022,
+      "linux_seconds": 0.670033334987238,
+      "linux_over_macos": 0.827346773949283,
+      "macos_outer_iterations": 10,
+      "linux_outer_iterations": 10,
+      "macos_total_queries": 668,
+      "linux_total_queries": 668,
+      "same_counts": true
+    },
+    {
+      "family": "queue",
+      "n": 4096,
+      "gamma": 0.999,
+      "macos_seconds": 26.99711291700001,
+      "linux_seconds": 27.88760654401267,
+      "linux_over_macos": 1.0329847724736492,
+      "macos_outer_iterations": 203,
+      "linux_outer_iterations": 205,
+      "macos_total_queries": 5985,
+      "linux_total_queries": 5987,
+      "same_counts": false
+    },
+    {
+      "family": "cluster",
+      "n": 512,
+      "gamma": 0.99,
+      "macos_seconds": 0.00844608400000002,
+      "linux_seconds": 0.005603956989943981,
+      "linux_over_macos": 0.6634976623419762,
+      "macos_outer_iterations": 7,
+      "linux_outer_iterations": 7,
+      "macos_total_queries": 26,
+      "linux_total_queries": 26,
+      "same_counts": true
+    },
+    {
+      "family": "cluster",
+      "n": 512,
+      "gamma": 0.999,
+      "macos_seconds": 0.009010750000000067,
+      "linux_seconds": 0.005995223007630557,
+      "linux_over_macos": 0.6653411766645964,
+      "macos_outer_iterations": 7,
+      "linux_outer_iterations": 7,
+      "macos_total_queries": 29,
+      "linux_total_queries": 29,
+      "same_counts": true
+    },
+    {
+      "family": "cluster",
+      "n": 1024,
+      "gamma": 0.99,
+      "macos_seconds": 0.02551287499999999,
+      "linux_seconds": 0.021453324996400625,
+      "linux_over_macos": 0.840882299482149,
+      "macos_outer_iterations": 6,
+      "linux_outer_iterations": 6,
+      "macos_total_queries": 23,
+      "linux_total_queries": 23,
+      "same_counts": true
+    },
+    {
+      "family": "cluster",
+      "n": 1024,
+      "gamma": 0.999,
+      "macos_seconds": 0.029379292000000223,
+      "linux_seconds": 0.0225140749826096,
+      "linux_over_macos": 0.7663246269722711,
+      "macos_outer_iterations": 6,
+      "linux_outer_iterations": 6,
+      "macos_total_queries": 26,
+      "linux_total_queries": 26,
+      "same_counts": true
+    },
+    {
+      "family": "cluster",
+      "n": 2048,
+      "gamma": 0.99,
+      "macos_seconds": 0.09030370800000043,
+      "linux_seconds": 0.09384264302207157,
+      "linux_over_macos": 1.0391892547986084,
+      "macos_outer_iterations": 6,
+      "linux_outer_iterations": 6,
+      "macos_total_queries": 17,
+      "linux_total_queries": 17,
+      "same_counts": true
+    },
+    {
+      "family": "cluster",
+      "n": 2048,
+      "gamma": 0.999,
+      "macos_seconds": 0.10592345899999955,
+      "linux_seconds": 0.11001896497327834,
+      "linux_over_macos": 1.0386647680499068,
+      "macos_outer_iterations": 7,
+      "linux_outer_iterations": 7,
+      "macos_total_queries": 24,
+      "linux_total_queries": 24,
+      "same_counts": true
+    },
+    {
+      "family": "cluster",
+      "n": 4096,
+      "gamma": 0.99,
+      "macos_seconds": 0.32245783299999786,
+      "linux_seconds": 0.383689192996826,
+      "linux_over_macos": 1.1898895102877793,
+      "macos_outer_iterations": 6,
+      "linux_outer_iterations": 6,
+      "macos_total_queries": 17,
+      "linux_total_queries": 17,
+      "same_counts": true
+    },
+    {
+      "family": "cluster",
+      "n": 4096,
+      "gamma": 0.999,
+      "macos_seconds": 0.41257358400000044,
+      "linux_seconds": 0.4741974719800055,
+      "linux_over_macos": 1.1493645991159847,
+      "macos_outer_iterations": 7,
+      "linux_outer_iterations": 7,
+      "macos_total_queries": 24,
+      "linux_total_queries": 24,
+      "same_counts": true
+    },
+    {
+      "family": "garnet",
+      "n": 512,
+      "gamma": 0.99,
+      "macos_seconds": 0.0029869579999999285,
+      "linux_seconds": 0.002498072979506105,
+      "linux_over_macos": 0.8363267844764356,
+      "macos_outer_iterations": 11,
+      "linux_outer_iterations": 11,
+      "macos_total_queries": 22,
+      "linux_total_queries": 22,
+      "same_counts": true
+    },
+    {
+      "family": "garnet",
+      "n": 512,
+      "gamma": 0.999,
+      "macos_seconds": 0.0031707920000000334,
+      "linux_seconds": 0.0025991080328822136,
+      "linux_over_macos": 0.8197031003238895,
+      "macos_outer_iterations": 11,
+      "linux_outer_iterations": 11,
+      "macos_total_queries": 26,
+      "linux_total_queries": 26,
+      "same_counts": true
+    },
+    {
+      "family": "garnet",
+      "n": 1024,
+      "gamma": 0.99,
+      "macos_seconds": 0.0040283329999999395,
+      "linux_seconds": 0.0032454620231874287,
+      "linux_over_macos": 0.8056588229392847,
+      "macos_outer_iterations": 11,
+      "linux_outer_iterations": 11,
+      "macos_total_queries": 24,
+      "linux_total_queries": 24,
+      "same_counts": true
+    },
+    {
+      "family": "garnet",
+      "n": 1024,
+      "gamma": 0.999,
+      "macos_seconds": 0.004265499999999811,
+      "linux_seconds": 0.003331771004013717,
+      "linux_over_macos": 0.7810974103889028,
+      "macos_outer_iterations": 11,
+      "linux_outer_iterations": 11,
+      "macos_total_queries": 27,
+      "linux_total_queries": 27,
+      "same_counts": true
+    },
+    {
+      "family": "garnet",
+      "n": 2048,
+      "gamma": 0.99,
+      "macos_seconds": 0.006027207999999895,
+      "linux_seconds": 0.005101165967062116,
+      "linux_over_macos": 0.8463563837621341,
+      "macos_outer_iterations": 12,
+      "linux_outer_iterations": 12,
+      "macos_total_queries": 24,
+      "linux_total_queries": 24,
+      "same_counts": true
+    },
+    {
+      "family": "garnet",
+      "n": 2048,
+      "gamma": 0.999,
+      "macos_seconds": 0.006602707999999957,
+      "linux_seconds": 0.005237314966507256,
+      "linux_over_macos": 0.7932071153998163,
+      "macos_outer_iterations": 12,
+      "linux_outer_iterations": 12,
+      "macos_total_queries": 27,
+      "linux_total_queries": 27,
+      "same_counts": true
+    },
+    {
+      "family": "garnet",
+      "n": 4096,
+      "gamma": 0.99,
+      "macos_seconds": 0.010060333999999838,
+      "linux_seconds": 0.00815914897248149,
+      "linux_over_macos": 0.8110216790497832,
+      "macos_outer_iterations": 12,
+      "linux_outer_iterations": 12,
+      "macos_total_queries": 24,
+      "linux_total_queries": 24,
+      "same_counts": true
+    },
+    {
+      "family": "garnet",
+      "n": 4096,
+      "gamma": 0.999,
+      "macos_seconds": 0.01212987500000029,
+      "linux_seconds": 0.00847346696536988,
+      "linux_over_macos": 0.6985617712770888,
+      "macos_outer_iterations": 12,
+      "linux_outer_iterations": 12,
+      "macos_total_queries": 27,
+      "linux_total_queries": 27,
+      "same_counts": true
+    },
+    {
+      "family": "latent",
+      "n": 512,
+      "gamma": 0.99,
+      "macos_seconds": 0.0030972920000000848,
+      "linux_seconds": 0.002595279016532004,
+      "linux_over_macos": 0.8379187420921027,
+      "macos_outer_iterations": 5,
+      "linux_outer_iterations": 5,
+      "macos_total_queries": 4,
+      "linux_total_queries": 4,
+      "same_counts": true
+    },
+    {
+      "family": "latent",
+      "n": 512,
+      "gamma": 0.999,
+      "macos_seconds": 0.0028232919999999773,
+      "linux_seconds": 0.0026485209818929434,
+      "linux_over_macos": 0.938096726053474,
+      "macos_outer_iterations": 4,
+      "linux_outer_iterations": 4,
+      "macos_total_queries": 6,
+      "linux_total_queries": 6,
+      "same_counts": true
+    },
+    {
+      "family": "latent",
+      "n": 1024,
+      "gamma": 0.99,
+      "macos_seconds": 0.007883166000000053,
+      "linux_seconds": 0.009270094975363463,
+      "linux_over_macos": 1.1759355283604838,
+      "macos_outer_iterations": 4,
+      "linux_outer_iterations": 4,
+      "macos_total_queries": 3,
+      "linux_total_queries": 3,
+      "same_counts": true
+    },
+    {
+      "family": "latent",
+      "n": 1024,
+      "gamma": 0.999,
+      "macos_seconds": 0.008787541999999426,
+      "linux_seconds": 0.00924193998798728,
+      "linux_over_macos": 1.0517093389696326,
+      "macos_outer_iterations": 4,
+      "linux_outer_iterations": 4,
+      "macos_total_queries": 4,
+      "linux_total_queries": 4,
+      "same_counts": true
+    },
+    {
+      "family": "latent",
+      "n": 2048,
+      "gamma": 0.99,
+      "macos_seconds": 0.031366582999999615,
+      "linux_seconds": 0.034446136036422104,
+      "linux_over_macos": 1.0981794235101263,
+      "macos_outer_iterations": 4,
+      "linux_outer_iterations": 4,
+      "macos_total_queries": 3,
+      "linux_total_queries": 3,
+      "same_counts": true
+    },
+    {
+      "family": "latent",
+      "n": 2048,
+      "gamma": 0.999,
+      "macos_seconds": 0.02880195799999985,
+      "linux_seconds": 0.03117954998742789,
+      "linux_over_macos": 1.0825496651105475,
+      "macos_outer_iterations": 3,
+      "linux_outer_iterations": 3,
+      "macos_total_queries": 4,
+      "linux_total_queries": 4,
+      "same_counts": true
+    },
+    {
+      "family": "latent",
+      "n": 4096,
+      "gamma": 0.99,
+      "macos_seconds": 0.1403834169999998,
+      "linux_seconds": 0.14029845298500732,
+      "linux_over_macos": 0.9993947717130117,
+      "macos_outer_iterations": 4,
+      "linux_outer_iterations": 4,
+      "macos_total_queries": 3,
+      "linux_total_queries": 3,
+      "same_counts": true
+    },
+    {
+      "family": "latent",
+      "n": 4096,
+      "gamma": 0.999,
+      "macos_seconds": 0.11050537500000068,
+      "linux_seconds": 0.1411250100354664,
+      "linux_over_macos": 1.2770872913237525,
+      "macos_outer_iterations": 4,
+      "linux_outer_iterations": 4,
+      "macos_total_queries": 3,
+      "linux_total_queries": 3,
+      "same_counts": true
+    }
+  ],
+  "matching_main_ls_counts": 30,
+  "public": [
+    {
+      "case_id": "public_frozenlake4x4_n17_g0p99_seed0",
+      "family": "frozenlake4x4",
+      "n": 17,
+      "gamma": 0.99,
+      "seed": 0,
+      "all_success": true,
+      "macos_mean_queries": 2.7142857142857144,
+      "linux_mean_queries": 2.7142857142857144,
+      "macos_max_queries": 5,
+      "linux_max_queries": 5,
+      "macos_outer_iterations": 7,
+      "linux_outer_iterations": 7,
+      "exact_query_sequence_match": true
+    },
+    {
+      "case_id": "public_frozenlake4x4_n17_g0p999_seed0",
+      "family": "frozenlake4x4",
+      "n": 17,
+      "gamma": 0.999,
+      "seed": 0,
+      "all_success": true,
+      "macos_mean_queries": 2.7142857142857144,
+      "linux_mean_queries": 2.7142857142857144,
+      "macos_max_queries": 5,
+      "linux_max_queries": 5,
+      "macos_outer_iterations": 7,
+      "linux_outer_iterations": 7,
+      "exact_query_sequence_match": true
+    },
+    {
+      "case_id": "public_cliffwalking_n49_g0p99_seed0",
+      "family": "cliffwalking",
+      "n": 49,
+      "gamma": 0.99,
+      "seed": 0,
+      "all_success": true,
+      "macos_mean_queries": 1.7619047619047619,
+      "linux_mean_queries": 1.4545454545454546,
+      "macos_max_queries": 4,
+      "linux_max_queries": 3,
+      "macos_outer_iterations": 21,
+      "linux_outer_iterations": 22,
+      "exact_query_sequence_match": false
+    },
+    {
+      "case_id": "public_cliffwalking_n49_g0p999_seed0",
+      "family": "cliffwalking",
+      "n": 49,
+      "gamma": 0.999,
+      "seed": 0,
+      "all_success": true,
+      "macos_mean_queries": 2.96,
+      "linux_mean_queries": 4.157894736842105,
+      "macos_max_queries": 6,
+      "linux_max_queries": 14,
+      "macos_outer_iterations": 25,
+      "linux_outer_iterations": 19,
+      "exact_query_sequence_match": false
+    },
+    {
+      "case_id": "public_frozenlake8x8_n65_g0p99_seed0",
+      "family": "frozenlake8x8",
+      "n": 65,
+      "gamma": 0.99,
+      "seed": 0,
+      "all_success": true,
+      "macos_mean_queries": 5.25,
+      "linux_mean_queries": 5.25,
+      "macos_max_queries": 9,
+      "linux_max_queries": 9,
+      "macos_outer_iterations": 12,
+      "linux_outer_iterations": 12,
+      "exact_query_sequence_match": true
+    },
+    {
+      "case_id": "public_frozenlake8x8_n65_g0p999_seed0",
+      "family": "frozenlake8x8",
+      "n": 65,
+      "gamma": 0.999,
+      "seed": 0,
+      "all_success": true,
+      "macos_mean_queries": 5.428571428571429,
+      "linux_mean_queries": 5.428571428571429,
+      "macos_max_queries": 10,
+      "linux_max_queries": 10,
+      "macos_outer_iterations": 14,
+      "linux_outer_iterations": 14,
+      "exact_query_sequence_match": true
+    },
+    {
+      "case_id": "public_taxi_n501_g0p99_seed0",
+      "family": "taxi",
+      "n": 501,
+      "gamma": 0.99,
+      "seed": 0,
+      "all_success": true,
+      "macos_mean_queries": 24.170731707317074,
+      "linux_mean_queries": 23.369565217391305,
+      "macos_max_queries": 100,
+      "linux_max_queries": 76,
+      "macos_outer_iterations": 41,
+      "linux_outer_iterations": 46,
+      "exact_query_sequence_match": false
+    },
+    {
+      "case_id": "public_taxi_n501_g0p999_seed0",
+      "family": "taxi",
+      "n": 501,
+      "gamma": 0.999,
+      "seed": 0,
+      "all_success": true,
+      "macos_mean_queries": 75.93617021276596,
+      "linux_mean_queries": 70.90196078431373,
+      "macos_max_queries": 353,
+      "linux_max_queries": 275,
+      "macos_outer_iterations": 47,
+      "linux_outer_iterations": 51,
+      "exact_query_sequence_match": false
+    }
+  ],
+  "scaling_cases": [
+    {
+      "case_id": "scaling_frozenlake_n1024_g0p999_seed130",
+      "family": "frozenlake",
+      "n": 1024,
+      "gamma": 0.999,
+      "seed": 130,
+      "all_success": true,
+      "macos_mean_queries": 16.333333333333332,
+      "linux_mean_queries": 12.75609756097561,
+      "macos_max_queries": 50,
+      "linux_max_queries": 31,
+      "macos_outer_iterations": 39,
+      "linux_outer_iterations": 41,
+      "exact_query_sequence_match": false
+    },
+    {
+      "case_id": "scaling_frozenlake_n1024_g0p999_seed131",
+      "family": "frozenlake",
+      "n": 1024,
+      "gamma": 0.999,
+      "seed": 131,
+      "all_success": true,
+      "macos_mean_queries": 13.232558139534884,
+      "linux_mean_queries": 13.613636363636363,
+      "macos_max_queries": 50,
+      "linux_max_queries": 41,
+      "macos_outer_iterations": 43,
+      "linux_outer_iterations": 44,
+      "exact_query_sequence_match": false
+    },
+    {
+      "case_id": "scaling_frozenlake_n1024_g0p999_seed132",
+      "family": "frozenlake",
+      "n": 1024,
+      "gamma": 0.999,
+      "seed": 132,
+      "all_success": true,
+      "macos_mean_queries": 15.256410256410257,
+      "linux_mean_queries": 15.925,
+      "macos_max_queries": 26,
+      "linux_max_queries": 29,
+      "macos_outer_iterations": 39,
+      "linux_outer_iterations": 40,
+      "exact_query_sequence_match": false
+    },
+    {
+      "case_id": "scaling_frozenlake_n1024_g0p99_seed130",
+      "family": "frozenlake",
+      "n": 1024,
+      "gamma": 0.99,
+      "seed": 130,
+      "all_success": true,
+      "macos_mean_queries": 8.5,
+      "linux_mean_queries": 8.473684210526315,
+      "macos_max_queries": 27,
+      "linux_max_queries": 27,
+      "macos_outer_iterations": 38,
+      "linux_outer_iterations": 38,
+      "exact_query_sequence_match": false
+    },
+    {
+      "case_id": "scaling_frozenlake_n1024_g0p99_seed131",
+      "family": "frozenlake",
+      "n": 1024,
+      "gamma": 0.99,
+      "seed": 131,
+      "all_success": true,
+      "macos_mean_queries": 8.702702702702704,
+      "linux_mean_queries": 8.621621621621621,
+      "macos_max_queries": 41,
+      "linux_max_queries": 42,
+      "macos_outer_iterations": 37,
+      "linux_outer_iterations": 37,
+      "exact_query_sequence_match": false
+    },
+    {
+      "case_id": "scaling_frozenlake_n1024_g0p99_seed132",
+      "family": "frozenlake",
+      "n": 1024,
+      "gamma": 0.99,
+      "seed": 132,
+      "all_success": true,
+      "macos_mean_queries": 9.13888888888889,
+      "linux_mean_queries": 7.833333333333333,
+      "macos_max_queries": 31,
+      "linux_max_queries": 27,
+      "macos_outer_iterations": 36,
+      "linux_outer_iterations": 36,
+      "exact_query_sequence_match": false
+    },
+    {
+      "case_id": "scaling_frozenlake_n2304_g0p999_seed130",
+      "family": "frozenlake",
+      "n": 2304,
+      "gamma": 0.999,
+      "seed": 130,
+      "all_success": true,
+      "macos_mean_queries": 15.545454545454545,
+      "linux_mean_queries": 16.345454545454544,
+      "macos_max_queries": 49,
+      "linux_max_queries": 52,
+      "macos_outer_iterations": 55,
+      "linux_outer_iterations": 55,
+      "exact_query_sequence_match": false
+    },
+    {
+      "case_id": "scaling_frozenlake_n2304_g0p999_seed131",
+      "family": "frozenlake",
+      "n": 2304,
+      "gamma": 0.999,
+      "seed": 131,
+      "all_success": true,
+      "macos_mean_queries": 15.818181818181818,
+      "linux_mean_queries": 15.5,
+      "macos_max_queries": 60,
+      "linux_max_queries": 39,
+      "macos_outer_iterations": 55,
+      "linux_outer_iterations": 54,
+      "exact_query_sequence_match": false
+    },
+    {
+      "case_id": "scaling_frozenlake_n2304_g0p999_seed132",
+      "family": "frozenlake",
+      "n": 2304,
+      "gamma": 0.999,
+      "seed": 132,
+      "all_success": true,
+      "macos_mean_queries": 21.90740740740741,
+      "linux_mean_queries": 21.98148148148148,
+      "macos_max_queries": 39,
+      "linux_max_queries": 34,
+      "macos_outer_iterations": 54,
+      "linux_outer_iterations": 54,
+      "exact_query_sequence_match": false
+    },
+    {
+      "case_id": "scaling_frozenlake_n2304_g0p99_seed130",
+      "family": "frozenlake",
+      "n": 2304,
+      "gamma": 0.99,
+      "seed": 130,
+      "all_success": true,
+      "macos_mean_queries": 9.18867924528302,
+      "linux_mean_queries": 8.716981132075471,
+      "macos_max_queries": 64,
+      "linux_max_queries": 53,
+      "macos_outer_iterations": 53,
+      "linux_outer_iterations": 53,
+      "exact_query_sequence_match": false
+    },
+    {
+      "case_id": "scaling_frozenlake_n2304_g0p99_seed131",
+      "family": "frozenlake",
+      "n": 2304,
+      "gamma": 0.99,
+      "seed": 131,
+      "all_success": true,
+      "macos_mean_queries": 9.18867924528302,
+      "linux_mean_queries": 9.037735849056604,
+      "macos_max_queries": 29,
+      "linux_max_queries": 31,
+      "macos_outer_iterations": 53,
+      "linux_outer_iterations": 53,
+      "exact_query_sequence_match": false
+    },
+    {
+      "case_id": "scaling_frozenlake_n2304_g0p99_seed132",
+      "family": "frozenlake",
+      "n": 2304,
+      "gamma": 0.99,
+      "seed": 132,
+      "all_success": true,
+      "macos_mean_queries": 10.660377358490566,
+      "linux_mean_queries": 10.39622641509434,
+      "macos_max_queries": 36,
+      "linux_max_queries": 37,
+      "macos_outer_iterations": 53,
+      "linux_outer_iterations": 53,
+      "exact_query_sequence_match": false
+    },
+    {
+      "case_id": "scaling_frozenlake_n256_g0p999_seed130",
+      "family": "frozenlake",
+      "n": 256,
+      "gamma": 0.999,
+      "seed": 130,
+      "all_success": true,
+      "macos_mean_queries": 9.391304347826088,
+      "linux_mean_queries": 9.0,
+      "macos_max_queries": 17,
+      "linux_max_queries": 15,
+      "macos_outer_iterations": 23,
+      "linux_outer_iterations": 22,
+      "exact_query_sequence_match": false
+    },
+    {
+      "case_id": "scaling_frozenlake_n256_g0p999_seed131",
+      "family": "frozenlake",
+      "n": 256,
+      "gamma": 0.999,
+      "seed": 131,
+      "all_success": true,
+      "macos_mean_queries": 8.285714285714286,
+      "linux_mean_queries": 8.285714285714286,
+      "macos_max_queries": 15,
+      "linux_max_queries": 15,
+      "macos_outer_iterations": 21,
+      "linux_outer_iterations": 21,
+      "exact_query_sequence_match": true
+    },
+    {
+      "case_id": "scaling_frozenlake_n256_g0p999_seed132",
+      "family": "frozenlake",
+      "n": 256,
+      "gamma": 0.999,
+      "seed": 132,
+      "all_success": true,
+      "macos_mean_queries": 7.714285714285714,
+      "linux_mean_queries": 7.714285714285714,
+      "macos_max_queries": 26,
+      "linux_max_queries": 26,
+      "macos_outer_iterations": 21,
+      "linux_outer_iterations": 21,
+      "exact_query_sequence_match": true
+    },
+    {
+      "case_id": "scaling_frozenlake_n256_g0p99_seed130",
+      "family": "frozenlake",
+      "n": 256,
+      "gamma": 0.99,
+      "seed": 130,
+      "all_success": true,
+      "macos_mean_queries": 7,
+      "linux_mean_queries": 7.0,
+      "macos_max_queries": 16,
+      "linux_max_queries": 16,
+      "macos_outer_iterations": 21,
+      "linux_outer_iterations": 21,
+      "exact_query_sequence_match": true
+    },
+    {
+      "case_id": "scaling_frozenlake_n256_g0p99_seed131",
+      "family": "frozenlake",
+      "n": 256,
+      "gamma": 0.99,
+      "seed": 131,
+      "all_success": true,
+      "macos_mean_queries": 7.05,
+      "linux_mean_queries": 7.05,
+      "macos_max_queries": 17,
+      "linux_max_queries": 17,
+      "macos_outer_iterations": 20,
+      "linux_outer_iterations": 20,
+      "exact_query_sequence_match": true
+    },
+    {
+      "case_id": "scaling_frozenlake_n256_g0p99_seed132",
+      "family": "frozenlake",
+      "n": 256,
+      "gamma": 0.99,
+      "seed": 132,
+      "all_success": true,
+      "macos_mean_queries": 6.1,
+      "linux_mean_queries": 6.1,
+      "macos_max_queries": 22,
+      "linux_max_queries": 22,
+      "macos_outer_iterations": 20,
+      "linux_outer_iterations": 20,
+      "exact_query_sequence_match": true
+    },
+    {
+      "case_id": "scaling_frozenlake_n4096_g0p999_seed130",
+      "family": "frozenlake",
+      "n": 4096,
+      "gamma": 0.999,
+      "seed": 130,
+      "all_success": true,
+      "macos_mean_queries": 22.465753424657535,
+      "linux_mean_queries": 18.904109589041095,
+      "macos_max_queries": 45,
+      "linux_max_queries": 43,
+      "macos_outer_iterations": 73,
+      "linux_outer_iterations": 73,
+      "exact_query_sequence_match": false
+    },
+    {
+      "case_id": "scaling_frozenlake_n4096_g0p999_seed131",
+      "family": "frozenlake",
+      "n": 4096,
+      "gamma": 0.999,
+      "seed": 131,
+      "all_success": true,
+      "macos_mean_queries": 21.24,
+      "linux_mean_queries": 21.556962025316455,
+      "macos_max_queries": 45,
+      "linux_max_queries": 55,
+      "macos_outer_iterations": 75,
+      "linux_outer_iterations": 79,
+      "exact_query_sequence_match": false
+    },
+    {
+      "case_id": "scaling_frozenlake_n4096_g0p999_seed132",
+      "family": "frozenlake",
+      "n": 4096,
+      "gamma": 0.999,
+      "seed": 132,
+      "all_success": true,
+      "macos_mean_queries": 16.943661971830984,
+      "linux_mean_queries": 17.408450704225352,
+      "macos_max_queries": 70,
+      "linux_max_queries": 68,
+      "macos_outer_iterations": 71,
+      "linux_outer_iterations": 71,
+      "exact_query_sequence_match": false
+    },
+    {
+      "case_id": "scaling_frozenlake_n4096_g0p99_seed130",
+      "family": "frozenlake",
+      "n": 4096,
+      "gamma": 0.99,
+      "seed": 130,
+      "all_success": true,
+      "macos_mean_queries": 9.626865671641792,
+      "linux_mean_queries": 10.147058823529411,
+      "macos_max_queries": 53,
+      "linux_max_queries": 77,
+      "macos_outer_iterations": 67,
+      "linux_outer_iterations": 68,
+      "exact_query_sequence_match": false
+    },
+    {
+      "case_id": "scaling_frozenlake_n4096_g0p99_seed131",
+      "family": "frozenlake",
+      "n": 4096,
+      "gamma": 0.99,
+      "seed": 131,
+      "all_success": true,
+      "macos_mean_queries": 10,
+      "linux_mean_queries": 9.941176470588236,
+      "macos_max_queries": 66,
+      "linux_max_queries": 80,
+      "macos_outer_iterations": 68,
+      "linux_outer_iterations": 68,
+      "exact_query_sequence_match": false
+    },
+    {
+      "case_id": "scaling_frozenlake_n4096_g0p99_seed132",
+      "family": "frozenlake",
+      "n": 4096,
+      "gamma": 0.99,
+      "seed": 132,
+      "all_success": true,
+      "macos_mean_queries": 8.632352941176471,
+      "linux_mean_queries": 8.119402985074627,
+      "macos_max_queries": 73,
+      "linux_max_queries": 40,
+      "macos_outer_iterations": 68,
+      "linux_outer_iterations": 67,
+      "exact_query_sequence_match": false
+    },
+    {
+      "case_id": "scaling_frozenlake_n576_g0p999_seed130",
+      "family": "frozenlake",
+      "n": 576,
+      "gamma": 0.999,
+      "seed": 130,
+      "all_success": true,
+      "macos_mean_queries": 10.137931034482758,
+      "linux_mean_queries": 10.4,
+      "macos_max_queries": 26,
+      "linux_max_queries": 27,
+      "macos_outer_iterations": 29,
+      "linux_outer_iterations": 30,
+      "exact_query_sequence_match": false
+    },
+    {
+      "case_id": "scaling_frozenlake_n576_g0p999_seed131",
+      "family": "frozenlake",
+      "n": 576,
+      "gamma": 0.999,
+      "seed": 131,
+      "all_success": true,
+      "macos_mean_queries": 10.371428571428572,
+      "linux_mean_queries": 11.5,
+      "macos_max_queries": 24,
+      "linux_max_queries": 31,
+      "macos_outer_iterations": 35,
+      "linux_outer_iterations": 30,
+      "exact_query_sequence_match": false
+    },
+    {
+      "case_id": "scaling_frozenlake_n576_g0p999_seed132",
+      "family": "frozenlake",
+      "n": 576,
+      "gamma": 0.999,
+      "seed": 132,
+      "all_success": true,
+      "macos_mean_queries": 11.371428571428572,
+      "linux_mean_queries": 9.933333333333334,
+      "macos_max_queries": 35,
+      "linux_max_queries": 26,
+      "macos_outer_iterations": 35,
+      "linux_outer_iterations": 30,
+      "exact_query_sequence_match": false
+    },
+    {
+      "case_id": "scaling_frozenlake_n576_g0p99_seed130",
+      "family": "frozenlake",
+      "n": 576,
+      "gamma": 0.99,
+      "seed": 130,
+      "all_success": true,
+      "macos_mean_queries": 8.035714285714286,
+      "linux_mean_queries": 7.928571428571429,
+      "macos_max_queries": 28,
+      "linux_max_queries": 22,
+      "macos_outer_iterations": 28,
+      "linux_outer_iterations": 28,
+      "exact_query_sequence_match": false
+    },
+    {
+      "case_id": "scaling_frozenlake_n576_g0p99_seed131",
+      "family": "frozenlake",
+      "n": 576,
+      "gamma": 0.99,
+      "seed": 131,
+      "all_success": true,
+      "macos_mean_queries": 7.931034482758621,
+      "linux_mean_queries": 8.344827586206897,
+      "macos_max_queries": 27,
+      "linux_max_queries": 26,
+      "macos_outer_iterations": 29,
+      "linux_outer_iterations": 29,
+      "exact_query_sequence_match": false
+    },
+    {
+      "case_id": "scaling_frozenlake_n576_g0p99_seed132",
+      "family": "frozenlake",
+      "n": 576,
+      "gamma": 0.99,
+      "seed": 132,
+      "all_success": true,
+      "macos_mean_queries": 8.275862068965518,
+      "linux_mean_queries": 8.241379310344827,
+      "macos_max_queries": 28,
+      "linux_max_queries": 28,
+      "macos_outer_iterations": 29,
+      "linux_outer_iterations": 29,
+      "exact_query_sequence_match": false
+    },
+    {
+      "case_id": "scaling_frozenlake_n64_g0p999_seed130",
+      "family": "frozenlake",
+      "n": 64,
+      "gamma": 0.999,
+      "seed": 130,
+      "all_success": true,
+      "macos_mean_queries": 5.333333333333333,
+      "linux_mean_queries": 5.333333333333333,
+      "macos_max_queries": 10,
+      "linux_max_queries": 10,
+      "macos_outer_iterations": 12,
+      "linux_outer_iterations": 12,
+      "exact_query_sequence_match": true
+    },
+    {
+      "case_id": "scaling_frozenlake_n64_g0p999_seed131",
+      "family": "frozenlake",
+      "n": 64,
+      "gamma": 0.999,
+      "seed": 131,
+      "all_success": true,
+      "macos_mean_queries": 5.357142857142857,
+      "linux_mean_queries": 5.357142857142857,
+      "macos_max_queries": 9,
+      "linux_max_queries": 9,
+      "macos_outer_iterations": 14,
+      "linux_outer_iterations": 14,
+      "exact_query_sequence_match": true
+    },
+    {
+      "case_id": "scaling_frozenlake_n64_g0p999_seed132",
+      "family": "frozenlake",
+      "n": 64,
+      "gamma": 0.999,
+      "seed": 132,
+      "all_success": true,
+      "macos_mean_queries": 5,
+      "linux_mean_queries": 5.0,
+      "macos_max_queries": 16,
+      "linux_max_queries": 16,
+      "macos_outer_iterations": 13,
+      "linux_outer_iterations": 13,
+      "exact_query_sequence_match": true
+    },
+    {
+      "case_id": "scaling_frozenlake_n64_g0p99_seed130",
+      "family": "frozenlake",
+      "n": 64,
+      "gamma": 0.99,
+      "seed": 130,
+      "all_success": true,
+      "macos_mean_queries": 5.083333333333333,
+      "linux_mean_queries": 5.083333333333333,
+      "macos_max_queries": 14,
+      "linux_max_queries": 14,
+      "macos_outer_iterations": 12,
+      "linux_outer_iterations": 12,
+      "exact_query_sequence_match": true
+    },
+    {
+      "case_id": "scaling_frozenlake_n64_g0p99_seed131",
+      "family": "frozenlake",
+      "n": 64,
+      "gamma": 0.99,
+      "seed": 131,
+      "all_success": true,
+      "macos_mean_queries": 4.833333333333333,
+      "linux_mean_queries": 4.833333333333333,
+      "macos_max_queries": 10,
+      "linux_max_queries": 10,
+      "macos_outer_iterations": 12,
+      "linux_outer_iterations": 12,
+      "exact_query_sequence_match": true
+    },
+    {
+      "case_id": "scaling_frozenlake_n64_g0p99_seed132",
+      "family": "frozenlake",
+      "n": 64,
+      "gamma": 0.99,
+      "seed": 132,
+      "all_success": true,
+      "macos_mean_queries": 4.833333333333333,
+      "linux_mean_queries": 4.833333333333333,
+      "macos_max_queries": 13,
+      "linux_max_queries": 13,
+      "macos_outer_iterations": 12,
+      "linux_outer_iterations": 12,
+      "exact_query_sequence_match": true
+    }
+  ],
+  "scaling": [
+    {
+      "gamma": 0.99,
+      "n": 64,
+      "macos_mean_queries": 4.916666666666666,
+      "linux_mean_queries": 4.916666666666666
+    },
+    {
+      "gamma": 0.99,
+      "n": 256,
+      "macos_mean_queries": 6.716666666666667,
+      "linux_mean_queries": 6.716666666666667
+    },
+    {
+      "gamma": 0.99,
+      "n": 576,
+      "macos_mean_queries": 8.080870279146142,
+      "linux_mean_queries": 8.17159277504105
+    },
+    {
+      "gamma": 0.99,
+      "n": 1024,
+      "macos_mean_queries": 8.78053053053053,
+      "linux_mean_queries": 8.309546388493757
+    },
+    {
+      "gamma": 0.99,
+      "n": 2304,
+      "macos_mean_queries": 9.679245283018869,
+      "linux_mean_queries": 9.383647798742139
+    },
+    {
+      "gamma": 0.99,
+      "n": 4096,
+      "macos_mean_queries": 9.419739537606088,
+      "linux_mean_queries": 9.40254609306409
+    },
+    {
+      "gamma": 0.999,
+      "n": 64,
+      "macos_mean_queries": 5.23015873015873,
+      "linux_mean_queries": 5.23015873015873
+    },
+    {
+      "gamma": 0.999,
+      "n": 256,
+      "macos_mean_queries": 8.46376811594203,
+      "linux_mean_queries": 8.333333333333334
+    },
+    {
+      "gamma": 0.999,
+      "n": 576,
+      "macos_mean_queries": 10.626929392446634,
+      "linux_mean_queries": 10.61111111111111
+    },
+    {
+      "gamma": 0.999,
+      "n": 1024,
+      "macos_mean_queries": 14.940767243092825,
+      "linux_mean_queries": 14.098244641537324
+    },
+    {
+      "gamma": 0.999,
+      "n": 2304,
+      "macos_mean_queries": 17.757014590347925,
+      "linux_mean_queries": 17.942312008978675
+    },
+    {
+      "gamma": 0.999,
+      "n": 4096,
+      "macos_mean_queries": 20.216471798829506,
+      "linux_mean_queries": 19.289840772860966
+    }
+  ],
+  "query_growth_fits": {
+    "0.99": {
+      "macos": {
+        "slope": 0.1643091172298316,
+        "coefficient": 2.6535907957226548
+      },
+      "linux": {
+        "slope": 0.15849215184094712,
+        "coefficient": 2.720926933117024
+      }
+    },
+    "0.999": {
+      "macos": {
+        "slope": 0.33424815575521893,
+        "coefficient": 1.3248961330120146
+      },
+      "linux": {
+        "slope": 0.32713460258937604,
+        "coefficient": 1.3621076995904278
+      }
+    }
+  },
+  "source_sha256": {
+    "benchmarks/macos-m2-paper/main.json": "7b4288efbc71f09e1b47d3bf703f9e521dac09ea3614131aecfc90a485cec720",
+    "experiments/data/archive_reference.json": "b1dbcc4e236755cfac128f60eea00d48239872beb75fc42b53cdbb38b9e49b06",
+    "benchmarks/linux-intel-2026-10-25/main/analysis.json": "dbb93d83c51a5c96b35b1fcd4bd77a4415d4ecbed5116032516659635c4d2106",
+    "benchmarks/linux-intel-2026-10-25/main/summary.json": "813eb17442f1158877875f0cb7b45200b6931cd31dd756acd58a2af6314e4dd6",
+    "benchmarks/linux-intel-2026-10-25/public/analysis.json": "0cbb61aa2806590ed126a995272c05a2c855d1bb528ae21b905cce7682f9d80e",
+    "benchmarks/linux-intel-2026-10-25/public/summary.json": "2365f1643deeae922e1ed3e6e03572c8c84eb11d706cbb8932e499b76623529d",
+    "benchmarks/linux-intel-2026-10-25/scaling/analysis.json": "25874f991b10613281bbb364e0a5e42320544d6ee6f8b0ae774b6e0448741ed7",
+    "benchmarks/linux-intel-2026-10-25/scaling/summary.json": "10edf054673010c42e9d62c52244473bb2e8b251f8fa6361d2da240d3316e98d"
+  },
+  "interpretation": "Independent software-platform replication, not an isolated CPU benchmark or a bitwise reproduction. Failed methods rank jointly below successful methods; all timing repetitions must succeed. Scaling fits are descriptive query fits, not complexity bounds."
+}

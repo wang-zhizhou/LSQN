@@ -1,0 +1,58 @@
+{
+  "status": "historical-rc1-reference-only-validation-on-macOS",
+  "date": "2026-10-25",
+  "package_version": "0.1.0rc1",
+  "test_environment": {
+    "python": "3.9.13",
+    "numpy": "1.26.4",
+    "scipy": "1.13.0",
+    "threadpoolctl": "3.5.0",
+    "architecture": "arm64",
+    "blas_threads": 1
+  },
+  "packaging": {
+    "wheel_built": true,
+    "installed_into_separate_venv": true,
+    "checks_run_outside_source_checkout": true,
+    "dependencies_reused_from_existing_development_environment": true,
+    "clean_linux_install_executed": false
+  },
+  "numerical_unit_tests_passed": 14,
+  "all_method_small_runs_passed": 60,
+  "lsqn_paper_runs_passed": 156,
+  "lsqn_paper_runs_breakdown": {
+    "main": 96,
+    "public": 24,
+    "scaling": 36
+  },
+  "public_and_scaling_archive_query_sequences_matched": 44,
+  "frozen_inputs_verified": 48,
+  "descriptive_query_fits": {
+    "0.99": {
+      "slope": 0.16430911722983166,
+      "coefficient": 2.653590795722655,
+      "caveat": "Descriptive six-size query fit, not a runtime exponent or an asymptotic complexity bound."
+    },
+    "0.999": {
+      "slope": 0.33424815575521877,
+      "coefficient": 1.3248961330120168,
+      "caveat": "Descriptive six-size query fit, not a runtime exponent or an asymptotic complexity bound."
+    }
+  },
+  "auxiliary_checks": {
+    "quickstart_passed": true,
+    "comparison_reader_60_run_selfcheck": true,
+    "sigint_child_cleanup_test_passed": true,
+    "full_paper_command_plan_checked": true
+  },
+  "not_claimed": [
+    "Linux execution",
+    "all 960 main-comparison runs on this Mac in this validation turn",
+    "reproduction of historical native-backend runtimes",
+    "public GitHub release or third-party redistribution clearance"
+  ],
+  "notes": [
+    "Mac reference timings are validation records, not a controlled hardware benchmark.",
+    "The standalone original raw Mac-result ZIPs remain in the development workspace; exported reference copies redact machine-specific personal paths."
+  ]
+}

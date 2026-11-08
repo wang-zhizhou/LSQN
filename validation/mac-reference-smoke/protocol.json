@@ -1,0 +1,190 @@
+{
+  "schema": "lsqn-run-protocol-v2",
+  "run_id": "eb462d02-ff4d-4d5a-a12f-82afd438a236",
+  "suite": "smoke",
+  "cases": [
+    {
+      "suite": "main",
+      "family": "queue",
+      "n": 32,
+      "gamma": 0.99,
+      "seed": 130,
+      "initialization": "reward_lower_bound_all_states"
+    },
+    {
+      "suite": "main",
+      "family": "cluster",
+      "n": 32,
+      "gamma": 0.99,
+      "seed": 130,
+      "initialization": "reward_lower_bound_all_states"
+    },
+    {
+      "suite": "main",
+      "family": "garnet",
+      "n": 32,
+      "gamma": 0.99,
+      "seed": 130,
+      "initialization": "reward_lower_bound_all_states"
+    },
+    {
+      "suite": "main",
+      "family": "latent",
+      "n": 32,
+      "gamma": 0.99,
+      "seed": 130,
+      "initialization": "reward_lower_bound_all_states"
+    },
+    {
+      "suite": "public",
+      "family": "frozenlake4x4",
+      "n": 17,
+      "gamma": 0.99,
+      "seed": 0,
+      "initialization": "reward_lower_bound_all_states"
+    },
+    {
+      "suite": "scaling",
+      "family": "frozenlake",
+      "n": 64,
+      "side": 8,
+      "gamma": 0.99,
+      "seed": 130,
+      "initialization": "zero"
+    }
+  ],
+  "methods": [
+    "LSQN"
+  ],
+  "method_order": "cyclic rotation by repetition, serial runs",
+  "requested_options": {
+    "suite": "smoke",
+    "methods": [
+      "LSQN"
+    ],
+    "implementation": "reference",
+    "output": "validation/mac-reference-smoke",
+    "repetitions": 3,
+    "scaling_repetitions": 1,
+    "time_limit": null,
+    "families": null,
+    "sizes": null,
+    "gammas": null,
+    "seeds": null,
+    "threads": 1,
+    "tol": 1e-08,
+    "max_outer": 500,
+    "save_models": false,
+    "prepare_only": false,
+    "input_models": null,
+    "reference_pi": false,
+    "reference_max_states": 1024
+  },
+  "solver_options": {
+    "tol": 1e-08,
+    "max_outer": 500,
+    "armijo_sigma": 0.0001,
+    "backtrack_beta": 0.5,
+    "max_backtracks": 80,
+    "regularization_scale": 1e-08,
+    "descent_fraction": 0.5,
+    "step_cap_factor": 2.0,
+    "tie_atol": 1e-12,
+    "tie_rtol": 1e-12,
+    "initial_scale": 1.0,
+    "forcing_trigger": 0.5,
+    "max_self_secant_enrichments": 4,
+    "certified_local_completion": true,
+    "local_completion_residual": 0.001,
+    "local_completion_stable_steps": 2,
+    "local_forcing_coefficient": 0.5,
+    "local_forcing_exponent": 0.5,
+    "projection_alignment_fraction": 0.5,
+    "width_fraction": 0.1
+  },
+  "seed_policy": "main130; scaling130/131/132; public frozen",
+  "implementation": "reference",
+  "lsqn_backend_by_case": {
+    "main_queue_n32_g0p99_seed130": "reference",
+    "main_cluster_n32_g0p99_seed130": "reference",
+    "main_garnet_n32_g0p99_seed130": "reference",
+    "main_latent_n32_g0p99_seed130": "reference",
+    "public_frozenlake4x4_n17_g0p99_seed0": "reference",
+    "scaling_frozenlake_n64_g0p99_seed130": "reference"
+  },
+  "implementation_sources_sha256": "b2378e6c8aae65198949c5f153b5265a3e0b519c163de26059801f54b37ddb45",
+  "comparison_scope": "Smoke health check; not a formal performance comparison",
+  "reference_pi_scope": "Optional reference PI is a correctness diagnostic outside all method timings",
+  "timing": "whole solver including data-dependent caches plus passive trace recording; excludes native compilation/library loading, model generation/loading, hashing, PI reference, independent verification and writing",
+  "timeout": "POSIX soft wall timer; a noninterruptible BLAS call can delay delivery until it returns",
+  "python": "3.9.13 (v3.9.13:6de2ca5339, May 17 2022, 11:37:23) \n[Clang 13.0.0 (clang-1300.0.29.30)]",
+  "numpy": "1.26.4",
+  "scipy": "1.13.0",
+  "platform": "macOS-14.3-arm64-arm-64bit",
+  "source_sha256": {
+    "experiments/__init__.py": "dbfb81486ae79b6b498797ac955ebfc615847af8a4557989ca090463008cab24",
+    "experiments/benchmarks.py": "f7c7953e9865a4ce23e3795578693b0beaad81884fc505cb625512345b32c97d",
+    "experiments/implementations.py": "bfa0f8e890494ed69078f810aa2c1b9815fbbf1c2be74ae0099f2d3d74351eac",
+    "experiments/models.py": "8a8e4158bb4d9673d9f07afb937b0fd065e41fd9923c20e1f835061ed8cc700b",
+    "experiments/public_models.py": "ff0aa558ca69f35419f53f48edbe7b935514dc2e83e3549c91348758adcc262e",
+    "experiments/run.py": "76fc08dfe518545b40cf5d043468e0c9597eff2cf006efd68b9005245f934912",
+    "experiments/scaling_models.py": "12dd9c01e0f6ccb17d1dd366f51db81d498a58995bf832904363dbc5e76736ba",
+    "experiments/summarize.py": "a75ea4d34a076f4cc0960b9cbe1353bf5347344182f8826bb12b7f6654bee1d9",
+    "experiments/validate.py": "b25ed2a165fe79c411901f61fbec7224930d5ba2d09bc6af37ea7c297143fe90",
+    "src/lsqn/__init__.py": "4c73835caf6463d8567fc75886e5e1025d6299fbfc0ef0e402aa35c5536e178d",
+    "src/lsqn/_blocked.py": "0a7b66d392ca058dc0c7b4ca8f38b05c253379c70beda96f73e60c2d8e9130c9",
+    "src/lsqn/_core.py": "60d90cf2c46594c294f419064c831f19aaccd87e76f489ec2c1d0b3a1c5f66d5",
+    "src/lsqn/_native/__init__.py": "e8399b9a6c7a994121e3cfcebe4f2a1c914ce3477324cbc0b603e5ad8f4dcbc9",
+    "src/lsqn/_native/_selftest.py": "32c6fe9acc420d26de7cbb7ccfc8df1803c0cc5d85f60e451ef689a37b5741d6",
+    "src/lsqn/_native/sources/abi.c": "e11e865f9600677c080e01c2f466ed6218392f66c3243d09a81750f5ccacd1b5",
+    "src/lsqn/_native/sources/blas_abi.h": "460836b6107e5211bed8d3a144e010eef02d3121e20921463babadc7ae7b701b",
+    "src/lsqn/_native/sources/copy_rows.c": "fa4d107ba817cee93cff6e172cd99b32cf0febc946a3cc10d0c75f83be9d01b5",
+    "src/lsqn/_native/sources/query.c": "31042c195399e548eec3d8db624d50103fcc6aa3fff33a4e7cb94b685eb0a9ef",
+    "src/lsqn/_native/sources/selected_rows.c": "7b1e6aa7527a855c988aa9443c67943d4123317a03c36c655f9173ae9cd3a528",
+    "src/lsqn/_policy_cache.py": "2410cb49d83bd0fe80b2fc94a589be5e2584e9f73934a52808286772ec628281",
+    "src/lsqn/_runtime.py": "7f8fdf2504cbfeffbd26449e204c66ee40fb9525e65f5282ce19366395b01262",
+    "src/lsqn/_support.py": "bac58c5cc778656e8ce68f14569f22a30a60bef42c2e38d1dc07091832dc6d89",
+    "src/lsqn/mdp.py": "957244d5fff24467195e23bb4974134e8b3a9c20ffa05f8995bd7e7836c1bb9a",
+    "src/lsqn/options.py": "ec62d74c707da8bcc2dafd869257d37924146634c6bc241e44c44c6c1fd84108",
+    "src/lsqn/solver.py": "914d8c62fad9171010f5a205f3def1c60e9b29cd824a93615433ebaabb91dfac",
+    "src/lsqn_baselines/__init__.py": "0e095ed7bd6fce1757626d575c03765b272b11e4ebdac23f06056f0cf374b7b5",
+    "src/lsqn_baselines/_anderson.py": "af9ec1b9113cd9042e3f663c00d3ea76240b883af90ea7b0a107d58c475d847b",
+    "src/lsqn_baselines/_basic.py": "d443a4016e6e3ac0b0173a52c3b2e47867d2a80be89934d35797f642ad14665b",
+    "src/lsqn_baselines/_comparators.py": "f2b81ad2b148420c41cc2c770a12ca9b37225717ded3830e83255b912c56ce1e",
+    "src/lsqn_baselines/_igmres.py": "69e3eae7eaa4433d920c064d4471a6cbcf5b0332c5963ceb07e31bc3e13ae882",
+    "src/lsqn_baselines/_metrics.py": "ee178a8fba7a04b7104a43b834c5da0b73da2ad6f8765815289be6711749fa03",
+    "src/lsqn_baselines/_trace.py": "3ef3950016ec592ae2b747e4b4a551b37d256fc7ce0ca3e7fde0d4296e4c982b"
+  },
+  "frozen_manifest_sha256": "9c986da62d1cf8807e3d9a65ef351cef56a2e2657056da06b21062d4fdfdaf0d",
+  "backend_preparation": [
+    {
+      "backend": "reference",
+      "loaded": true
+    }
+  ],
+  "native_backend": {
+    "required": false
+  },
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/numpy/.dylibs/libopenblas64_.0.dylib",
+      "version": "0.3.23.dev",
+      "threading_layer": "pthreads",
+      "architecture": "armv8"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/scipy/.dylibs/libopenblas.0.dylib",
+      "version": "0.3.26.dev",
+      "threading_layer": "pthreads",
+      "architecture": "neoversen1"
+    }
+  ]
+}

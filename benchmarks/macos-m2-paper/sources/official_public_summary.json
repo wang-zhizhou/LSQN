@@ -1,0 +1,98 @@
+[
+  {
+    "name": "FrozenLake-4x4",
+    "gamma": 0.99,
+    "n": 17,
+    "actions": 4,
+    "success": true,
+    "calls": 7,
+    "mean_queries": 2.7142857142857144,
+    "max_queries": 5,
+    "full_n_calls": 0,
+    "median_wall_s": 0.006613292000000048
+  },
+  {
+    "name": "FrozenLake-4x4",
+    "gamma": 0.999,
+    "n": 17,
+    "actions": 4,
+    "success": true,
+    "calls": 7,
+    "mean_queries": 2.7142857142857144,
+    "max_queries": 5,
+    "full_n_calls": 0,
+    "median_wall_s": 0.005932042000000082
+  },
+  {
+    "name": "FrozenLake-8x8",
+    "gamma": 0.99,
+    "n": 65,
+    "actions": 4,
+    "success": true,
+    "calls": 12,
+    "mean_queries": 5.25,
+    "max_queries": 9,
+    "full_n_calls": 0,
+    "median_wall_s": 0.011349958000000049
+  },
+  {
+    "name": "FrozenLake-8x8",
+    "gamma": 0.999,
+    "n": 65,
+    "actions": 4,
+    "success": true,
+    "calls": 14,
+    "mean_queries": 5.428571428571429,
+    "max_queries": 10,
+    "full_n_calls": 0,
+    "median_wall_s": 0.013525624999999986
+  },
+  {
+    "name": "Taxi-v3",
+    "gamma": 0.99,
+    "n": 501,
+    "actions": 6,
+    "success": true,
+    "calls": 41,
+    "mean_queries": 24.170731707317074,
+    "max_queries": 100,
+    "full_n_calls": 0,
+    "median_wall_s": 0.23639337500000002
+  },
+  {
+    "name": "Taxi-v3",
+    "gamma": 0.999,
+    "n": 501,
+    "actions": 6,
+    "success": true,
+    "calls": 47,
+    "mean_queries": 75.93617021276596,
+    "max_queries": 353,
+    "full_n_calls": 0,
+    "median_wall_s": 0.905432792
+  },
+  {
+    "name": "CliffWalking-v0",
+    "gamma": 0.99,
+    "n": 49,
+    "actions": 4,
+    "success": true,
+    "calls": 21,
+    "mean_queries": 1.7619047619047619,
+    "max_queries": 4,
+    "full_n_calls": 0,
+    "median_wall_s": 0.01428891599999993
+  },
+  {
+    "name": "CliffWalking-v0",
+    "gamma": 0.999,
+    "n": 49,
+    "actions": 4,
+    "success": true,
+    "calls": 25,
+    "mean_queries": 2.96,
+    "max_queries": 6,
+    "full_n_calls": 0,
+    "median_wall_s": 0.020104874999999467
+  }
+]

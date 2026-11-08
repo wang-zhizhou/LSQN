@@ -1,0 +1,43 @@
+{
+  "all_passed": true,
+  "frozen_models": 48,
+  "small_main_generators_matched": 4,
+  "archived_query_sequences": 44,
+  "official_archived_outer_iterations": 174,
+  "official_archived_zero_queries": 13,
+  "scaling_regenerated": 36,
+  "public_regenerated": 8,
+  "archived_descriptive_fits": {
+    "0.99": {
+      "slope": 0.16430911722983166,
+      "coefficient": 2.653590795722655
+    },
+    "0.999": {
+      "slope": 0.33424815575521877,
+      "coefficient": 1.3248961330120168
+    }
+  },
+  "date": "2026-10-25",
+  "host_system": "Darwin",
+  "python": "3.9.13",
+  "numpy": "1.26.4",
+  "scipy": "1.13.0",
+  "smoke_cases_passed": 6,
+  "smoke_exact_pi_bounds_passed": 6,
+  "official_cases_locally_solved": 8,
+  "official_archive_query_sequences_matched": 8,
+  "official_step_certificates_passed": 8,
+  "official_exact_pi_bounds_passed": 8,
+  "external_frozen_input_smoke_passed": true,
+  "refuse_overwrite_exit_code": 2,
+  "timeout_recorded_exit_code": 1,
+  "prepare_only_models": 6,
+  "prepare_only_solves": 0,
+  "limitation": "Local macOS preflight only; complete main/scaling solver suites, full 960-run comparison and Linux execution not completed by this preparation audit.",
+  "all_methods_smoke_executions": 60,
+  "all_methods_smoke_passed": 60,
+  "selected_main_method_repeat_check": "Latent n512 gamma0.99; LSQN and PI; three repeats each passed",
+  "missing_repeat_not_ranked": true,
+  "mixed_batch_rankings_rejected": true,
+  "public_scaling_all_reject_baselines": true
+}

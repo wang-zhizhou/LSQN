@@ -1,0 +1,5 @@
+# Match the numerical-library versions used by the archived experiments.
+# Use Python 3.11 for the new Linux environment; Python 3.13 is unsupported.
+numpy==1.26.4
+scipy==1.13.0
+threadpoolctl==3.5.0

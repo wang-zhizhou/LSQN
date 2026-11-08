@@ -1,0 +1,264 @@
+{
+  "converged": true,
+  "message": "converged",
+  "iterations": 7,
+  "value": [
+    26.063717769210818,
+    26.052819162206443,
+    26.086458007220987,
+    26.057163284022916,
+    26.037244472512217,
+    25.9480679622107,
+    25.9767733795786,
+    25.983867892285158,
+    26.00141682724371,
+    26.035346591418147,
+    26.072385895621416,
+    26.047554534661796,
+    26.09958817391862,
+    26.022571992809134,
+    26.00743686222116,
+    26.010644777517193,
+    25.9343122617947,
+    26.063394801583495,
+    26.009281229176974,
+    26.01658843878397,
+    26.069063519595353,
+    26.07142136684964,
+    26.008475168530616,
+    25.998051581173208,
+    25.989141929720585,
+    25.913989631345242,
+    26.03254969126522,
+    26.02037520478956,
+    26.025735856289465,
+    25.99583466485547,
+    26.008480775489314,
+    26.045331333996835
+  ],
+  "policy": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    3,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    0,
+    3,
+    3,
+    3,
+    3,
+    3,
+    0
+  ],
+  "history": [
+    {
+      "iteration": 0,
+      "residual": 0.6767782945937242,
+      "candidate_residual": 0.017065799103441748,
+      "safeguarded": 0.0,
+      "policy_switches": 0.0
+    },
+    {
+      "iteration": 1,
+      "residual": 0.017065799103441748,
+      "candidate_residual": 0.001540643149553489,
+      "safeguarded": 0.0,
+      "policy_switches": 0.0
+    },
+    {
+      "iteration": 2,
+      "residual": 0.001540643149553489,
+      "candidate_residual": 1.947027866577855e-05,
+      "safeguarded": 0.0,
+      "policy_switches": 0.0
+    },
+    {
+      "iteration": 3,
+      "residual": 1.947027866577855e-05,
+      "candidate_residual": 5.542730544760843e-06,
+      "safeguarded": 0.0,
+      "policy_switches": 0.0
+    },
+    {
+      "iteration": 4,
+      "residual": 5.542730544760843e-06,
+      "candidate_residual": 2.876696569842352e-07,
+      "safeguarded": 0.0,
+      "policy_switches": 0.0
+    },
+    {
+      "iteration": 5,
+      "residual": 2.876696569842352e-07,
+      "candidate_residual": 1.5434320488338926e-08,
+      "safeguarded": 0.0,
+      "policy_switches": 0.0
+    },
+    {
+      "iteration": 6,
+      "residual": 1.5434320488338926e-08,
+      "candidate_residual": 1.9899424330560578e-09,
+      "safeguarded": 0.0,
+      "policy_switches": 0.0
+    },
+    {
+      "iteration": 7,
+      "residual": 1.9899424330560578e-09,
+      "safeguarded": 0.0,
+      "policy_switches": 0.0
+    }
+  ],
+  "stats": {
+    "bellman_backups": 8.0,
+    "action_matvecs": 32.0,
+    "policy_matvecs": 0.0,
+    "policy_rmatvecs": 0.0,
+    "gmres_matvecs": 0.0,
+    "memory_image_matvecs": 0.0,
+    "prior_matvecs": 0.0,
+    "direct_solve_flops": 0.0,
+    "block_solve_flops": 0.0,
+    "lp_calls": 0,
+    "operator_products": 32.0
+  },
+  "method": "QPI-U",
+  "residual": 1.9899424330560578e-09,
+  "trace": [
+    {
+      "k": 0,
+      "residual2": 3.4289348493857448,
+      "residual_inf": 0.6767782945937242,
+      "elapsed_s": 4.0540999999949534e-05,
+      "event": "initial"
+    },
+    {
+      "k": 1,
+      "residual2": 0.05184546094281987,
+      "residual_inf": 0.017065799103441748,
+      "elapsed_s": 0.00011795799999991807,
+      "event": "accepted"
+    },
+    {
+      "k": 2,
+      "residual2": 0.005263235361847109,
+      "residual_inf": 0.001540643149553489,
+      "elapsed_s": 0.00017654100000008555,
+      "event": "accepted"
+    },
+    {
+      "k": 3,
+      "residual2": 5.781145820862282e-05,
+      "residual_inf": 1.947027866577855e-05,
+      "elapsed_s": 0.00022891599999996792,
+      "event": "accepted"
+    },
+    {
+      "k": 4,
+      "residual2": 1.8336971130747936e-05,
+      "residual_inf": 5.542730544760843e-06,
+      "elapsed_s": 0.0002793329999999372,
+      "event": "accepted"
+    },
+    {
+      "k": 5,
+      "residual2": 5.796421422566198e-07,
+      "residual_inf": 2.876696569842352e-07,
+      "elapsed_s": 0.00033012500000006995,
+      "event": "accepted"
+    },
+    {
+      "k": 6,
+      "residual2": 4.6505961093211096e-08,
+      "residual_inf": 1.5434320488338926e-08,
+      "elapsed_s": 0.0003802500000000819,
+      "event": "accepted"
+    },
+    {
+      "k": 7,
+      "residual2": 3.762156730019524e-09,
+      "residual_inf": 1.9899424330560578e-09,
+      "elapsed_s": 0.0004654580000000852,
+      "event": "finished"
+    }
+  ],
+  "runtime_s": 0.00047274999999991074,
+  "implementation": "curves",
+  "backend": "lsqn_baselines:QPI-U",
+  "spec": {
+    "suite": "main",
+    "family": "latent",
+    "n": 32,
+    "gamma": 0.99,
+    "seed": 130,
+    "initialization": "reward_lower_bound_all_states"
+  },
+  "model": {
+    "n_states": 32,
+    "n_actions": 4,
+    "gamma": 0.99,
+    "name": "latent_switching",
+    "storage": "dense",
+    "transition_nnz": 4096,
+    "model_sha256": "15f4b3bdb3c454f230f0b4fb65665f5e2d43765c9c04db58d0958df7f9796ef2",
+    "hash_schema": "lsqn-model-arrays-v1",
+    "source": "bundled_frozen",
+    "source_id": "original main generator; reduced smoke dimension n32",
+    "file_sha256": "b044ae7f03917e035d776b24d21c5249062888518913d83eadb460ae0d5c2ee2",
+    "frozen_model_match": true,
+    "construction": "unchanged original generator at n32"
+  },
+  "wall_seconds": 0.0005039589999999983,
+  "wall_budget_seconds": 30.0,
+  "timeout": false,
+  "success": true,
+  "independent_verification": {
+    "passed": true,
+    "residual_inf": 1.9899424330560578e-09,
+    "residual2": 3.762156730019524e-09,
+    "finite": true,
+    "tolerance": 1e-08,
+    "value_error_bound_inf": 1.989942433056056e-07
+  },
+  "baseline_settings": {
+    "tol": 1e-08,
+    "implementation": "lsqn_baselines",
+    "note": "Method-specific fixed parameters and iteration limits are documented in baselines-port-notes.txt"
+  },
+  "reference_pi": {
+    "status": "complete",
+    "iterations": 1,
+    "verification": {
+      "passed": true,
+      "residual_inf": 7.105427357601002e-15,
+      "residual2": 2.537145046425895e-14,
+      "finite": true,
+      "tolerance": 1e-08,
+      "value_error_bound_inf": 7.105427357600996e-13
+    },
+    "diagnostic_wall_seconds": 0.0001292500000000807,
+    "value_difference_inf": 2.276572530490739e-08,
+    "residual_error_bound": 1.9899495384834135e-07,
+    "agrees_with_error_bound": true
+  },
+  "repeat": 0,
+  "run_id": "c6be79e5-9c57-4c7c-a460-12b9571cd6f3"
+}

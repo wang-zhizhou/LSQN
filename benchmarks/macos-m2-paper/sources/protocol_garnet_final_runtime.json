@@ -1,0 +1,65 @@
+{
+  "args": {
+    "label": "confirm_garnet_latent16",
+    "seed": 130,
+    "sizes": [
+      512,
+      1024,
+      2048,
+      4096
+    ],
+    "gammas": [
+      0.99,
+      0.999
+    ],
+    "repetitions": 3,
+    "variants": [
+      "reference",
+      "fused_sparse",
+      "QPI-BT",
+      "QPI-U",
+      "AA-I-S-5"
+    ]
+  },
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "external-library/libopenblas64_.0.dylib",
+      "version": "0.3.23.dev",
+      "threading_layer": "pthreads",
+      "architecture": "armv8"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "external-library/libopenblas.0.dylib",
+      "version": "0.3.26.dev",
+      "threading_layer": "pthreads",
+      "architecture": "neoversen1"
+    }
+  ],
+  "hashes": {
+    "scb_section6_rerun_2026-10-10/compute_optimization/operator_reuse_2026-10-14/experiment.py": "7a89d85545b2cf7984b058c73f220654dea10c1409e5dd704b307a5199f8bb4c",
+    "scb_section6_rerun_2026-10-10/compute_optimization/operator_reuse_2026-10-14/operators.py": "f72e5950cccc812def19ef044e7a8c0cf4c188bd8de8ad3d47b0fc0b34ba7606",
+    "scb_section6_rerun_2026-10-10/compute_optimization/operator_reuse_2026-10-14/image_basis.py": "144b00c5fdffa3f4571325fb1d5b4ac8611944d84e0c1dd080ac812f6cf19b7d",
+    "scb_section6_rerun_2026-10-10/compute_optimization/operator_reuse_2026-10-14/fused_basis.py": "c05e09e953c9488fcbe29a877488e14fc9b5833d7d825dc9e47a1e6e52ce00ae",
+    "scb_section6_rerun_2026-10-10/compute_optimization/operator_reuse_2026-10-14/selected_rows.c": "c41e5bc701aa6cfc80dee98ba757bc74addaf1c5376c92ee2f5fbc26856d0df0",
+    "scb_section6_rerun_2026-10-10/compute_optimization/product_reuse_2026-10-14/native_candidate.py": "2618e5acdcafca3fb6d3718d68e154347bc457c13f7ef220e4bbb685fa302bb1",
+    "scb_section6_rerun_2026-10-10/compute_optimization/product_reuse_2026-10-14/kernel_candidate.py": "de015f14f0de6b4e596a9fc53840cfa0f5dbd17a1cb71406cb152810c5b67504",
+    "scb_section6_rerun_2026-10-10/compute_optimization/product_reuse_2026-10-14/candidates.py": "0064cd5569490fa362af8e5ba201bcf4806c162897dbc8334fd7bc2134c1d056",
+    "scb_section6_rerun_2026-10-10/compute_optimization/policy_cache_2026-10-14/run_check.py": "1c49e1e8d21e7fc24a7eccc6a8316c6b686e93113f3ced121e0f42b1be3289fa",
+    "scb_siopt_candidate_2026-09-20/code/solver.py": "d8a05c55fb1a2773536ef47e6f94368bc8c5419ee8fb30051f0f6219c1bf97da",
+    "scb_section6_rerun_2026-10-10/compute_optimization/blocked_model.py": "0a7b66d392ca058dc0c7b4ca8f38b05c253379c70beda96f73e60c2d8e9130c9",
+    "scb_section6_rerun_2026-10-10/compute_optimization/policy_cache_2026-10-14/policy_cache.py": "2410cb49d83bd0fe80b2fc94a589be5e2584e9f73934a52808286772ec628281",
+    "scb_section6_rerun_2026-10-10/run_study.py": "2ab9f3aed792a596b9b674db666152db1d64a2ebb53f864699e14cded2bcd7a4",
+    "scb_siopt_candidate_2026-09-20/code/comparators.py": "a0a7b61a865bf6c697b9b70d9075fda0b4482e0f724e5e7a89ac93fbbbcc82c8",
+    "scb_section6_rerun_2026-10-10/compute_optimization/operator_reuse_2026-10-14/selection_before_confirmation.txt": "9436910fbfa07952747626dd06cfa6de81129972e22c53b1c884d32df1996c30"
+  },
+  "reference": "Second-round native SCB; all data-dependent setup inside timed solves; no parameter changes.",
+  "method": "Serial rotated order, one BLAS thread, three/five repetitions, 30/60-second limits."
+}

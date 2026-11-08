@@ -1,0 +1,216 @@
+{
+  "converged": true,
+  "message": "converged",
+  "iterations": 4,
+  "value": [
+    26.06371771853059,
+    26.052819111924055,
+    26.086457956851685,
+    26.05716323391735,
+    26.03724442232925,
+    25.948067911823628,
+    25.97677333017677,
+    25.98386784307826,
+    26.001416776222,
+    26.035346540446564,
+    26.072385843387345,
+    26.047554482752233,
+    26.0995881217549,
+    26.022571943333183,
+    26.007436811671305,
+    26.01064472714398,
+    25.934312211953834,
+    26.063394751273933,
+    26.00928117733994,
+    26.01658838784489,
+    26.069063467882323,
+    26.07142131866055,
+    26.008475118035552,
+    25.998051530754356,
+    25.989141879131267,
+    25.91398958479613,
+    26.03254964073666,
+    26.02037515720166,
+    26.02573580890358,
+    25.995834616876163,
+    26.008480724654415,
+    26.045331283780747
+  ],
+  "policy": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    3,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    0,
+    3,
+    3,
+    3,
+    3,
+    3,
+    0
+  ],
+  "history": [
+    {
+      "iteration": 0,
+      "info": 0,
+      "initial_residual_inf": 0.6767782945937353,
+      "attained_residual_inf": 0.001448511304941974,
+      "forcing_ratio": 0.0021403040205529994
+    },
+    {
+      "iteration": 1,
+      "info": 0,
+      "initial_residual_inf": 0.001448511304941974,
+      "attained_residual_inf": 1.238474691939162e-05,
+      "forcing_ratio": 0.00854998292187146
+    },
+    {
+      "iteration": 2,
+      "info": 0,
+      "initial_residual_inf": 1.238474691939162e-05,
+      "attained_residual_inf": 3.126849825174638e-07,
+      "forcing_ratio": 0.025247587581129508
+    },
+    {
+      "iteration": 3,
+      "info": 0,
+      "initial_residual_inf": 3.126849825174638e-07,
+      "attained_residual_inf": 3.001017045978216e-09,
+      "forcing_ratio": 0.009597573320652218
+    }
+  ],
+  "stats": {
+    "bellman_backups": 0.0,
+    "action_matvecs": 0.0,
+    "policy_matvecs": 0.0,
+    "policy_rmatvecs": 0.0,
+    "gmres_matvecs": 0.0,
+    "memory_image_matvecs": 0.0,
+    "prior_matvecs": 0.0,
+    "direct_solve_flops": 0.0,
+    "block_solve_flops": 0.0,
+    "lp_calls": 0,
+    "operator_products": 0.0
+  },
+  "method": "iGMRES-PI",
+  "residual": 3.00101632433325e-09,
+  "trace": [
+    {
+      "k": 0,
+      "residual2": 3.4289348493857448,
+      "residual_inf": 0.6767782945937242,
+      "elapsed_s": 4.9291999999923064e-05,
+      "event": "initial"
+    },
+    {
+      "k": 1,
+      "residual2": 0.003430667272639535,
+      "residual_inf": 0.0014485113049467202,
+      "elapsed_s": 0.0002920420000001034,
+      "event": "accepted"
+    },
+    {
+      "k": 2,
+      "residual2": 2.572849124769917e-05,
+      "residual_inf": 1.2384746920446332e-05,
+      "elapsed_s": 0.0004900420000000238,
+      "event": "accepted"
+    },
+    {
+      "k": 3,
+      "residual2": 9.587395294726814e-07,
+      "residual_inf": 3.126849854595548e-07,
+      "elapsed_s": 0.0006839169999999228,
+      "event": "accepted"
+    },
+    {
+      "k": 4,
+      "residual2": 7.482838965670699e-09,
+      "residual_inf": 3.00101632433325e-09,
+      "elapsed_s": 0.0009440419999999783,
+      "event": "finished"
+    }
+  ],
+  "runtime_s": 0.0009513750000000876,
+  "implementation": "curves",
+  "backend": "lsqn_baselines:iGMRES-PI",
+  "spec": {
+    "suite": "main",
+    "family": "latent",
+    "n": 32,
+    "gamma": 0.99,
+    "seed": 130,
+    "initialization": "reward_lower_bound_all_states"
+  },
+  "model": {
+    "n_states": 32,
+    "n_actions": 4,
+    "gamma": 0.99,
+    "name": "latent_switching",
+    "storage": "dense",
+    "transition_nnz": 4096,
+    "model_sha256": "15f4b3bdb3c454f230f0b4fb65665f5e2d43765c9c04db58d0958df7f9796ef2",
+    "hash_schema": "lsqn-model-arrays-v1",
+    "source": "bundled_frozen",
+    "source_id": "original main generator; reduced smoke dimension n32",
+    "file_sha256": "b044ae7f03917e035d776b24d21c5249062888518913d83eadb460ae0d5c2ee2",
+    "frozen_model_match": true,
+    "construction": "unchanged original generator at n32"
+  },
+  "wall_seconds": 0.0009808749999999922,
+  "wall_budget_seconds": 30.0,
+  "timeout": false,
+  "success": true,
+  "independent_verification": {
+    "passed": true,
+    "residual_inf": 3.00101632433325e-09,
+    "residual2": 7.482838965670699e-09,
+    "finite": true,
+    "tolerance": 1e-08,
+    "value_error_bound_inf": 3.0010163243332473e-07
+  },
+  "baseline_settings": {
+    "tol": 1e-08,
+    "implementation": "lsqn_baselines",
+    "note": "Method-specific fixed parameters and iteration limits are documented in baselines-port-notes.txt"
+  },
+  "reference_pi": {
+    "status": "complete",
+    "iterations": 1,
+    "verification": {
+      "passed": true,
+      "residual_inf": 7.105427357601002e-15,
+      "residual2": 2.537145046425895e-14,
+      "finite": true,
+      "tolerance": 1e-08,
+      "value_error_bound_inf": 7.105427357600996e-13
+    },
+    "diagnostic_wall_seconds": 0.0001292500000000807,
+    "value_difference_inf": 3.227679457040722e-08,
+    "residual_error_bound": 3.001023429760605e-07,
+    "agrees_with_error_bound": true
+  },
+  "repeat": 0,
+  "run_id": "c6be79e5-9c57-4c7c-a460-12b9571cd6f3"
+}

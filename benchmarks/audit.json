@@ -1,0 +1,1002 @@
+{
+  "schema": "lsqn-completed-linux-audit-v1",
+  "scope": "Read-only audit of completed Linux records; no solver rerun; recomputed scalar certificates from saved histories, source/model identity and local-result comparisons. Saved values are present; no per-iterate vectors or Linux-generated main model arrays were supplied.",
+  "source_package": {
+    "filename": "LSQN-release-candidate-2026-10-25.zip",
+    "sha256": "69a209bf72115c3155644116706c3cc854a091583160700c7dd71c86363f7dae",
+    "version": "0.1.0rc2"
+  },
+  "source_identity": {
+    "main": {
+      "source_count": 32,
+      "mismatches": {
+        "candidate": [],
+        "distribution": [],
+        "manifest": [],
+        "zip": []
+      },
+      "frozen_manifest_matches": true,
+      "implementation": "paper"
+    },
+    "public": {
+      "source_count": 32,
+      "mismatches": {
+        "candidate": [],
+        "distribution": [],
+        "manifest": [],
+        "zip": []
+      },
+      "frozen_manifest_matches": true,
+      "implementation": "paper"
+    },
+    "scaling": {
+      "source_count": 32,
+      "mismatches": {
+        "candidate": [],
+        "distribution": [],
+        "manifest": [],
+        "zip": []
+      },
+      "frozen_manifest_matches": true,
+      "implementation": "paper"
+    }
+  },
+  "recorded_sources_same_between_suites": true,
+  "suites": {
+    "main": {
+      "total_executions": 960,
+      "method_failure_counts": {
+        "iGMRES-PI": 12,
+        "AA-I-S-5": 3,
+        "QPI-S": 12,
+        "VI": 12,
+        "MPI-4": 9,
+        "MPI-20": 6
+      },
+      "lsqn_runs": 96,
+      "lsqn_unique_cases": 32,
+      "all_lsqn_pass": true,
+      "lsqn_errors": [],
+      "audited_accepted_steps": 2367,
+      "strict_armijo_failures": 0,
+      "strict_descent_failures": 0,
+      "residual2_increases": 0,
+      "queries_sum": 47517,
+      "query_min": 0,
+      "query_max": 563,
+      "residual_inf_min": 3.410605131648481e-13,
+      "residual_inf_max": 4.3131649363203906e-09,
+      "backend_mismatches": [],
+      "frozen_model_mismatches": [],
+      "models_different_between_methods_or_repeats": [],
+      "repeat_numerical_differences": []
+    },
+    "public": {
+      "total_executions": 24,
+      "method_failure_counts": {},
+      "lsqn_runs": 24,
+      "lsqn_unique_cases": 8,
+      "all_lsqn_pass": true,
+      "lsqn_errors": [],
+      "audited_accepted_steps": 534,
+      "strict_armijo_failures": 0,
+      "strict_descent_failures": 0,
+      "residual2_increases": 0,
+      "queries_sum": 14937,
+      "query_min": 0,
+      "query_max": 275,
+      "residual_inf_min": 1.1102230246251565e-16,
+      "residual_inf_max": 4.2580516890211584e-10,
+      "backend_mismatches": [],
+      "frozen_model_mismatches": [],
+      "models_different_between_methods_or_repeats": [],
+      "repeat_numerical_differences": []
+    },
+    "scaling": {
+      "total_executions": 36,
+      "method_failure_counts": {},
+      "lsqn_runs": 36,
+      "lsqn_unique_cases": 36,
+      "all_lsqn_pass": true,
+      "lsqn_errors": [],
+      "audited_accepted_steps": 1360,
+      "strict_armijo_failures": 0,
+      "strict_descent_failures": 0,
+      "residual2_increases": 0,
+      "queries_sum": 16309,
+      "query_min": 0,
+      "query_max": 80,
+      "residual_inf_min": 3.1319391524675666e-13,
+      "residual_inf_max": 7.955695352501735e-09,
+      "backend_mismatches": [],
+      "frozen_model_mismatches": [],
+      "models_different_between_methods_or_repeats": [],
+      "repeat_numerical_differences": []
+    }
+  },
+  "main_summary_recomputed_from_raw": {
+    "raw_files": 960,
+    "raw_total_bytes": 607179668,
+    "analysis_and_summary_match_raw": true,
+    "errors": []
+  },
+  "main_input_hash_vs_mac_generated_models": {
+    "total_cases": 32,
+    "same_hash": 16,
+    "by_family": {
+      "queue": {
+        "cases": 8,
+        "same_hash": 8
+      },
+      "cluster": {
+        "cases": 8,
+        "same_hash": 0
+      },
+      "garnet": {
+        "cases": 8,
+        "same_hash": 8
+      },
+      "latent": {
+        "cases": 8,
+        "same_hash": 0
+      }
+    },
+    "records": [
+      {
+        "case": "main_cluster_n1024_g0p999_seed130",
+        "family": "cluster",
+        "same_model_hash": false,
+        "linux_model_hash": "e9658e5bf7ff37a08db66fa972b001a5606dc53763f75513d51157b7e820e7ed",
+        "mac_reference_stage_model_hash": "4df02af6ad09f4996305adf99b05de581d87c300eb4bb2611d10933a12fdce7c"
+      },
+      {
+        "case": "main_cluster_n1024_g0p99_seed130",
+        "family": "cluster",
+        "same_model_hash": false,
+        "linux_model_hash": "8d235ff04e246469b5dda5d5c1964a970d7871493abb1c44280bf9623bea5dbc",
+        "mac_reference_stage_model_hash": "ae304525a3af3ba578718a0ec8f5c22736b66d5567c26d1df1c7946bb10ea79f"
+      },
+      {
+        "case": "main_cluster_n2048_g0p999_seed130",
+        "family": "cluster",
+        "same_model_hash": false,
+        "linux_model_hash": "2b60d405c80145508a84c6a888f7bf8ebbe375e8d8c3f45bca2af902b9b45a7d",
+        "mac_reference_stage_model_hash": "a08ba03914ec719a3abca6d2a6f2d855200ce76a14f71704e83a693fb393392a"
+      },
+      {
+        "case": "main_cluster_n2048_g0p99_seed130",
+        "family": "cluster",
+        "same_model_hash": false,
+        "linux_model_hash": "f5af8a3d38b0450540939974e20f1189193adbc8ab447f392d010df24c88130d",
+        "mac_reference_stage_model_hash": "dd374037117c3ec8ed70a0e2ef3e295963e0ef874519339e781337089184ef64"
+      },
+      {
+        "case": "main_cluster_n4096_g0p999_seed130",
+        "family": "cluster",
+        "same_model_hash": false,
+        "linux_model_hash": "8bafcf05524f7352ef7d56fea108c8953167b356b4635c4ce2d09d422cc03f5a",
+        "mac_reference_stage_model_hash": "b1fbcee56a1105d77e42cf8ba114008d56d7b39b9a5ef0ad45b3916e10f1487f"
+      },
+      {
+        "case": "main_cluster_n4096_g0p99_seed130",
+        "family": "cluster",
+        "same_model_hash": false,
+        "linux_model_hash": "23377040a430752c582032a992db67e08f3006ee82c5d964a682eb0a53768601",
+        "mac_reference_stage_model_hash": "64f5d34d6381181824a8dfa1fbdaa640d360eb81fc2d65dac8ae7bc05bf53bcc"
+      },
+      {
+        "case": "main_cluster_n512_g0p999_seed130",
+        "family": "cluster",
+        "same_model_hash": false,
+        "linux_model_hash": "875771b43635207576cd6470a6220c802f219be091e1c38cda4a08f073a27823",
+        "mac_reference_stage_model_hash": "4f203798dc2ba34b3a254b233b1431d581a4c36e0d90a762204419f78a5d7dbd"
+      },
+      {
+        "case": "main_cluster_n512_g0p99_seed130",
+        "family": "cluster",
+        "same_model_hash": false,
+        "linux_model_hash": "60f9c34de1aed47daad5b4d06bca4a4aa7a58565ec683e3c81020e22cfbc80a7",
+        "mac_reference_stage_model_hash": "e89ae62103118def88111f58a1bb1b0f4928fb5c415b94ade0688a84dc085b35"
+      },
+      {
+        "case": "main_garnet_n1024_g0p999_seed130",
+        "family": "garnet",
+        "same_model_hash": true,
+        "linux_model_hash": "1910fbaccec134397a83f3ab94bf74cf6c7b049d120fff056715cc2db5c7b781",
+        "mac_reference_stage_model_hash": "1910fbaccec134397a83f3ab94bf74cf6c7b049d120fff056715cc2db5c7b781"
+      },
+      {
+        "case": "main_garnet_n1024_g0p99_seed130",
+        "family": "garnet",
+        "same_model_hash": true,
+        "linux_model_hash": "3a0d7fdacd14dee6f46fdaa5521b5042f050e90d6af7d715ac65ce59594cc21e",
+        "mac_reference_stage_model_hash": "3a0d7fdacd14dee6f46fdaa5521b5042f050e90d6af7d715ac65ce59594cc21e"
+      },
+      {
+        "case": "main_garnet_n2048_g0p999_seed130",
+        "family": "garnet",
+        "same_model_hash": true,
+        "linux_model_hash": "bdff26af57a3ded90c3fde6a87b4556a121c20fc5fd7a6729c02d950a3cfb97f",
+        "mac_reference_stage_model_hash": "bdff26af57a3ded90c3fde6a87b4556a121c20fc5fd7a6729c02d950a3cfb97f"
+      },
+      {
+        "case": "main_garnet_n2048_g0p99_seed130",
+        "family": "garnet",
+        "same_model_hash": true,
+        "linux_model_hash": "d516a6d15e9d37784b50adf0140b818a5162764a55823a99e8cfe97d273ed4ef",
+        "mac_reference_stage_model_hash": "d516a6d15e9d37784b50adf0140b818a5162764a55823a99e8cfe97d273ed4ef"
+      },
+      {
+        "case": "main_garnet_n4096_g0p999_seed130",
+        "family": "garnet",
+        "same_model_hash": true,
+        "linux_model_hash": "2c6cb0d2cfdd7f35d08f4fe0231341b52f3e5765c4c1838f6cae86e646be3e3b",
+        "mac_reference_stage_model_hash": "2c6cb0d2cfdd7f35d08f4fe0231341b52f3e5765c4c1838f6cae86e646be3e3b"
+      },
+      {
+        "case": "main_garnet_n4096_g0p99_seed130",
+        "family": "garnet",
+        "same_model_hash": true,
+        "linux_model_hash": "b2d42eeca6cca171306fa590dcb8349bd9e7a3520b6d10053bf640ea12368329",
+        "mac_reference_stage_model_hash": "b2d42eeca6cca171306fa590dcb8349bd9e7a3520b6d10053bf640ea12368329"
+      },
+      {
+        "case": "main_garnet_n512_g0p999_seed130",
+        "family": "garnet",
+        "same_model_hash": true,
+        "linux_model_hash": "1260f0fbc127a6901e60785ce7d8f2f8b7c8879a55d248d6caab3c7a5d4d4c51",
+        "mac_reference_stage_model_hash": "1260f0fbc127a6901e60785ce7d8f2f8b7c8879a55d248d6caab3c7a5d4d4c51"
+      },
+      {
+        "case": "main_garnet_n512_g0p99_seed130",
+        "family": "garnet",
+        "same_model_hash": true,
+        "linux_model_hash": "bf23951c081a2388cf5b6cc87b86a3bd0d2b62c22f2c1c3592a0f914eef81cdc",
+        "mac_reference_stage_model_hash": "bf23951c081a2388cf5b6cc87b86a3bd0d2b62c22f2c1c3592a0f914eef81cdc"
+      },
+      {
+        "case": "main_latent_n1024_g0p999_seed130",
+        "family": "latent",
+        "same_model_hash": false,
+        "linux_model_hash": "d428285a5a762246631134b8b8421edff4a29041db3d826c6fc4959fc46bda0c",
+        "mac_reference_stage_model_hash": "a0f13b2b35ab234da2e2cd6ea4bb8835a887bf0952086d5b21d334d234d3bcaa"
+      },
+      {
+        "case": "main_latent_n1024_g0p99_seed130",
+        "family": "latent",
+        "same_model_hash": false,
+        "linux_model_hash": "be9db28f1f8c9b565353f2b4dabf52411c993cb6ce02790708f1ab2829a0e297",
+        "mac_reference_stage_model_hash": "93f07a4a250861a2f71babd1d09b82ad931671c48ae9c167d970b6522797113b"
+      },
+      {
+        "case": "main_latent_n2048_g0p999_seed130",
+        "family": "latent",
+        "same_model_hash": false,
+        "linux_model_hash": "62411a8e7f1ff954914f11c6bd763fcebf56ca01b63a0dd2ed40832a477b71a5",
+        "mac_reference_stage_model_hash": "24a619d54760a097a77985d6bd9697f430d2d45bdee83574603381fbc062aa7b"
+      },
+      {
+        "case": "main_latent_n2048_g0p99_seed130",
+        "family": "latent",
+        "same_model_hash": false,
+        "linux_model_hash": "8d1326590179587cb16d6375af7903b8c28ac586e9b2510ad4e1a2e77df266a6",
+        "mac_reference_stage_model_hash": "fcbd5d0eb2be0f1350ca2cac0737c7d6f0c3aa71e6a229fef101342265998ca1"
+      },
+      {
+        "case": "main_latent_n4096_g0p999_seed130",
+        "family": "latent",
+        "same_model_hash": false,
+        "linux_model_hash": "6eb96e0864b92d9c110ab00289fcd4bb8011ee4b701bacb7dc3c600bc24ad31e",
+        "mac_reference_stage_model_hash": "9224c955bab1c9fb0ca5904ba1522df2d2596c0fca5131bafca08457c4a8424d"
+      },
+      {
+        "case": "main_latent_n4096_g0p99_seed130",
+        "family": "latent",
+        "same_model_hash": false,
+        "linux_model_hash": "53f47844d608642667bafbb2c6e918b623dac3d5255e265a9e11d07f8a3e4289",
+        "mac_reference_stage_model_hash": "b62bbd5b5124e2e0c0f3b0525a6974e65291bd734fd3811d2e8bd7d0469d55e4"
+      },
+      {
+        "case": "main_latent_n512_g0p999_seed130",
+        "family": "latent",
+        "same_model_hash": false,
+        "linux_model_hash": "4031b7ed6cd262a4c63ff29022bb3f31f8012e9e3616d8e1861403b5c5d77131",
+        "mac_reference_stage_model_hash": "073d9600d1e59a9e6dfa62cfff9c04228e73e603417715c368fa71fbbdfcee94"
+      },
+      {
+        "case": "main_latent_n512_g0p99_seed130",
+        "family": "latent",
+        "same_model_hash": false,
+        "linux_model_hash": "55c3eb38c8fd76a8359e37aada38e646cf5dcfb240ede42012c9db49483b4ca2",
+        "mac_reference_stage_model_hash": "7db15399589e11e1455717e75a2d27a7980b546888aa2a1cdaebcea5107ca733"
+      },
+      {
+        "case": "main_queue_n1024_g0p999_seed130",
+        "family": "queue",
+        "same_model_hash": true,
+        "linux_model_hash": "0925d9c793d49f5510663495f669182364265f9e1a01eaf8b8a69cd56c940d26",
+        "mac_reference_stage_model_hash": "0925d9c793d49f5510663495f669182364265f9e1a01eaf8b8a69cd56c940d26"
+      },
+      {
+        "case": "main_queue_n1024_g0p99_seed130",
+        "family": "queue",
+        "same_model_hash": true,
+        "linux_model_hash": "56247a0d359e6743acda18e4fc6b6fbe5a08cefb1c932f9aa0a2fca2075e8541",
+        "mac_reference_stage_model_hash": "56247a0d359e6743acda18e4fc6b6fbe5a08cefb1c932f9aa0a2fca2075e8541"
+      },
+      {
+        "case": "main_queue_n2048_g0p999_seed130",
+        "family": "queue",
+        "same_model_hash": true,
+        "linux_model_hash": "6e6edbb54584a157e68487ab0fe873bc62aec36bd694796275957cccafef1929",
+        "mac_reference_stage_model_hash": "6e6edbb54584a157e68487ab0fe873bc62aec36bd694796275957cccafef1929"
+      },
+      {
+        "case": "main_queue_n2048_g0p99_seed130",
+        "family": "queue",
+        "same_model_hash": true,
+        "linux_model_hash": "554bd2f631e134cd4d6046e65cab29e1b593de9dbbde3ec37c142da463500a01",
+        "mac_reference_stage_model_hash": "554bd2f631e134cd4d6046e65cab29e1b593de9dbbde3ec37c142da463500a01"
+      },
+      {
+        "case": "main_queue_n4096_g0p999_seed130",
+        "family": "queue",
+        "same_model_hash": true,
+        "linux_model_hash": "31b5c5867aa438f1c3751022f6f6d365bf8c0a892eda9a4337cc5bf585a1643b",
+        "mac_reference_stage_model_hash": "31b5c5867aa438f1c3751022f6f6d365bf8c0a892eda9a4337cc5bf585a1643b"
+      },
+      {
+        "case": "main_queue_n4096_g0p99_seed130",
+        "family": "queue",
+        "same_model_hash": true,
+        "linux_model_hash": "e78de090f8dea90bec41f7335c0fabe0314cbb1f70eeb80dc7b088934261375f",
+        "mac_reference_stage_model_hash": "e78de090f8dea90bec41f7335c0fabe0314cbb1f70eeb80dc7b088934261375f"
+      },
+      {
+        "case": "main_queue_n512_g0p999_seed130",
+        "family": "queue",
+        "same_model_hash": true,
+        "linux_model_hash": "ae4a854b25c9b0c7c70688ba4a07007bb2c9ae7d0cf194e7234c8c244caf7dd8",
+        "mac_reference_stage_model_hash": "ae4a854b25c9b0c7c70688ba4a07007bb2c9ae7d0cf194e7234c8c244caf7dd8"
+      },
+      {
+        "case": "main_queue_n512_g0p99_seed130",
+        "family": "queue",
+        "same_model_hash": true,
+        "linux_model_hash": "1a32b8bbefefd93528e03b2fdd23187227b2e5a76987afc163248274c7b11ea2",
+        "mac_reference_stage_model_hash": "1a32b8bbefefd93528e03b2fdd23187227b2e5a76987afc163248274c7b11ea2"
+      }
+    ],
+    "note": "Compare model hashes only: the Mac reference-stage main solver backend differs and its timing/trajectory is not used as an implementation comparison."
+  },
+  "frozen_residual_recompute_on_mac": {
+    "unique_models": 44,
+    "all_pass": true,
+    "max_residual_inf": 7.955695352501735e-09,
+    "records": [
+      {
+        "case": "public_cliffwalking_n49_g0p999_seed0",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 2.5774937739697634e-12,
+        "linux_reported_residual_inf": 2.5774937739697634e-12,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 0.0
+      },
+      {
+        "case": "public_cliffwalking_n49_g0p99_seed0",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 3.043965079996269e-11,
+        "linux_reported_residual_inf": 3.043965079996269e-11,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 0.0
+      },
+      {
+        "case": "public_frozenlake4x4_n17_g0p999_seed0",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 1.1102230246251565e-16,
+        "linux_reported_residual_inf": 2.220446049250313e-16,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 0.0
+      },
+      {
+        "case": "public_frozenlake4x4_n17_g0p99_seed0",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 1.1102230246251565e-16,
+        "linux_reported_residual_inf": 1.1102230246251565e-16,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 0.0
+      },
+      {
+        "case": "public_frozenlake8x8_n65_g0p999_seed0",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 1.499356194756274e-12,
+        "linux_reported_residual_inf": 1.4994672170587364e-12,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 0.0
+      },
+      {
+        "case": "public_frozenlake8x8_n65_g0p99_seed0",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 2.4109325647003743e-11,
+        "linux_reported_residual_inf": 2.4109381158154974e-11,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 0.0
+      },
+      {
+        "case": "public_taxi_n501_g0p999_seed0",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 1.7761792037163104e-11,
+        "linux_reported_residual_inf": 1.7761792037163104e-11,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 0.0
+      },
+      {
+        "case": "public_taxi_n501_g0p99_seed0",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 4.2580516890211584e-10,
+        "linux_reported_residual_inf": 4.2580516890211584e-10,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 0.0
+      },
+      {
+        "case": "scaling_frozenlake_n1024_g0p999_seed130",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 1.5548673459875317e-12,
+        "linux_reported_residual_inf": 1.5548673459875317e-12,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 5.551115123125783e-17
+      },
+      {
+        "case": "scaling_frozenlake_n1024_g0p999_seed131",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 1.4376905221880065e-09,
+        "linux_reported_residual_inf": 1.4376905221880065e-09,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 1.1102230246251565e-16
+      },
+      {
+        "case": "scaling_frozenlake_n1024_g0p999_seed132",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 9.262257627540293e-12,
+        "linux_reported_residual_inf": 9.262368649842756e-12,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 1.1102230246251565e-16
+      },
+      {
+        "case": "scaling_frozenlake_n1024_g0p99_seed130",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 7.955695352501735e-09,
+        "linux_reported_residual_inf": 7.955695352501735e-09,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 2.7755575615628914e-17
+      },
+      {
+        "case": "scaling_frozenlake_n1024_g0p99_seed131",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 6.626738047188496e-11,
+        "linux_reported_residual_inf": 6.626738047188496e-11,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 2.7755575615628914e-17
+      },
+      {
+        "case": "scaling_frozenlake_n1024_g0p99_seed132",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 3.63342920334242e-09,
+        "linux_reported_residual_inf": 3.6334292102813137e-09,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 6.938893903907228e-18
+      },
+      {
+        "case": "scaling_frozenlake_n2304_g0p999_seed130",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 6.485367798347852e-12,
+        "linux_reported_residual_inf": 6.485367798347852e-12,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 1.1102230246251565e-16
+      },
+      {
+        "case": "scaling_frozenlake_n2304_g0p999_seed131",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 1.2258744019888468e-09,
+        "linux_reported_residual_inf": 1.2258744019888468e-09,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 1.1102230246251565e-16
+      },
+      {
+        "case": "scaling_frozenlake_n2304_g0p999_seed132",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 2.426466916283232e-09,
+        "linux_reported_residual_inf": 2.426466916283232e-09,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 1.1102230246251565e-16
+      },
+      {
+        "case": "scaling_frozenlake_n2304_g0p99_seed130",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 1.6049453432920302e-12,
+        "linux_reported_residual_inf": 1.6049453432920302e-12,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 3.469446951953614e-18
+      },
+      {
+        "case": "scaling_frozenlake_n2304_g0p99_seed131",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 6.678725766873228e-10,
+        "linux_reported_residual_inf": 6.678725801567698e-10,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 5.551115123125783e-17
+      },
+      {
+        "case": "scaling_frozenlake_n2304_g0p99_seed132",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 1.495142204488431e-11,
+        "linux_reported_residual_inf": 1.495142204488431e-11,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 2.7755575615628914e-17
+      },
+      {
+        "case": "scaling_frozenlake_n256_g0p999_seed130",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 4.755299487513298e-09,
+        "linux_reported_residual_inf": 4.755299487513298e-09,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 0.0
+      },
+      {
+        "case": "scaling_frozenlake_n256_g0p999_seed131",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 3.642574131212939e-09,
+        "linux_reported_residual_inf": 3.642574131212939e-09,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 0.0
+      },
+      {
+        "case": "scaling_frozenlake_n256_g0p999_seed132",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 1.56935575645889e-10,
+        "linux_reported_residual_inf": 1.56935575645889e-10,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 1.1102230246251565e-16
+      },
+      {
+        "case": "scaling_frozenlake_n256_g0p99_seed130",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 2.8711696908878537e-09,
+        "linux_reported_residual_inf": 2.8711696908878537e-09,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 0.0
+      },
+      {
+        "case": "scaling_frozenlake_n256_g0p99_seed131",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 6.70441996364346e-09,
+        "linux_reported_residual_inf": 6.704419908132309e-09,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 0.0
+      },
+      {
+        "case": "scaling_frozenlake_n256_g0p99_seed132",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 2.442383295608863e-09,
+        "linux_reported_residual_inf": 2.442383295608863e-09,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 0.0
+      },
+      {
+        "case": "scaling_frozenlake_n4096_g0p999_seed130",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 7.512828692490814e-09,
+        "linux_reported_residual_inf": 7.512828692490814e-09,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 1.1102230246251565e-16
+      },
+      {
+        "case": "scaling_frozenlake_n4096_g0p999_seed131",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 3.133049375492192e-13,
+        "linux_reported_residual_inf": 3.1319391524675666e-13,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 1.1102230246251565e-16
+      },
+      {
+        "case": "scaling_frozenlake_n4096_g0p999_seed132",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 5.976552586162143e-12,
+        "linux_reported_residual_inf": 5.976552586162143e-12,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 1.1102230246251565e-16
+      },
+      {
+        "case": "scaling_frozenlake_n4096_g0p99_seed130",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 8.823705655025549e-13,
+        "linux_reported_residual_inf": 8.823705655025549e-13,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 1.3877787807814457e-17
+      },
+      {
+        "case": "scaling_frozenlake_n4096_g0p99_seed131",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 4.886854809704744e-12,
+        "linux_reported_residual_inf": 4.886854809704744e-12,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 1.3877787807814457e-17
+      },
+      {
+        "case": "scaling_frozenlake_n4096_g0p99_seed132",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 7.269384991962641e-09,
+        "linux_reported_residual_inf": 7.269384991962641e-09,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 1.3877787807814457e-17
+      },
+      {
+        "case": "scaling_frozenlake_n576_g0p999_seed130",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 1.154154549709574e-11,
+        "linux_reported_residual_inf": 1.154154549709574e-11,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 0.0
+      },
+      {
+        "case": "scaling_frozenlake_n576_g0p999_seed131",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 2.6732582814048556e-10,
+        "linux_reported_residual_inf": 2.6732582814048556e-10,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 5.551115123125783e-17
+      },
+      {
+        "case": "scaling_frozenlake_n576_g0p999_seed132",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 7.075018348956519e-10,
+        "linux_reported_residual_inf": 7.075017238733494e-10,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 0.0
+      },
+      {
+        "case": "scaling_frozenlake_n576_g0p99_seed130",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 2.2720642034457228e-10,
+        "linux_reported_residual_inf": 2.2720642034457228e-10,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 2.7755575615628914e-17
+      },
+      {
+        "case": "scaling_frozenlake_n576_g0p99_seed131",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 2.5519142354823998e-11,
+        "linux_reported_residual_inf": 2.5519142354823998e-11,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 5.551115123125783e-17
+      },
+      {
+        "case": "scaling_frozenlake_n576_g0p99_seed132",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 9.117068211494939e-12,
+        "linux_reported_residual_inf": 9.117068211494939e-12,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 0.0
+      },
+      {
+        "case": "scaling_frozenlake_n64_g0p999_seed130",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 4.751986582007817e-10,
+        "linux_reported_residual_inf": 4.751986582007817e-10,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 0.0
+      },
+      {
+        "case": "scaling_frozenlake_n64_g0p999_seed131",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 2.3748003563639486e-11,
+        "linux_reported_residual_inf": 2.374822560824441e-11,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 0.0
+      },
+      {
+        "case": "scaling_frozenlake_n64_g0p999_seed132",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 1.4426547734203155e-09,
+        "linux_reported_residual_inf": 1.4426547734203155e-09,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 0.0
+      },
+      {
+        "case": "scaling_frozenlake_n64_g0p99_seed130",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 8.12839129338272e-10,
+        "linux_reported_residual_inf": 8.12839129338272e-10,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 0.0
+      },
+      {
+        "case": "scaling_frozenlake_n64_g0p99_seed131",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 2.0180357385157777e-10,
+        "linux_reported_residual_inf": 2.018034628292753e-10,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 0.0
+      },
+      {
+        "case": "scaling_frozenlake_n64_g0p99_seed132",
+        "npz_hash_matches": true,
+        "array_hash_matches": true,
+        "residual_inf_on_mac": 4.097389094681603e-12,
+        "linux_reported_residual_inf": 4.097389094681603e-12,
+        "passed": true,
+        "maximum_saved_policy_greedy_gap": 0.0
+      }
+    ],
+    "policy_differences_against_old_reference_checks": [
+      {
+        "case": "public_cliffwalking_n49_g0p999_seed0",
+        "different_policy_rows": 6,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 2.5712765250318625e-12,
+        "value_difference_inf": 8.019380715040825e-10
+      },
+      {
+        "case": "public_cliffwalking_n49_g0p99_seed0",
+        "different_policy_rows": 1,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 0.0,
+        "value_difference_inf": 6.979078426283536e-10
+      },
+      {
+        "case": "public_frozenlake4x4_n17_g0p99_seed0",
+        "different_policy_rows": 1,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 0.0,
+        "value_difference_inf": 8.881784197001252e-16
+      },
+      {
+        "case": "public_taxi_n501_g0p999_seed0",
+        "different_policy_rows": 97,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 1.1683098932735447e-11,
+        "value_difference_inf": 1.3698873146950064e-09
+      },
+      {
+        "case": "public_taxi_n501_g0p99_seed0",
+        "different_policy_rows": 30,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 6.120046691648895e-10,
+        "value_difference_inf": 1.5063750247179541e-09
+      },
+      {
+        "case": "scaling_frozenlake_n1024_g0p999_seed130",
+        "different_policy_rows": 5,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 1.0391687510491465e-13,
+        "value_difference_inf": 2.292043221885365e-09
+      },
+      {
+        "case": "scaling_frozenlake_n1024_g0p999_seed131",
+        "different_policy_rows": 2,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 1.1102230246251565e-16,
+        "value_difference_inf": 1.996459875197587e-08
+      },
+      {
+        "case": "scaling_frozenlake_n1024_g0p999_seed132",
+        "different_policy_rows": 4,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 5.551115123125783e-17,
+        "value_difference_inf": 8.896514447354065e-08
+      },
+      {
+        "case": "scaling_frozenlake_n1024_g0p99_seed130",
+        "different_policy_rows": 2,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 0.0,
+        "value_difference_inf": 3.260092683865512e-07
+      },
+      {
+        "case": "scaling_frozenlake_n1024_g0p99_seed131",
+        "different_policy_rows": 4,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 2.7755575615628914e-17,
+        "value_difference_inf": 9.373478659924217e-10
+      },
+      {
+        "case": "scaling_frozenlake_n1024_g0p99_seed132",
+        "different_policy_rows": 3,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 0.0,
+        "value_difference_inf": 1.101580801993185e-07
+      },
+      {
+        "case": "scaling_frozenlake_n2304_g0p999_seed130",
+        "different_policy_rows": 9,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 1.9384494009955233e-13,
+        "value_difference_inf": 9.303954495720745e-09
+      },
+      {
+        "case": "scaling_frozenlake_n2304_g0p999_seed131",
+        "different_policy_rows": 4,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 5.551115123125783e-17,
+        "value_difference_inf": 6.925519024925109e-08
+      },
+      {
+        "case": "scaling_frozenlake_n2304_g0p999_seed132",
+        "different_policy_rows": 6,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 2.7755575615628914e-17,
+        "value_difference_inf": 9.269951439794255e-08
+      },
+      {
+        "case": "scaling_frozenlake_n2304_g0p99_seed130",
+        "different_policy_rows": 10,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 2.7755575615628914e-16,
+        "value_difference_inf": 6.875455760280147e-11
+      },
+      {
+        "case": "scaling_frozenlake_n2304_g0p99_seed131",
+        "different_policy_rows": 6,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 6.938893903907228e-18,
+        "value_difference_inf": 1.9612839675248184e-08
+      },
+      {
+        "case": "scaling_frozenlake_n2304_g0p99_seed132",
+        "different_policy_rows": 1,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 0.0,
+        "value_difference_inf": 3.888092833803647e-10
+      },
+      {
+        "case": "scaling_frozenlake_n256_g0p999_seed130",
+        "different_policy_rows": 1,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 0.0,
+        "value_difference_inf": 3.722234021008575e-08
+      },
+      {
+        "case": "scaling_frozenlake_n256_g0p999_seed132",
+        "different_policy_rows": 1,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 1.1102230246251565e-16,
+        "value_difference_inf": 4.218847493575595e-15
+      },
+      {
+        "case": "scaling_frozenlake_n256_g0p99_seed130",
+        "different_policy_rows": 1,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 0.0,
+        "value_difference_inf": 7.771561172376096e-16
+      },
+      {
+        "case": "scaling_frozenlake_n4096_g0p999_seed130",
+        "different_policy_rows": 6,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 2.85570900260268e-10,
+        "value_difference_inf": 2.9705623516562696e-07
+      },
+      {
+        "case": "scaling_frozenlake_n4096_g0p999_seed131",
+        "different_policy_rows": 6,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 1.1102230246251565e-16,
+        "value_difference_inf": 1.1351365847289685e-08
+      },
+      {
+        "case": "scaling_frozenlake_n4096_g0p999_seed132",
+        "different_policy_rows": 8,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 1.3888890038060708e-13,
+        "value_difference_inf": 7.531696377682806e-10
+      },
+      {
+        "case": "scaling_frozenlake_n4096_g0p99_seed130",
+        "different_policy_rows": 5,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 2.4313884239290928e-14,
+        "value_difference_inf": 1.052854057149305e-08
+      },
+      {
+        "case": "scaling_frozenlake_n4096_g0p99_seed131",
+        "different_policy_rows": 8,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 6.938893903907228e-18,
+        "value_difference_inf": 2.471895006392333e-10
+      },
+      {
+        "case": "scaling_frozenlake_n4096_g0p99_seed132",
+        "different_policy_rows": 6,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 3.469446951953614e-18,
+        "value_difference_inf": 1.8486547966652805e-07
+      },
+      {
+        "case": "scaling_frozenlake_n576_g0p999_seed131",
+        "different_policy_rows": 1,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 0.0,
+        "value_difference_inf": 1.570676921858194e-09
+      },
+      {
+        "case": "scaling_frozenlake_n576_g0p999_seed132",
+        "different_policy_rows": 1,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 0.0,
+        "value_difference_inf": 9.877783813116991e-09
+      },
+      {
+        "case": "scaling_frozenlake_n576_g0p99_seed130",
+        "different_policy_rows": 1,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 2.7755575615628914e-17,
+        "value_difference_inf": 2.6342525660805194e-09
+      },
+      {
+        "case": "scaling_frozenlake_n576_g0p99_seed131",
+        "different_policy_rows": 2,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 5.551115123125783e-17,
+        "value_difference_inf": 3.2866472099435384e-08
+      },
+      {
+        "case": "scaling_frozenlake_n576_g0p99_seed132",
+        "different_policy_rows": 1,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 0.0,
+        "value_difference_inf": 9.160017189202563e-11
+      },
+      {
+        "case": "scaling_frozenlake_n64_g0p999_seed130",
+        "different_policy_rows": 1,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 0.0,
+        "value_difference_inf": 1.9984014443252818e-15
+      },
+      {
+        "case": "scaling_frozenlake_n64_g0p99_seed130",
+        "different_policy_rows": 1,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 0.0,
+        "value_difference_inf": 5.551115123125783e-16
+      },
+      {
+        "case": "scaling_frozenlake_n64_g0p99_seed131",
+        "different_policy_rows": 1,
+        "max_q_gap_between_two_saved_policies_at_linux_value": 1.1102230246251565e-16,
+        "value_difference_inf": 9.992007221626409e-16
+      }
+    ]
+  },
+  "scalar_recomputation_roundoff": {
+    "case": "main_cluster_n1024_g0p99_seed130, all three repeats, step 2",
+    "stored_target": 0.34114722495662486,
+    "mac_recomputed_target": 0.3411472249566248,
+    "difference_ulps": 1,
+    "handling": "Target-formula check permits 2 ULP for cross-platform scalar pow/libm rounding. This changes only offline audit comparison; no solver threshold was changed."
+  },
+  "limitations": [
+    "Main models were generated on Linux, and --save-models was false. Where model hashes differ from Mac, the supplied records do not establish the magnitude or sole cause of input differences; no Linux transition arrays were supplied.",
+    "Public/scaling inputs are frozen and their recorded archive/model hashes match the distributed manifest. This audit compares saved model identity and recomputes all scalar acceptance certificates; saved scalar slopes alone cannot independently reconstruct generalized derivatives without per-iterate vectors.",
+    "Runtime metadata records NumPy OpenBLAS dispatch Prescott and SciPy dispatch Haswell on i9-14900K. The environment snapshot does not record OPENBLAS_CORETYPE, so it cannot identify whether an override or autodetection caused this. No CPU affinity was set.",
+    "Residual curves and decreasing observed forcing values are empirical diagnostics, not a proof of asymptotic superlinear convergence.",
+    "All main methods used the same recorded model hash for each case. A different cross-platform model hash does not affect this within-Linux fairness, but prevents a strict identical-input cross-platform timing or trajectory claim.",
+    "The main suite exit status 1 records baseline failures/timeouts; it is not an LSQN failure. See method_failure_counts."
+  ],
+  "original_audit_sha256": {
+    "core_audit.json": "e5d77b409791ecf0c7b160f227893197a9eea8dc5df98edbfb12e7efc954a4b6",
+    "main_audit.json": "ffa80ef24c2a240cdcdbe820e5ce8b9287d4b919e071994bdba10f7f47e9443f",
+    "learning_audit.json": "2084905af38833901930fe27130ebb0c1a7317923fd5b27df0577344f04bab25"
+  },
+  "original_audit_note": "Hashes identify the authors' original local audits. The published audit exports only relevant checks and excludes local filesystem locations."
+}

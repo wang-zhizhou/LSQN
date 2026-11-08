@@ -1,0 +1,244 @@
+{
+  "converged": true,
+  "message": "converged",
+  "iterations": 6,
+  "value": [
+    3.959374978915934,
+    3.932676845062144,
+    3.9746730701106108,
+    3.956376813294976,
+    3.90774674147404,
+    3.876825951402926,
+    -4.035820937247106,
+    -4.0851866546877025,
+    -4.04906953155568,
+    -4.0752907884764396,
+    -4.12058466074032,
+    -3.930683275415869,
+    -3.857711206738278,
+    -3.837029679466283,
+    -3.8209995241847787,
+    -3.834264351687804,
+    -4.081331265103231,
+    -4.053697239407093,
+    -4.106423807095887,
+    -4.042848319267512,
+    -4.06775933531776,
+    -4.051454109411486,
+    -5.8966597041215785,
+    -5.881102315707028,
+    -5.90515499426001,
+    -5.880385748526255,
+    -5.9190310463664915,
+    -6.89614206864137,
+    -6.926429114849517,
+    -6.893062196204199,
+    -6.898778482462772,
+    -6.921215677115862
+  ],
+  "policy": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    2,
+    2,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0
+  ],
+  "history": [
+    {
+      "iteration": 0,
+      "info": 0,
+      "initial_residual_inf": 0.6307883859813392,
+      "attained_residual_inf": 0.029005876872341102,
+      "forcing_ratio": 0.045983530320101974
+    },
+    {
+      "iteration": 1,
+      "info": 0,
+      "initial_residual_inf": 0.04091721419791777,
+      "attained_residual_inf": 0.0014307146559263961,
+      "forcing_ratio": 0.034966081732886
+    },
+    {
+      "iteration": 2,
+      "info": 0,
+      "initial_residual_inf": 0.002585855617309174,
+      "attained_residual_inf": 9.003567000817614e-05,
+      "forcing_ratio": 0.03481852173241858
+    },
+    {
+      "iteration": 3,
+      "info": 0,
+      "initial_residual_inf": 9.003567000817614e-05,
+      "attained_residual_inf": 3.6825576384125203e-06,
+      "forcing_ratio": 0.04090109662179564
+    },
+    {
+      "iteration": 4,
+      "info": 0,
+      "initial_residual_inf": 3.6825576384125203e-06,
+      "attained_residual_inf": 1.50006758667387e-07,
+      "forcing_ratio": 0.040734395329668764
+    },
+    {
+      "iteration": 5,
+      "info": 0,
+      "initial_residual_inf": 1.50006758667387e-07,
+      "attained_residual_inf": 5.721314186302173e-09,
+      "forcing_ratio": 0.038140376054576035
+    }
+  ],
+  "stats": {
+    "bellman_backups": 0.0,
+    "action_matvecs": 0.0,
+    "policy_matvecs": 0.0,
+    "policy_rmatvecs": 0.0,
+    "gmres_matvecs": 0.0,
+    "memory_image_matvecs": 0.0,
+    "prior_matvecs": 0.0,
+    "direct_solve_flops": 0.0,
+    "block_solve_flops": 0.0,
+    "lp_calls": 0,
+    "operator_products": 0.0
+  },
+  "method": "iGMRES-PI",
+  "residual": 5.721313200979239e-09,
+  "trace": [
+    {
+      "k": 0,
+      "residual2": 2.4800304048183515,
+      "residual_inf": 0.6307883859813401,
+      "elapsed_s": 5.4457999999923956e-05,
+      "event": "initial"
+    },
+    {
+      "k": 1,
+      "residual2": 0.07269420572388184,
+      "residual_inf": 0.04091721419791838,
+      "elapsed_s": 0.00055633300000002,
+      "event": "accepted"
+    },
+    {
+      "k": 2,
+      "residual2": 0.004497064550556708,
+      "residual_inf": 0.002585855617310173,
+      "elapsed_s": 0.001047583000000074,
+      "event": "accepted"
+    },
+    {
+      "k": 3,
+      "residual2": 0.00022201191909485438,
+      "residual_inf": 9.003567000753776e-05,
+      "elapsed_s": 0.0015855830000000015,
+      "event": "accepted"
+    },
+    {
+      "k": 4,
+      "residual2": 8.268898903087322e-06,
+      "residual_inf": 3.6825576374965863e-06,
+      "elapsed_s": 0.0021780829999999973,
+      "event": "accepted"
+    },
+    {
+      "k": 5,
+      "residual2": 2.795433230974131e-07,
+      "residual_inf": 1.5000675857024248e-07,
+      "elapsed_s": 0.0029101250000000967,
+      "event": "accepted"
+    },
+    {
+      "k": 6,
+      "residual2": 1.3180045748553326e-08,
+      "residual_inf": 5.721313200979239e-09,
+      "elapsed_s": 0.003733291000000083,
+      "event": "finished"
+    }
+  ],
+  "runtime_s": 0.0037410829999999784,
+  "implementation": "curves",
+  "backend": "lsqn_baselines:iGMRES-PI",
+  "spec": {
+    "suite": "main",
+    "family": "cluster",
+    "n": 32,
+    "gamma": 0.99,
+    "seed": 130,
+    "initialization": "reward_lower_bound_all_states"
+  },
+  "model": {
+    "n_states": 32,
+    "n_actions": 4,
+    "gamma": 0.99,
+    "name": "nearly_decomposable",
+    "storage": "dense",
+    "transition_nnz": 1072,
+    "model_sha256": "cd53584a926a3c14aa8073eff847bd6f6cfcc5fd9f6f92a760f5361c31cc6204",
+    "hash_schema": "lsqn-model-arrays-v1",
+    "source": "bundled_frozen",
+    "source_id": "original main generator; reduced smoke dimension n32",
+    "file_sha256": "26838d972aec97565e16b542a5b4f7aa52fea8c98983a495f5ee3a6391a57172",
+    "frozen_model_match": true,
+    "construction": "unchanged original generator at n32"
+  },
+  "wall_seconds": 0.003778958999999915,
+  "wall_budget_seconds": 30.0,
+  "timeout": false,
+  "success": true,
+  "independent_verification": {
+    "passed": true,
+    "residual_inf": 5.721313200979239e-09,
+    "residual2": 1.3180045748553326e-08,
+    "finite": true,
+    "tolerance": 1e-08,
+    "value_error_bound_inf": 5.721313200979234e-07
+  },
+  "baseline_settings": {
+    "tol": 1e-08,
+    "implementation": "lsqn_baselines",
+    "note": "Method-specific fixed parameters and iteration limits are documented in baselines-port-notes.txt"
+  },
+  "reference_pi": {
+    "status": "complete",
+    "iterations": 2,
+    "verification": {
+      "passed": true,
+      "residual_inf": 1.7763568394002505e-15,
+      "residual2": 3.76822190084106e-15,
+      "finite": true,
+      "tolerance": 1e-08,
+      "value_error_bound_inf": 1.776356839400249e-13
+    },
+    "diagnostic_wall_seconds": 0.00019362499999997507,
+    "value_difference_inf": 2.5384809365647243e-07,
+    "residual_error_bound": 5.721314977336073e-07,
+    "agrees_with_error_bound": true
+  },
+  "repeat": 0,
+  "run_id": "c6be79e5-9c57-4c7c-a460-12b9571cd6f3"
+}

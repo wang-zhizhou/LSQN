@@ -1,0 +1,354 @@
+{
+  "schema": "lsqn-historical-environment-v1",
+  "records": [
+    {
+      "batch": "baseline_paper_table",
+      "fields": {
+        "date": "2026-10-10",
+        "platform": "macOS-14.3-arm64-arm-64bit",
+        "processor": "arm",
+        "python": "3.9.13",
+        "numpy": "1.26.4",
+        "scipy": "1.13.0",
+        "gymnasium": null,
+        "cpu_model": null,
+        "memory_bytes": null,
+        "c_compiler": null,
+        "c_compiler_flags": null,
+        "threadpoolctl_version": null,
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libopenblas",
+            "filepath": "external-library/libopenblas64_.0.dylib",
+            "version": "0.3.23.dev",
+            "threading_layer": "pthreads",
+            "architecture": "armv8"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libopenblas",
+            "filepath": "external-library/libopenblas.0.dylib",
+            "version": "0.3.26.dev",
+            "threading_layer": "pthreads",
+            "architecture": "neoversen1"
+          }
+        ]
+      },
+      "source_ref": {
+        "source_id": "output/pdf/section6_optimized_2026-10-11/final_protocol.json",
+        "sha256": "e26c1f5a6fe77e5e75bfa0115d015d9bbd5749f1943b2483fbc96ebe587a4f82",
+        "original_size_bytes": 6721,
+        "bundled_normalized_copy": "sources/protocol_baseline_paper_table.json"
+      },
+      "missing_policy": "Null means not recorded in this batch protocol; values are not borrowed from another batch or the current host."
+    },
+    {
+      "batch": "original_main_batch",
+      "fields": {
+        "date": "2026-10-10",
+        "platform": "macOS-14.3-arm64-arm-64bit",
+        "processor": "arm",
+        "python": "3.9.13",
+        "numpy": "1.26.4",
+        "scipy": "1.13.0",
+        "gymnasium": null,
+        "cpu_model": null,
+        "memory_bytes": null,
+        "c_compiler": null,
+        "c_compiler_flags": null,
+        "threadpoolctl_version": null,
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libopenblas",
+            "filepath": "external-library/libopenblas64_.0.dylib",
+            "version": "0.3.23.dev",
+            "threading_layer": "pthreads",
+            "architecture": "armv8"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libopenblas",
+            "filepath": "external-library/libopenblas.0.dylib",
+            "version": "0.3.26.dev",
+            "threading_layer": "pthreads",
+            "architecture": "neoversen1"
+          }
+        ]
+      },
+      "source_ref": {
+        "source_id": "scb_section6_rerun_2026-10-10/protocol.json",
+        "sha256": "94888be93976a55881d90d65bbb1f2ca58bbfa2b15c0824da356c8b001bbda48",
+        "original_size_bytes": 3652,
+        "bundled_normalized_copy": "sources/protocol_original_main_batch.json"
+      },
+      "missing_policy": "Null means not recorded in this batch protocol; values are not borrowed from another batch or the current host."
+    },
+    {
+      "batch": "scaling",
+      "fields": {
+        "date": "2026-09-30",
+        "platform": "macOS-14.3-arm64-arm-64bit",
+        "processor": null,
+        "python": "3.9.13 (v3.9.13:6de2ca5339, May 17 2022, 11:37:23) \n[Clang 13.0.0 (clang-1300.0.29.30)]",
+        "numpy": "1.26.4",
+        "scipy": null,
+        "gymnasium": null,
+        "cpu_model": null,
+        "memory_bytes": null,
+        "c_compiler": null,
+        "c_compiler_flags": null,
+        "threadpoolctl_version": null,
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libopenblas",
+            "filepath": "external-library/libopenblas64_.0.dylib",
+            "version": "0.3.23.dev",
+            "threading_layer": "pthreads",
+            "architecture": "armv8"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libopenblas",
+            "filepath": "external-library/libopenblas.0.dylib",
+            "version": "0.3.26.dev",
+            "threading_layer": "pthreads",
+            "architecture": "neoversen1"
+          }
+        ]
+      },
+      "source_ref": {
+        "source_id": "scb_public_benchmarks_2026-09-30/results/scale/protocol.json",
+        "sha256": "4f0da64d9be53b53f481972a8809d2b5b2e5f627f77713c0e457305370a6884f",
+        "original_size_bytes": 8613,
+        "bundled_normalized_copy": "sources/protocol_scaling.json"
+      },
+      "missing_policy": "Null means not recorded in this batch protocol; values are not borrowed from another batch or the current host."
+    },
+    {
+      "batch": "queue_final_runtime",
+      "fields": {
+        "date": null,
+        "platform": null,
+        "processor": null,
+        "python": null,
+        "numpy": null,
+        "scipy": null,
+        "gymnasium": null,
+        "cpu_model": null,
+        "memory_bytes": null,
+        "c_compiler": null,
+        "c_compiler_flags": null,
+        "threadpoolctl_version": null,
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libopenblas",
+            "filepath": "external-library/libopenblas64_.0.dylib",
+            "version": "0.3.23.dev",
+            "threading_layer": "pthreads",
+            "architecture": "armv8"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libopenblas",
+            "filepath": "external-library/libopenblas.0.dylib",
+            "version": "0.3.26.dev",
+            "threading_layer": "pthreads",
+            "architecture": "neoversen1"
+          }
+        ]
+      },
+      "source_ref": {
+        "source_id": "scb_section6_rerun_2026-10-10/compute_optimization/queue_fusion_2026-10-14/confirm_queue8/protocol.json",
+        "sha256": "192be510052a472c3d51128e42187f2453f5596314221137baacd51a4a4c1426",
+        "original_size_bytes": 59641,
+        "bundled_normalized_copy": "sources/protocol_queue_final_runtime.json"
+      },
+      "missing_policy": "Null means not recorded in this batch protocol; values are not borrowed from another batch or the current host."
+    },
+    {
+      "batch": "cluster_final_runtime",
+      "fields": {
+        "date": null,
+        "platform": null,
+        "processor": null,
+        "python": null,
+        "numpy": null,
+        "scipy": null,
+        "gymnasium": null,
+        "cpu_model": null,
+        "memory_bytes": null,
+        "c_compiler": null,
+        "c_compiler_flags": null,
+        "threadpoolctl_version": null,
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libopenblas",
+            "filepath": "external-library/libopenblas64_.0.dylib",
+            "version": "0.3.23.dev",
+            "threading_layer": "pthreads",
+            "architecture": "armv8"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libopenblas",
+            "filepath": "external-library/libopenblas.0.dylib",
+            "version": "0.3.26.dev",
+            "threading_layer": "pthreads",
+            "architecture": "neoversen1"
+          }
+        ]
+      },
+      "source_ref": {
+        "source_id": "scb_section6_rerun_2026-10-10/compute_optimization/policy_cache_2026-10-14/leader_recheck_idle_all32/protocol.json",
+        "sha256": "3deb8d0b823304db8625e6781ca4d774aeb359085e50ed17455a067a1c0d4f34",
+        "original_size_bytes": 65550,
+        "bundled_normalized_copy": "sources/protocol_cluster_final_runtime.json"
+      },
+      "missing_policy": "Null means not recorded in this batch protocol; values are not borrowed from another batch or the current host."
+    },
+    {
+      "batch": "garnet_final_runtime",
+      "fields": {
+        "date": null,
+        "platform": null,
+        "processor": null,
+        "python": null,
+        "numpy": null,
+        "scipy": null,
+        "gymnasium": null,
+        "cpu_model": null,
+        "memory_bytes": null,
+        "c_compiler": null,
+        "c_compiler_flags": null,
+        "threadpoolctl_version": null,
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libopenblas",
+            "filepath": "external-library/libopenblas64_.0.dylib",
+            "version": "0.3.23.dev",
+            "threading_layer": "pthreads",
+            "architecture": "armv8"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libopenblas",
+            "filepath": "external-library/libopenblas.0.dylib",
+            "version": "0.3.26.dev",
+            "threading_layer": "pthreads",
+            "architecture": "neoversen1"
+          }
+        ]
+      },
+      "source_ref": {
+        "source_id": "scb_section6_rerun_2026-10-10/compute_optimization/operator_reuse_2026-10-14/confirm_garnet_latent16/protocol.json",
+        "sha256": "552febd062fc2fbb820bd25128ed8506863bb0929a95ee9bab02aae57a2dae6a",
+        "original_size_bytes": 95426,
+        "bundled_normalized_copy": "sources/protocol_garnet_final_runtime.json"
+      },
+      "missing_policy": "Null means not recorded in this batch protocol; values are not borrowed from another batch or the current host."
+    },
+    {
+      "batch": "latent_final_runtime",
+      "fields": {
+        "date": null,
+        "platform": null,
+        "processor": null,
+        "python": null,
+        "numpy": null,
+        "scipy": null,
+        "gymnasium": null,
+        "cpu_model": null,
+        "memory_bytes": null,
+        "c_compiler": null,
+        "c_compiler_flags": null,
+        "threadpoolctl_version": null,
+        "threadpools": [
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libopenblas",
+            "filepath": "external-library/libopenblas64_.0.dylib",
+            "version": "0.3.23.dev",
+            "threading_layer": "pthreads",
+            "architecture": "armv8"
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libopenblas",
+            "filepath": "external-library/libopenblas.0.dylib",
+            "version": "0.3.26.dev",
+            "threading_layer": "pthreads",
+            "architecture": "neoversen1"
+          }
+        ]
+      },
+      "source_ref": {
+        "source_id": "scb_section6_rerun_2026-10-10/compute_optimization/product_reuse_2026-10-14/confirm_garnet_latent16/protocol.json",
+        "sha256": "e747d7d3b9419707bf2a17439aba41db052b1cb0b3bd85a68bfe3729eab99c7e",
+        "original_size_bytes": 43583,
+        "bundled_normalized_copy": "sources/protocol_latent_final_runtime.json"
+      },
+      "missing_policy": "Null means not recorded in this batch protocol; values are not borrowed from another batch or the current host."
+    },
+    {
+      "batch": "official_public",
+      "fields": {
+        "platform": null,
+        "processor": null,
+        "cpu_model": null,
+        "memory_bytes": null,
+        "python": null,
+        "numpy": null,
+        "scipy": null,
+        "gymnasium": [
+          "1.1.1"
+        ],
+        "threadpoolctl_version": null,
+        "threadpools": null,
+        "c_compiler": null,
+        "c_compiler_flags": null
+      },
+      "source_ref": {
+        "source_id": "scb_section6_rerun_2026-10-10/supplement/public_official.json.gz",
+        "sha256": "8b487cebe0793b98254f3cf1e9bbd5045f7d5081371acea9240ba7e7f0939378",
+        "original_size_bytes": 44936
+      },
+      "missing_policy": "Only Gymnasium's version is embedded in these official-model raw records; missing environment fields remain null."
+    }
+  ],
+  "label_note": "macos-m2-paper is the supplied archive label. The inspected protocols record arm/macOS; an exact CPU model is not recorded and remains null.",
+  "current_machine_inspected": false
+}

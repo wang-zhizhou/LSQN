@@ -1,0 +1,93 @@
+{
+  "schema": "lsqn-run-summary-v1",
+  "prepared_only": false,
+  "implementation": "paper",
+  "configurations": 4,
+  "methods": [
+    "LSQN"
+  ],
+  "executions": 4,
+  "all_success": true,
+  "runs": [
+    {
+      "case_id": "main_queue_n4096_g0p999_seed130",
+      "method": "LSQN",
+      "backend": "native_query",
+      "repeat": 0,
+      "file": "main_queue_n4096_g0p999_seed130_LSQN_r0.json",
+      "success": true,
+      "timeout": false,
+      "wall_seconds": 26.899704583000002,
+      "residual_inf": 1.4551915228366852e-11,
+      "query_summary": {
+        "completed_outer_iterations": 203,
+        "mean": 29.482758620689655,
+        "maximum": 563,
+        "total": 5985,
+        "zero": 31,
+        "full_dimension": 0
+      },
+      "model_sha256": "31b5c5867aa438f1c3751022f6f6d365bf8c0a892eda9a4337cc5bf585a1643b"
+    },
+    {
+      "case_id": "main_cluster_n4096_g0p999_seed130",
+      "method": "LSQN",
+      "backend": "cache_reuse",
+      "repeat": 0,
+      "file": "main_cluster_n4096_g0p999_seed130_LSQN_r0.json",
+      "success": true,
+      "timeout": false,
+      "wall_seconds": 0.4926702919999997,
+      "residual_inf": 7.318590178329032e-13,
+      "query_summary": {
+        "completed_outer_iterations": 7,
+        "mean": 3.4285714285714284,
+        "maximum": 6,
+        "total": 24,
+        "zero": 2,
+        "full_dimension": 0
+      },
+      "model_sha256": "b1fbcee56a1105d77e42cf8ba114008d56d7b39b9a5ef0ad45b3916e10f1487f"
+    },
+    {
+      "case_id": "main_garnet_n4096_g0p999_seed130",
+      "method": "LSQN",
+      "backend": "fused_sparse",
+      "repeat": 0,
+      "file": "main_garnet_n4096_g0p999_seed130_LSQN_r0.json",
+      "success": true,
+      "timeout": false,
+      "wall_seconds": 0.01123183300000008,
+      "residual_inf": 6.730260793119669e-10,
+      "query_summary": {
+        "completed_outer_iterations": 12,
+        "mean": 2.25,
+        "maximum": 8,
+        "total": 27,
+        "zero": 6,
+        "full_dimension": 0
+      },
+      "model_sha256": "2c6cb0d2cfdd7f35d08f4fe0231341b52f3e5765c4c1838f6cae86e646be3e3b"
+    },
+    {
+      "case_id": "main_latent_n4096_g0p999_seed130",
+      "method": "LSQN",
+      "backend": "native",
+      "repeat": 0,
+      "file": "main_latent_n4096_g0p999_seed130_LSQN_r0.json",
+      "success": true,
+      "timeout": false,
+      "wall_seconds": 0.1425910839999993,
+      "residual_inf": 1.5688783605583012e-11,
+      "query_summary": {
+        "completed_outer_iterations": 4,
+        "mean": 0.75,
+        "maximum": 2,
+        "total": 3,
+        "zero": 2,
+        "full_dimension": 0
+      },
+      "model_sha256": "9224c955bab1c9fb0ca5904ba1522df2d2596c0fca5131bafca08457c4a8424d"
+    }
+  ]
+}

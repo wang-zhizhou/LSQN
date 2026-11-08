@@ -1,0 +1,270 @@
+{
+  "converged": true,
+  "message": "converged",
+  "iterations": 10,
+  "value": [
+    0.5420259555846734,
+    0.4988032121237523,
+    0.4706957130891484,
+    0.4568517192822142,
+    0.5584509836636204,
+    -0.0,
+    0.3583480826825996,
+    -0.0,
+    0.591798764562657,
+    0.6430798382910577,
+    0.6152075676016451,
+    -0.0,
+    -0.0,
+    0.7417204488897094,
+    0.8628374349546887,
+    -0.0,
+    -0.0
+  ],
+  "policy": [
+    0,
+    3,
+    3,
+    3,
+    0,
+    0,
+    0,
+    0,
+    3,
+    1,
+    0,
+    0,
+    0,
+    2,
+    1,
+    0,
+    0
+  ],
+  "history": [
+    {
+      "iteration": 0,
+      "info": 0,
+      "initial_residual_inf": 0.3333333333333333,
+      "attained_residual_inf": 0.017360956939576688,
+      "forcing_ratio": 0.052082870818730066
+    },
+    {
+      "iteration": 1,
+      "info": 0,
+      "initial_residual_inf": 0.16366440542324093,
+      "attained_residual_inf": 0.004900501768993841,
+      "forcing_ratio": 0.029942379690446434
+    },
+    {
+      "iteration": 2,
+      "info": 0,
+      "initial_residual_inf": 0.07204240094767843,
+      "attained_residual_inf": 0.0027134302200552554,
+      "forcing_ratio": 0.037664350221002674
+    },
+    {
+      "iteration": 3,
+      "info": 0,
+      "initial_residual_inf": 0.05842809385631759,
+      "attained_residual_inf": 0.0006033691059586483,
+      "forcing_ratio": 0.01032669502178888
+    },
+    {
+      "iteration": 4,
+      "info": 0,
+      "initial_residual_inf": 0.04127469778462603,
+      "attained_residual_inf": 0.001034499835408482,
+      "forcing_ratio": 0.025063777348693556
+    },
+    {
+      "iteration": 5,
+      "info": 0,
+      "initial_residual_inf": 0.01434796578595811,
+      "attained_residual_inf": 0.0010671999666400705,
+      "forcing_ratio": 0.07437987952860221
+    },
+    {
+      "iteration": 6,
+      "info": 0,
+      "initial_residual_inf": 0.0010671999666400705,
+      "attained_residual_inf": 4.4251786147004096e-05,
+      "forcing_ratio": 0.041465318150566144
+    },
+    {
+      "iteration": 7,
+      "info": 0,
+      "initial_residual_inf": 4.4251786147004096e-05,
+      "attained_residual_inf": 1.6025785440630898e-06,
+      "forcing_ratio": 0.036215002457512926
+    },
+    {
+      "iteration": 8,
+      "info": 0,
+      "initial_residual_inf": 1.6025785440630898e-06,
+      "attained_residual_inf": 5.2114912605041245e-08,
+      "forcing_ratio": 0.03251941241701137
+    },
+    {
+      "iteration": 9,
+      "info": 0,
+      "initial_residual_inf": 5.2114912605041245e-08,
+      "attained_residual_inf": 1.460552911344188e-09,
+      "forcing_ratio": 0.028025623345339812
+    }
+  ],
+  "stats": {
+    "bellman_backups": 0.0,
+    "action_matvecs": 0.0,
+    "policy_matvecs": 0.0,
+    "policy_rmatvecs": 0.0,
+    "gmres_matvecs": 0.0,
+    "memory_image_matvecs": 0.0,
+    "prior_matvecs": 0.0,
+    "direct_solve_flops": 0.0,
+    "block_solve_flops": 0.0,
+    "lp_calls": 0,
+    "operator_products": 0.0
+  },
+  "method": "iGMRES-PI",
+  "residual": 1.4605529008449025e-09,
+  "trace": [
+    {
+      "k": 0,
+      "residual2": 0.3333333333333333,
+      "residual_inf": 0.3333333333333333,
+      "elapsed_s": 7.708399999994953e-05,
+      "event": "initial"
+    },
+    {
+      "k": 1,
+      "residual2": 0.1850102216437721,
+      "residual_inf": 0.16366440542324096,
+      "elapsed_s": 0.0008472089999997934,
+      "event": "accepted"
+    },
+    {
+      "k": 2,
+      "residual2": 0.10461797979159704,
+      "residual_inf": 0.07204240094767839,
+      "elapsed_s": 0.0016973339999997172,
+      "event": "accepted"
+    },
+    {
+      "k": 3,
+      "residual2": 0.07931421883173935,
+      "residual_inf": 0.05842809385631759,
+      "elapsed_s": 0.0028622920000000995,
+      "event": "accepted"
+    },
+    {
+      "k": 4,
+      "residual2": 0.04127913649769164,
+      "residual_inf": 0.04127469778462611,
+      "elapsed_s": 0.004151583999999708,
+      "event": "accepted"
+    },
+    {
+      "k": 5,
+      "residual2": 0.014430278583466391,
+      "residual_inf": 0.014347965785958094,
+      "elapsed_s": 0.005290999999999713,
+      "event": "accepted"
+    },
+    {
+      "k": 6,
+      "residual2": 0.0013945490507137378,
+      "residual_inf": 0.0010671999666400644,
+      "elapsed_s": 0.006427624999999715,
+      "event": "accepted"
+    },
+    {
+      "k": 7,
+      "residual2": 7.913084984838639e-05,
+      "residual_inf": 4.425178614719805e-05,
+      "elapsed_s": 0.00787116699999979,
+      "event": "accepted"
+    },
+    {
+      "k": 8,
+      "residual2": 2.536348042990297e-06,
+      "residual_inf": 1.6025785442019824e-06,
+      "elapsed_s": 0.009438916999999769,
+      "event": "accepted"
+    },
+    {
+      "k": 9,
+      "residual2": 8.58880627472161e-08,
+      "residual_inf": 5.21149126075926e-08,
+      "elapsed_s": 0.010739583999999969,
+      "event": "accepted"
+    },
+    {
+      "k": 10,
+      "residual2": 2.574734623016041e-09,
+      "residual_inf": 1.4605529008449025e-09,
+      "elapsed_s": 0.011983124999999983,
+      "event": "finished"
+    }
+  ],
+  "runtime_s": 0.011991458999999871,
+  "implementation": "paper",
+  "backend": "lsqn_baselines:iGMRES-PI",
+  "spec": {
+    "suite": "public",
+    "family": "frozenlake4x4",
+    "n": 17,
+    "gamma": 0.99,
+    "seed": 0,
+    "initialization": "reward_lower_bound_all_states"
+  },
+  "model": {
+    "n_states": 17,
+    "n_actions": 4,
+    "gamma": 0.99,
+    "name": "FrozenLake-4x4",
+    "storage": "csr",
+    "transition_nnz": 156,
+    "model_sha256": "228b23637a465f5e40bf18e71dedc5013b7e7141345536cfe3643920beecf4d7",
+    "hash_schema": "lsqn-model-arrays-v1",
+    "source": "bundled_frozen",
+    "source_id": "scb_section6_rerun_2026-10-10/supplement/public_official.json.gz",
+    "file_sha256": "6dcd7e6c1c59ee11342fa2894dc672329e7713bc51265850f5bf827d87222eea",
+    "frozen_model_match": true,
+    "construction": "official Gymnasium 1.1.1 transition tuples"
+  },
+  "wall_seconds": 0.01204045800000042,
+  "wall_budget_seconds": 30.0,
+  "timeout": false,
+  "success": true,
+  "independent_verification": {
+    "passed": true,
+    "residual_inf": 1.4605529008449025e-09,
+    "residual2": 2.574734623016041e-09,
+    "finite": true,
+    "tolerance": 1e-08,
+    "value_error_bound_inf": 1.4605529008449012e-07
+  },
+  "baseline_settings": {
+    "tol": 1e-08,
+    "implementation": "lsqn_baselines",
+    "note": "Method-specific fixed parameters and iteration limits are documented in baselines-port-notes.txt"
+  },
+  "reference_pi": {
+    "status": "complete",
+    "iterations": 6,
+    "verification": {
+      "passed": true,
+      "residual_inf": 1.1102230246251565e-16,
+      "residual2": 2.0770370905276122e-16,
+      "finite": true,
+      "tolerance": 1e-08,
+      "value_error_bound_inf": 1.1102230246251556e-14
+    },
+    "diagnostic_wall_seconds": 0.004690749999999966,
+    "value_difference_inf": 2.489429312690916e-08,
+    "residual_error_bound": 1.4605530118672037e-07,
+    "agrees_with_error_bound": true
+  },
+  "repeat": 0,
+  "run_id": "b754cff1-cf1d-418f-b7c6-9898ee3b309a"
+}

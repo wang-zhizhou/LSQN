@@ -1,0 +1,56 @@
+{
+  "args": {
+    "label": "confirm_queue8",
+    "seed": 130,
+    "sizes": [
+      512,
+      1024,
+      2048,
+      4096
+    ],
+    "gammas": [
+      0.99,
+      0.999
+    ],
+    "repetitions": 3,
+    "variants": [
+      "reference",
+      "native_query"
+    ]
+  },
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "external-library/libopenblas64_.0.dylib",
+      "version": "0.3.23.dev",
+      "threading_layer": "pthreads",
+      "architecture": "armv8"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "external-library/libopenblas.0.dylib",
+      "version": "0.3.26.dev",
+      "threading_layer": "pthreads",
+      "architecture": "neoversen1"
+    }
+  ],
+  "hashes": {
+    "scb_section6_rerun_2026-10-10/compute_optimization/queue_fusion_2026-10-14/experiment.py": "4aa3deddf4ac52bc63928d48352975db3560016482c3b15cc7e21b5eb0fe8ed3",
+    "scb_section6_rerun_2026-10-10/compute_optimization/operator_reuse_2026-10-14/fused_basis.py": "c05e09e953c9488fcbe29a877488e14fc9b5833d7d825dc9e47a1e6e52ce00ae",
+    "scb_section6_rerun_2026-10-10/compute_optimization/operator_reuse_2026-10-14/operators.py": "f72e5950cccc812def19ef044e7a8c0cf4c188bd8de8ad3d47b0fc0b34ba7606",
+    "scb_siopt_candidate_2026-09-20/code/solver.py": "d8a05c55fb1a2773536ef47e6f94368bc8c5419ee8fb30051f0f6219c1bf97da",
+    "scb_section6_rerun_2026-10-10/compute_optimization/blocked_model.py": "0a7b66d392ca058dc0c7b4ca8f38b05c253379c70beda96f73e60c2d8e9130c9",
+    "scb_section6_rerun_2026-10-10/compute_optimization/operator_reuse_2026-10-14/selected_rows.c": "c41e5bc701aa6cfc80dee98ba757bc74addaf1c5376c92ee2f5fbc26856d0df0",
+    "scb_section6_rerun_2026-10-10/compute_optimization/policy_cache_2026-10-14/run_check.py": "1c49e1e8d21e7fc24a7eccc6a8316c6b686e93113f3ced121e0f42b1be3289fa",
+    "scb_section6_rerun_2026-10-10/compute_optimization/queue_fusion_2026-10-14/query.c": "00dde9e1316d6e5a202b189bbe6c04ada27c393dcf4af71a4577111b1503c958",
+    "scb_section6_rerun_2026-10-10/compute_optimization/queue_fusion_2026-10-14/native_query.py": "76065953a368d141ba6fd1c1e292a844c0771c551897937fe3041eb5facadd99"
+  },
+  "timing": "One BLAS thread, serial rotated order, 30/60-second budgets, all data-dependent setup included.",
+  "reference": "Queue SCB version used in the latest complete runtime table: policy cache plus block32 cached proposal."
+}

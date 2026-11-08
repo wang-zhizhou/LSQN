@@ -1,0 +1,300 @@
+{
+  "converged": true,
+  "message": "converged",
+  "iterations": 10,
+  "value": [
+    -18.206966546793865,
+    -18.875022101669412,
+    -19.713098581882427,
+    -20.647168610196225,
+    -21.637459196161316,
+    -22.671381672663898,
+    -23.73565089547718,
+    -24.826612534062516,
+    -25.945083274015147,
+    -27.082642277464977,
+    -28.249217079342863,
+    -29.43552559218447,
+    -30.642956414903548,
+    -31.866542142255653,
+    -33.09963886502898,
+    -34.34659383715341,
+    -35.59559336086998,
+    -36.85004293489325,
+    -38.112452725550995,
+    -39.38606212220199,
+    -40.641573918134895,
+    -41.85000988997716,
+    -42.95664813314703,
+    -43.85432855916366,
+    -44.5153126492527,
+    -44.961188015301666,
+    -45.32267216426814,
+    -45.62465698828857,
+    -45.866828727801355,
+    -46.06941853674278,
+    -46.1926128975495,
+    -46.24967299918342
+  ],
+  "policy": [
+    0,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    2,
+    2,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "history": [
+    {
+      "iteration": 0,
+      "info": 0,
+      "initial_residual_inf": 0.9772111638990086,
+      "attained_residual_inf": 0.0015431159127590188,
+      "forcing_ratio": 0.0015791018049794757
+    },
+    {
+      "iteration": 1,
+      "info": 0,
+      "initial_residual_inf": 0.09662379601709892,
+      "attained_residual_inf": 0.005339069271192598,
+      "forcing_ratio": 0.05525625664973643
+    },
+    {
+      "iteration": 2,
+      "info": 0,
+      "initial_residual_inf": 0.13380483769754514,
+      "attained_residual_inf": 0.008301957875420485,
+      "forcing_ratio": 0.06204527443309919
+    },
+    {
+      "iteration": 3,
+      "info": 0,
+      "initial_residual_inf": 0.12220011905133754,
+      "attained_residual_inf": 0.004925224981591481,
+      "forcing_ratio": 0.04030458415120154
+    },
+    {
+      "iteration": 4,
+      "info": 0,
+      "initial_residual_inf": 0.04517294278313255,
+      "attained_residual_inf": 0.0014155304428854296,
+      "forcing_ratio": 0.031335803152810864
+    },
+    {
+      "iteration": 5,
+      "info": 0,
+      "initial_residual_inf": 0.003249230417652238,
+      "attained_residual_inf": 9.765821954743625e-05,
+      "forcing_ratio": 0.030055799987863008
+    },
+    {
+      "iteration": 6,
+      "info": 0,
+      "initial_residual_inf": 0.0003541038942147523,
+      "attained_residual_inf": 1.0127354941602551e-05,
+      "forcing_ratio": 0.02859995359288719
+    },
+    {
+      "iteration": 7,
+      "info": 0,
+      "initial_residual_inf": 1.0127354941602551e-05,
+      "attained_residual_inf": 4.06337168579185e-07,
+      "forcing_ratio": 0.04012273401319993
+    },
+    {
+      "iteration": 8,
+      "info": 0,
+      "initial_residual_inf": 4.06337168579185e-07,
+      "attained_residual_inf": 1.2919839961766932e-08,
+      "forcing_ratio": 0.03179586058283314
+    },
+    {
+      "iteration": 9,
+      "info": 0,
+      "initial_residual_inf": 1.2919839961766932e-08,
+      "attained_residual_inf": 5.463346441914041e-11,
+      "forcing_ratio": 0.0042286486969509395
+    }
+  ],
+  "stats": {
+    "bellman_backups": 0.0,
+    "action_matvecs": 0.0,
+    "policy_matvecs": 0.0,
+    "policy_rmatvecs": 0.0,
+    "gmres_matvecs": 0.0,
+    "memory_image_matvecs": 0.0,
+    "prior_matvecs": 0.0,
+    "direct_solve_flops": 0.0,
+    "block_solve_flops": 0.0,
+    "lp_calls": 0,
+    "operator_products": 0.0
+  },
+  "method": "iGMRES-PI",
+  "residual": 5.4633630952594103e-11,
+  "trace": [
+    {
+      "k": 0,
+      "residual2": 4.280428185457673,
+      "residual_inf": 0.977211163899014,
+      "elapsed_s": 6.741600000004233e-05,
+      "event": "initial"
+    },
+    {
+      "k": 1,
+      "residual2": 0.2590715409177735,
+      "residual_inf": 0.09662379601709858,
+      "elapsed_s": 0.004321500000000089,
+      "event": "accepted"
+    },
+    {
+      "k": 2,
+      "residual2": 0.2510044249282858,
+      "residual_inf": 0.13380483769754647,
+      "elapsed_s": 0.005876750000000097,
+      "event": "accepted"
+    },
+    {
+      "k": 3,
+      "residual2": 0.1436706147458053,
+      "residual_inf": 0.12220011905133532,
+      "elapsed_s": 0.007377500000000037,
+      "event": "accepted"
+    },
+    {
+      "k": 4,
+      "residual2": 0.05661834589495641,
+      "residual_inf": 0.04517294278313244,
+      "elapsed_s": 0.008655583000000022,
+      "event": "accepted"
+    },
+    {
+      "k": 5,
+      "residual2": 0.005458972017518996,
+      "residual_inf": 0.003249230417651461,
+      "elapsed_s": 0.009861791000000064,
+      "event": "accepted"
+    },
+    {
+      "k": 6,
+      "residual2": 0.00045619938289467605,
+      "residual_inf": 0.0003541038942103114,
+      "elapsed_s": 0.01134091600000009,
+      "event": "accepted"
+    },
+    {
+      "k": 7,
+      "residual2": 2.128693959010955e-05,
+      "residual_inf": 1.0127354940436817e-05,
+      "elapsed_s": 0.012898708000000036,
+      "event": "accepted"
+    },
+    {
+      "k": 8,
+      "residual2": 9.41657634746541e-07,
+      "residual_inf": 4.063371648044267e-07,
+      "elapsed_s": 0.01463341600000001,
+      "event": "accepted"
+    },
+    {
+      "k": 9,
+      "residual2": 2.831187033198233e-08,
+      "residual_inf": 1.2919837644176368e-08,
+      "elapsed_s": 0.01605050000000008,
+      "event": "accepted"
+    },
+    {
+      "k": 10,
+      "residual2": 1.346476897729389e-10,
+      "residual_inf": 5.4633630952594103e-11,
+      "elapsed_s": 0.01782500000000009,
+      "event": "finished"
+    }
+  ],
+  "runtime_s": 0.017832625000000046,
+  "implementation": "paper",
+  "backend": "lsqn_baselines:iGMRES-PI",
+  "spec": {
+    "suite": "main",
+    "family": "queue",
+    "n": 32,
+    "gamma": 0.99,
+    "seed": 130,
+    "initialization": "reward_lower_bound_all_states"
+  },
+  "model": {
+    "n_states": 32,
+    "n_actions": 4,
+    "gamma": 0.99,
+    "name": "controlled_queue",
+    "storage": "csr",
+    "transition_nnz": 376,
+    "model_sha256": "f5e642162cb2e8bce0c6e56e95b7ca58835aa2ef96d82962cfee87db6cf9e301",
+    "hash_schema": "lsqn-model-arrays-v1",
+    "source": "bundled_frozen",
+    "source_id": "original main generator; reduced smoke dimension n32",
+    "file_sha256": "3c34c665f4e908f701f0a943204462f735e53a03ac3d273a2f6dd873d2ee8fdc",
+    "frozen_model_match": true,
+    "construction": "unchanged original generator at n32"
+  },
+  "wall_seconds": 0.017865583000000074,
+  "wall_budget_seconds": 30.0,
+  "timeout": false,
+  "success": true,
+  "independent_verification": {
+    "passed": true,
+    "residual_inf": 5.4633630952594103e-11,
+    "residual2": 1.346476897729389e-10,
+    "finite": true,
+    "tolerance": 1e-08,
+    "value_error_bound_inf": 5.463363095259405e-09
+  },
+  "baseline_settings": {
+    "tol": 1e-08,
+    "implementation": "lsqn_baselines",
+    "note": "Method-specific fixed parameters and iteration limits are documented in baselines-port-notes.txt"
+  },
+  "reference_pi": {
+    "status": "complete",
+    "iterations": 6,
+    "verification": {
+      "passed": true,
+      "residual_inf": 7.105427357601002e-15,
+      "residual2": 2.07157025572446e-14,
+      "finite": true,
+      "tolerance": 1e-08,
+      "value_error_bound_inf": 7.105427357600996e-13
+    },
+    "diagnostic_wall_seconds": 0.00675695799999998,
+    "value_difference_inf": 3.0237856663006824e-10,
+    "residual_error_bound": 5.4640736379951655e-09,
+    "agrees_with_error_bound": true
+  },
+  "repeat": 0,
+  "run_id": "b754cff1-cf1d-418f-b7c6-9898ee3b309a"
+}

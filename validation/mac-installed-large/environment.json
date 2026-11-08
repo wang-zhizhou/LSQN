@@ -1,0 +1,56 @@
+{
+  "timestamp_utc": "2026-10-25T10:30:25.631006+00:00",
+  "system": "Darwin",
+  "release": "23.3.0",
+  "architecture": "arm64",
+  "python": "3.9.13 (v3.9.13:6de2ca5339, May 17 2022, 11:37:23) \n[Clang 13.0.0 (clang-1300.0.29.30)]",
+  "cpu_model": null,
+  "logical_cpus": 8,
+  "memory_bytes": null,
+  "lscpu_json": null,
+  "gpu_inventory": null,
+  "gpu_used": false,
+  "dependencies": {
+    "lsqn-mdp": "0.1.0rc2",
+    "numpy": "1.26.4",
+    "scipy": "1.13.0",
+    "threadpoolctl": "3.5.0",
+    "setuptools": "58.1.0",
+    "pip": "22.0.4"
+  },
+  "requested_blas_threads": 1,
+  "threadpools_under_requested_limit": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "version": "0.3.23.dev",
+      "threading_layer": "pthreads",
+      "architecture": "armv8"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "version": "0.3.26.dev",
+      "threading_layer": "pthreads",
+      "architecture": "neoversen1"
+    }
+  ],
+  "numpy_scipy_build": "Build Dependencies:\n  blas:\n    detection method: pkgconfig\n    found: true\n    include directory: /opt/arm64-builds/include\n    lib directory: /opt/arm64-builds/lib\n    name: openblas64\n    openblas configuration: USE_64BITINT=1 DYNAMIC_ARCH=1 DYNAMIC_OLDER= NO_CBLAS=\n      NO_LAPACK= NO_LAPACKE= NO_AFFINITY=1 USE_OPENMP= SANDYBRIDGE MAX_THREADS=3\n    pc file directory: /usr/local/lib/pkgconfig\n    version: 0.3.23.dev\n  lapack:\n    detection method: internal\n    found: true\n    include directory: unknown\n    lib directory: unknown\n    name: dep4333629152\n    openblas configuration: unknown\n    pc file directory: unknown\n    version: 1.26.4\nCompilers:\n  c:\n    args: -fno-strict-aliasing, -DBLAS_SYMBOL_SUFFIX=64_, -DHAVE_BLAS_ILP64\n    commands: cc\n    linker: ld64\n    linker args: -fno-strict-aliasing, -DBLAS_SYMBOL_SUFFIX=64_, -DHAVE_BLAS_ILP64\n    name: clang\n    version: 14.0.0\n  c++:\n    args: -DBLAS_SYMBOL_SUFFIX=64_, -DHAVE_BLAS_ILP64\n    commands: c++\n    linker: ld64\n    linker args: -DBLAS_SYMBOL_SUFFIX=64_, -DHAVE_BLAS_ILP64\n    name: clang\n    version: 14.0.0\n  cython:\n    commands: cython\n    linker: cython\n    name: cython\n    version: 3.0.8\nMachine Information:\n  build:\n    cpu: aarch64\n    endian: little\n    family: aarch64\n    system: darwin\n  host:\n    cpu: aarch64\n    endian: little\n    family: aarch64\n    system: darwin\nPython Information:\n  path: /private/var/folders/76/zy5ktkns50v6gt5g8r0sf6sc0000gn/T/cibw-run-rlaq62oz/cp39-macosx_arm64/build/venv/bin/python\n  version: '3.9'\nSIMD Extensions:\n  baseline:\n  - NEON\n  - NEON_FP16\n  - NEON_VFPV4\n  - ASIMD\n  found:\n  - ASIMDHP\n  not found:\n  - ASIMDFHM\n\nBuild Dependencies:\n  blas:\n    detection method: pkgconfig\n    found: true\n    include directory: /opt/arm64-builds/include\n    lib directory: /opt/arm64-builds/lib\n    name: openblas\n    openblas configuration: USE_64BITINT=0 DYNAMIC_ARCH=1 DYNAMIC_OLDER= NO_CBLAS=\n      NO_LAPACK= NO_LAPACKE= NO_AFFINITY=1 USE_OPENMP= SANDYBRIDGE MAX_THREADS=64\n    pc file directory: /opt/arm64-builds/lib/pkgconfig\n    version: 0.3.26.dev\n  lapack:\n    detection method: pkgconfig\n    found: true\n    include directory: /opt/arm64-builds/include\n    lib directory: /opt/arm64-builds/lib\n    name: openblas\n    openblas configuration: USE_64BITINT=0 DYNAMIC_ARCH=1 DYNAMIC_OLDER= NO_CBLAS=\n      NO_LAPACK= NO_LAPACKE= NO_AFFINITY=1 USE_OPENMP= SANDYBRIDGE MAX_THREADS=64\n    pc file directory: /opt/arm64-builds/lib/pkgconfig\n    version: 0.3.26.dev\n  pybind11:\n    detection method: config-tool\n    include directory: unknown\n    name: pybind11\n    version: 2.12.0\nCompilers:\n  c:\n    commands: cc\n    linker: ld64\n    name: clang\n    version: 15.0.0\n  c++:\n    commands: c++\n    linker: ld64\n    name: clang\n    version: 15.0.0\n  cython:\n    commands: cython\n    linker: cython\n    name: cython\n    version: 3.0.10\n  fortran:\n    commands: gfortran\n    linker: ld64\n    name: gcc\n    version: 13.2.0\n  pythran:\n    include directory: ../../../../../../private/var/folders/l_/53d72k7j4zl9kj8fzncsd8hw0000gn/T/pip-build-env-726u8hzw/overlay/lib/python3.9/site-packages/pythran\n    version: 0.15.0\nMachine Information:\n  build:\n    cpu: aarch64\n    endian: little\n    family: aarch64\n    system: darwin\n  cross-compiled: false\n  host:\n    cpu: aarch64\n    endian: little\n    family: aarch64\n    system: darwin\nPython Information:\n  path: /private/var/folders/l_/53d72k7j4zl9kj8fzncsd8hw0000gn/T/cibw-run-7y1k_coo/cp39-macosx_arm64/build/venv/bin/python\n  version: '3.9'\n\n",
+  "cpu_affinity": "Not pinned; one BLAS thread does not select a physical core.",
+  "exit_status": 0,
+  "command_arguments": [
+    "main",
+    "--sizes",
+    "4096",
+    "--gammas",
+    "0.999",
+    "--repetitions",
+    "1",
+    "--output",
+    "<release-candidate>/validation/mac-installed-large"
+  ]
+}

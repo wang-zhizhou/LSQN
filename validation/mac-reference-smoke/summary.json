@@ -1,0 +1,133 @@
+{
+  "schema": "lsqn-run-summary-v1",
+  "prepared_only": false,
+  "implementation": "reference",
+  "configurations": 6,
+  "methods": [
+    "LSQN"
+  ],
+  "executions": 6,
+  "all_success": true,
+  "runs": [
+    {
+      "case_id": "main_queue_n32_g0p99_seed130",
+      "method": "LSQN",
+      "backend": "reference",
+      "repeat": 0,
+      "file": "main_queue_n32_g0p99_seed130_LSQN_r0.json",
+      "success": true,
+      "timeout": false,
+      "wall_seconds": 0.012604583000000003,
+      "residual_inf": 3.169020601490047e-12,
+      "query_summary": {
+        "completed_outer_iterations": 13,
+        "mean": 5.461538461538462,
+        "maximum": 22,
+        "total": 71,
+        "zero": 0,
+        "full_dimension": 0
+      },
+      "model_sha256": "f5e642162cb2e8bce0c6e56e95b7ca58835aa2ef96d82962cfee87db6cf9e301"
+    },
+    {
+      "case_id": "main_cluster_n32_g0p99_seed130",
+      "method": "LSQN",
+      "backend": "reference",
+      "repeat": 0,
+      "file": "main_cluster_n32_g0p99_seed130_LSQN_r0.json",
+      "success": true,
+      "timeout": false,
+      "wall_seconds": 0.001968375000000022,
+      "residual_inf": 4.4155790135391726e-10,
+      "query_summary": {
+        "completed_outer_iterations": 7,
+        "mean": 4.857142857142857,
+        "maximum": 7,
+        "total": 34,
+        "zero": 0,
+        "full_dimension": 0
+      },
+      "model_sha256": "cd53584a926a3c14aa8073eff847bd6f6cfcc5fd9f6f92a760f5361c31cc6204"
+    },
+    {
+      "case_id": "main_garnet_n32_g0p99_seed130",
+      "method": "LSQN",
+      "backend": "reference",
+      "repeat": 0,
+      "file": "main_garnet_n32_g0p99_seed130_LSQN_r0.json",
+      "success": true,
+      "timeout": false,
+      "wall_seconds": 0.00695733300000001,
+      "residual_inf": 5.620165666186949e-09,
+      "query_summary": {
+        "completed_outer_iterations": 8,
+        "mean": 1.75,
+        "maximum": 4,
+        "total": 14,
+        "zero": 3,
+        "full_dimension": 0
+      },
+      "model_sha256": "b46953d6e6355295a97d15ad0ae37472b1123f699a4e110b774a7b236e678ef4"
+    },
+    {
+      "case_id": "main_latent_n32_g0p99_seed130",
+      "method": "LSQN",
+      "backend": "reference",
+      "repeat": 0,
+      "file": "main_latent_n32_g0p99_seed130_LSQN_r0.json",
+      "success": true,
+      "timeout": false,
+      "wall_seconds": 0.0007845409999999997,
+      "residual_inf": 1.390674242429668e-10,
+      "query_summary": {
+        "completed_outer_iterations": 5,
+        "mean": 0.8,
+        "maximum": 2,
+        "total": 4,
+        "zero": 3,
+        "full_dimension": 0
+      },
+      "model_sha256": "15f4b3bdb3c454f230f0b4fb65665f5e2d43765c9c04db58d0958df7f9796ef2"
+    },
+    {
+      "case_id": "public_frozenlake4x4_n17_g0p99_seed0",
+      "method": "LSQN",
+      "backend": "reference",
+      "repeat": 0,
+      "file": "public_frozenlake4x4_n17_g0p99_seed0_LSQN_r0.json",
+      "success": true,
+      "timeout": false,
+      "wall_seconds": 0.006367208000000013,
+      "residual_inf": 1.1102230246251565e-16,
+      "query_summary": {
+        "completed_outer_iterations": 7,
+        "mean": 2.7142857142857144,
+        "maximum": 5,
+        "total": 19,
+        "zero": 0,
+        "full_dimension": 0
+      },
+      "model_sha256": "228b23637a465f5e40bf18e71dedc5013b7e7141345536cfe3643920beecf4d7"
+    },
+    {
+      "case_id": "scaling_frozenlake_n64_g0p99_seed130",
+      "method": "LSQN",
+      "backend": "reference",
+      "repeat": 0,
+      "file": "scaling_frozenlake_n64_g0p99_seed130_LSQN_r0.json",
+      "success": true,
+      "timeout": false,
+      "wall_seconds": 0.01231312499999998,
+      "residual_inf": 8.128390183159695e-10,
+      "query_summary": {
+        "completed_outer_iterations": 12,
+        "mean": 5.083333333333333,
+        "maximum": 14,
+        "total": 61,
+        "zero": 0,
+        "full_dimension": 0
+      },
+      "model_sha256": "008b6577e10cdb3f03e7db351ce8b194eb32ca5e4f41881bf64bdfe9f3412169"
+    }
+  ]
+}

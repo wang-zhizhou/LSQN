@@ -1,0 +1,210 @@
+{
+  "configurations": 4,
+  "method_configurations": 4,
+  "executions": 4,
+  "methods": [
+    "LSQN"
+  ],
+  "implementation": "paper",
+  "run_id": "c37c138f-20b0-401f-a174-24f8230b7d03",
+  "mixed_run_records": [],
+  "implementation_mismatches": [],
+  "missing_case_methods": [],
+  "all_success": true,
+  "counts_use": "First repetition per configuration; never triple-count timing repetitions",
+  "scope": "Methods from this one run and requested implementation profile only; optional reference PI diagnostic is excluded from timing comparisons",
+  "cases": [
+    {
+      "case_id": "main_cluster_n4096_g0p999_seed130",
+      "method": "LSQN",
+      "spec": {
+        "suite": "main",
+        "family": "cluster",
+        "n": 4096,
+        "gamma": 0.999,
+        "seed": 130,
+        "initialization": "reward_lower_bound_all_states"
+      },
+      "repetitions": 1,
+      "implementation": "paper",
+      "backend": "cache_reuse",
+      "same_backend_across_repeats": true,
+      "matches_requested_backend": true,
+      "expected_repetitions": 1,
+      "all_repetitions_present": true,
+      "same_run_id": true,
+      "all_success": true,
+      "same_query_sequence_across_repeats": true,
+      "same_model_across_repeats": true,
+      "model_sha256": "b1fbcee56a1105d77e42cf8ba114008d56d7b39b9a5ef0ad45b3916e10f1487f",
+      "median_wall_seconds": 0.4926702919999997,
+      "wall_seconds_all": [
+        0.4926702919999997
+      ],
+      "failed_repeats": [],
+      "query_summary": {
+        "completed_outer_iterations": 7,
+        "mean": 3.4285714285714284,
+        "maximum": 6,
+        "total": 24,
+        "zero": 2,
+        "full_dimension": 0
+      },
+      "maximum_final_residual": 7.318590178329032e-13
+    },
+    {
+      "case_id": "main_garnet_n4096_g0p999_seed130",
+      "method": "LSQN",
+      "spec": {
+        "suite": "main",
+        "family": "garnet",
+        "n": 4096,
+        "gamma": 0.999,
+        "seed": 130,
+        "initialization": "reward_lower_bound_all_states"
+      },
+      "repetitions": 1,
+      "implementation": "paper",
+      "backend": "fused_sparse",
+      "same_backend_across_repeats": true,
+      "matches_requested_backend": true,
+      "expected_repetitions": 1,
+      "all_repetitions_present": true,
+      "same_run_id": true,
+      "all_success": true,
+      "same_query_sequence_across_repeats": true,
+      "same_model_across_repeats": true,
+      "model_sha256": "2c6cb0d2cfdd7f35d08f4fe0231341b52f3e5765c4c1838f6cae86e646be3e3b",
+      "median_wall_seconds": 0.01123183300000008,
+      "wall_seconds_all": [
+        0.01123183300000008
+      ],
+      "failed_repeats": [],
+      "query_summary": {
+        "completed_outer_iterations": 12,
+        "mean": 2.25,
+        "maximum": 8,
+        "total": 27,
+        "zero": 6,
+        "full_dimension": 0
+      },
+      "maximum_final_residual": 6.730260793119669e-10
+    },
+    {
+      "case_id": "main_latent_n4096_g0p999_seed130",
+      "method": "LSQN",
+      "spec": {
+        "suite": "main",
+        "family": "latent",
+        "n": 4096,
+        "gamma": 0.999,
+        "seed": 130,
+        "initialization": "reward_lower_bound_all_states"
+      },
+      "repetitions": 1,
+      "implementation": "paper",
+      "backend": "native",
+      "same_backend_across_repeats": true,
+      "matches_requested_backend": true,
+      "expected_repetitions": 1,
+      "all_repetitions_present": true,
+      "same_run_id": true,
+      "all_success": true,
+      "same_query_sequence_across_repeats": true,
+      "same_model_across_repeats": true,
+      "model_sha256": "9224c955bab1c9fb0ca5904ba1522df2d2596c0fca5131bafca08457c4a8424d",
+      "median_wall_seconds": 0.1425910839999993,
+      "wall_seconds_all": [
+        0.1425910839999993
+      ],
+      "failed_repeats": [],
+      "query_summary": {
+        "completed_outer_iterations": 4,
+        "mean": 0.75,
+        "maximum": 2,
+        "total": 3,
+        "zero": 2,
+        "full_dimension": 0
+      },
+      "maximum_final_residual": 1.5688783605583012e-11
+    },
+    {
+      "case_id": "main_queue_n4096_g0p999_seed130",
+      "method": "LSQN",
+      "spec": {
+        "suite": "main",
+        "family": "queue",
+        "n": 4096,
+        "gamma": 0.999,
+        "seed": 130,
+        "initialization": "reward_lower_bound_all_states"
+      },
+      "repetitions": 1,
+      "implementation": "paper",
+      "backend": "native_query",
+      "same_backend_across_repeats": true,
+      "matches_requested_backend": true,
+      "expected_repetitions": 1,
+      "all_repetitions_present": true,
+      "same_run_id": true,
+      "all_success": true,
+      "same_query_sequence_across_repeats": true,
+      "same_model_across_repeats": true,
+      "model_sha256": "31b5c5867aa438f1c3751022f6f6d365bf8c0a892eda9a4337cc5bf585a1643b",
+      "median_wall_seconds": 26.899704583000002,
+      "wall_seconds_all": [
+        26.899704583000002
+      ],
+      "failed_repeats": [],
+      "query_summary": {
+        "completed_outer_iterations": 203,
+        "mean": 29.482758620689655,
+        "maximum": 563,
+        "total": 5985,
+        "zero": 31,
+        "full_dimension": 0
+      },
+      "maximum_final_residual": 1.4551915228366852e-11
+    }
+  ],
+  "main_comparisons": [
+    {
+      "case_id": "main_cluster_n4096_g0p999_seed130",
+      "same_inputs_across_methods": true,
+      "ranking_requires": "all ten methods attempted in the same main-suite batch and model, three successful repetitions per ranked method",
+      "rankings": [],
+      "failed_or_incomplete_methods": [],
+      "missing_methods": [],
+      "note": "Smoke, selected-method or non-three-repeat runs are validation/exploration and are not assigned formal comparison ranks."
+    },
+    {
+      "case_id": "main_garnet_n4096_g0p999_seed130",
+      "same_inputs_across_methods": true,
+      "ranking_requires": "all ten methods attempted in the same main-suite batch and model, three successful repetitions per ranked method",
+      "rankings": [],
+      "failed_or_incomplete_methods": [],
+      "missing_methods": [],
+      "note": "Smoke, selected-method or non-three-repeat runs are validation/exploration and are not assigned formal comparison ranks."
+    },
+    {
+      "case_id": "main_latent_n4096_g0p999_seed130",
+      "same_inputs_across_methods": true,
+      "ranking_requires": "all ten methods attempted in the same main-suite batch and model, three successful repetitions per ranked method",
+      "rankings": [],
+      "failed_or_incomplete_methods": [],
+      "missing_methods": [],
+      "note": "Smoke, selected-method or non-three-repeat runs are validation/exploration and are not assigned formal comparison ranks."
+    },
+    {
+      "case_id": "main_queue_n4096_g0p999_seed130",
+      "same_inputs_across_methods": true,
+      "ranking_requires": "all ten methods attempted in the same main-suite batch and model, three successful repetitions per ranked method",
+      "rankings": [],
+      "failed_or_incomplete_methods": [],
+      "missing_methods": [],
+      "note": "Smoke, selected-method or non-three-repeat runs are validation/exploration and are not assigned formal comparison ranks."
+    }
+  ],
+  "scaling": [],
+  "descriptive_fits": {}
+}

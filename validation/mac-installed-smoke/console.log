@@ -1,0 +1,67 @@
+Preparing main_queue_n32_g0p99_seed130
+main_queue_n32_g0p99_seed130 method=LSQN repeat=0 success=True residual=3.176126028847648e-12 queries=71 time=0.007s
+main_queue_n32_g0p99_seed130 method=VI repeat=0 success=True residual=9.917457077790459e-09 queries=n/a time=0.061s
+main_queue_n32_g0p99_seed130 method=PI repeat=0 success=True residual=7.105427357601002e-15 queries=n/a time=0.004s
+main_queue_n32_g0p99_seed130 method=MPI-4 repeat=0 success=True residual=9.623754237964022e-09 queries=n/a time=0.303s
+main_queue_n32_g0p99_seed130 method=MPI-20 repeat=0 success=True residual=9.632138642245991e-09 queries=n/a time=0.065s
+main_queue_n32_g0p99_seed130 method=QPI-U repeat=0 success=True residual=9.93409798866196e-09 queries=n/a time=0.046s
+main_queue_n32_g0p99_seed130 method=QPI-BT repeat=0 success=True residual=9.799137501431687e-09 queries=n/a time=0.037s
+main_queue_n32_g0p99_seed130 method=QPI-S repeat=0 success=True residual=8.976556387096934e-09 queries=n/a time=0.015s
+main_queue_n32_g0p99_seed130 method=iGMRES-PI repeat=0 success=True residual=5.4633630952594103e-11 queries=n/a time=0.017s
+main_queue_n32_g0p99_seed130 method=AA-I-S-5 repeat=0 success=True residual=5.158973692687141e-09 queries=n/a time=0.012s
+Preparing main_cluster_n32_g0p99_seed130
+main_cluster_n32_g0p99_seed130 method=LSQN repeat=0 success=True residual=4.4155878953233696e-10 queries=34 time=0.002s
+main_cluster_n32_g0p99_seed130 method=VI repeat=0 success=True residual=9.930660738177721e-09 queries=n/a time=0.039s
+main_cluster_n32_g0p99_seed130 method=PI repeat=0 success=True residual=1.7763568394002505e-15 queries=n/a time=0.000s
+main_cluster_n32_g0p99_seed130 method=MPI-4 repeat=0 success=True residual=9.930670508140338e-09 queries=n/a time=0.018s
+main_cluster_n32_g0p99_seed130 method=MPI-20 repeat=0 success=True residual=9.163865222205914e-09 queries=n/a time=0.006s
+main_cluster_n32_g0p99_seed130 method=QPI-U repeat=0 success=True residual=9.85119674723478e-09 queries=n/a time=0.037s
+main_cluster_n32_g0p99_seed130 method=QPI-BT repeat=0 success=True residual=9.948379897650739e-09 queries=n/a time=0.030s
+main_cluster_n32_g0p99_seed130 method=QPI-S repeat=0 success=True residual=6.230721716349308e-09 queries=n/a time=0.009s
+main_cluster_n32_g0p99_seed130 method=iGMRES-PI repeat=0 success=True residual=5.721313200979239e-09 queries=n/a time=0.004s
+main_cluster_n32_g0p99_seed130 method=AA-I-S-5 repeat=0 success=True residual=3.947851823227211e-09 queries=n/a time=0.006s
+Preparing main_garnet_n32_g0p99_seed130
+main_garnet_n32_g0p99_seed130 method=LSQN repeat=0 success=True residual=5.620165666186949e-09 queries=14 time=0.002s
+main_garnet_n32_g0p99_seed130 method=VI repeat=0 success=True residual=9.931696354215092e-09 queries=n/a time=0.067s
+main_garnet_n32_g0p99_seed130 method=PI repeat=0 success=True residual=4.263256414560601e-14 queries=n/a time=0.002s
+main_garnet_n32_g0p99_seed130 method=MPI-4 repeat=0 success=True residual=9.832959335653868e-09 queries=n/a time=0.335s
+main_garnet_n32_g0p99_seed130 method=MPI-20 repeat=0 success=True residual=9.075165507965721e-09 queries=n/a time=0.073s
+main_garnet_n32_g0p99_seed130 method=QPI-U repeat=0 success=True residual=5.51750645172433e-09 queries=n/a time=0.001s
+main_garnet_n32_g0p99_seed130 method=QPI-BT repeat=0 success=True residual=5.517463819160184e-09 queries=n/a time=0.001s
+main_garnet_n32_g0p99_seed130 method=QPI-S repeat=0 success=True residual=8.185622846212937e-09 queries=n/a time=0.002s
+main_garnet_n32_g0p99_seed130 method=iGMRES-PI repeat=0 success=True residual=1.5969590094755404e-09 queries=n/a time=0.007s
+main_garnet_n32_g0p99_seed130 method=AA-I-S-5 repeat=0 success=True residual=4.260130026523257e-09 queries=n/a time=0.002s
+Preparing main_latent_n32_g0p99_seed130
+main_latent_n32_g0p99_seed130 method=LSQN repeat=0 success=True residual=1.39063871529288e-10 queries=4 time=0.001s
+main_latent_n32_g0p99_seed130 method=VI repeat=0 success=True residual=9.9246229012806e-09 queries=n/a time=0.038s
+main_latent_n32_g0p99_seed130 method=PI repeat=0 success=True residual=7.105427357601002e-15 queries=n/a time=0.000s
+main_latent_n32_g0p99_seed130 method=MPI-4 repeat=0 success=True residual=9.629847141923165e-09 queries=n/a time=0.018s
+main_latent_n32_g0p99_seed130 method=MPI-20 repeat=0 success=True residual=8.535753437399762e-09 queries=n/a time=0.005s
+main_latent_n32_g0p99_seed130 method=QPI-U repeat=0 success=True residual=1.9899424330560578e-09 queries=n/a time=0.001s
+main_latent_n32_g0p99_seed130 method=QPI-BT repeat=0 success=True residual=1.9899459857697366e-09 queries=n/a time=0.000s
+main_latent_n32_g0p99_seed130 method=QPI-S repeat=0 success=True residual=8.470088630474493e-09 queries=n/a time=0.001s
+main_latent_n32_g0p99_seed130 method=iGMRES-PI repeat=0 success=True residual=3.00101632433325e-09 queries=n/a time=0.001s
+main_latent_n32_g0p99_seed130 method=AA-I-S-5 repeat=0 success=True residual=4.2248515796927677e-10 queries=n/a time=0.001s
+Preparing public_frozenlake4x4_n17_g0p99_seed0
+public_frozenlake4x4_n17_g0p99_seed0 method=LSQN repeat=0 success=True residual=1.1102230246251565e-16 queries=19 time=0.006s
+public_frozenlake4x4_n17_g0p99_seed0 method=VI repeat=0 success=True residual=9.771440878658666e-09 queries=n/a time=0.014s
+public_frozenlake4x4_n17_g0p99_seed0 method=PI repeat=0 success=True residual=1.1102230246251565e-16 queries=n/a time=0.005s
+public_frozenlake4x4_n17_g0p99_seed0 method=MPI-4 repeat=0 success=True residual=9.893254104831328e-09 queries=n/a time=0.073s
+public_frozenlake4x4_n17_g0p99_seed0 method=MPI-20 repeat=0 success=True residual=5.2447780563014135e-09 queries=n/a time=0.018s
+public_frozenlake4x4_n17_g0p99_seed0 method=QPI-U repeat=0 success=True residual=9.367588205133615e-09 queries=n/a time=0.014s
+public_frozenlake4x4_n17_g0p99_seed0 method=QPI-BT repeat=0 success=True residual=9.298381009603673e-09 queries=n/a time=0.013s
+public_frozenlake4x4_n17_g0p99_seed0 method=QPI-S repeat=0 success=True residual=6.399245577881629e-10 queries=n/a time=0.004s
+public_frozenlake4x4_n17_g0p99_seed0 method=iGMRES-PI repeat=0 success=True residual=1.4605529008449025e-09 queries=n/a time=0.010s
+public_frozenlake4x4_n17_g0p99_seed0 method=AA-I-S-5 repeat=0 success=True residual=7.229232878991354e-09 queries=n/a time=0.003s
+Preparing scaling_frozenlake_n64_g0p99_seed130
+scaling_frozenlake_n64_g0p99_seed130 method=LSQN repeat=0 success=True residual=8.128390183159695e-10 queries=61 time=0.012s
+scaling_frozenlake_n64_g0p99_seed130 method=VI repeat=0 success=True residual=9.833587166774294e-09 queries=n/a time=0.008s
+scaling_frozenlake_n64_g0p99_seed130 method=PI repeat=0 success=True residual=2.220446049250313e-16 queries=n/a time=0.009s
+scaling_frozenlake_n64_g0p99_seed130 method=MPI-4 repeat=0 success=True residual=8.281209828986391e-09 queries=n/a time=0.043s
+scaling_frozenlake_n64_g0p99_seed130 method=MPI-20 repeat=0 success=True residual=2.945883426086482e-09 queries=n/a time=0.012s
+scaling_frozenlake_n64_g0p99_seed130 method=QPI-U repeat=0 success=True residual=9.956374502628762e-09 queries=n/a time=0.018s
+scaling_frozenlake_n64_g0p99_seed130 method=QPI-BT repeat=0 success=True residual=9.402727374485664e-09 queries=n/a time=0.017s
+scaling_frozenlake_n64_g0p99_seed130 method=QPI-S repeat=0 success=True residual=9.994440386407177e-09 queries=n/a time=0.010s
+scaling_frozenlake_n64_g0p99_seed130 method=iGMRES-PI repeat=0 success=True residual=1.3005746479777258e-09 queries=n/a time=0.015s
+scaling_frozenlake_n64_g0p99_seed130 method=AA-I-S-5 repeat=0 success=True residual=7.000437229898182e-09 queries=n/a time=0.010s
+Saved <release-candidate>/validation/mac-installed-smoke

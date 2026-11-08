@@ -1,0 +1,446 @@
+{
+  "converged": true,
+  "message": "converged",
+  "iterations": 25,
+  "residual": 5.2447780563014135e-09,
+  "value": [
+    0.5420258411398294,
+    0.49880306591185203,
+    0.47069554761234594,
+    0.4568515454920473,
+    0.5584508759959395,
+    0.0,
+    0.3583480070158902,
+    0.0,
+    0.5917986733553146,
+    0.6430797712178684,
+    0.6152075106485639,
+    0.0,
+    0.0,
+    0.7417204009648561,
+    0.8628374104186649,
+    0.0,
+    0.0
+  ],
+  "policy": [
+    0,
+    3,
+    3,
+    3,
+    0,
+    0,
+    0,
+    0,
+    3,
+    1,
+    0,
+    0,
+    0,
+    2,
+    1,
+    0,
+    0
+  ],
+  "history": [
+    {
+      "iteration": 0,
+      "residual": 0.3333333333333333,
+      "bellman_calls": 1,
+      "policy_products": 19
+    },
+    {
+      "iteration": 1,
+      "residual": 0.16417910443909986,
+      "bellman_calls": 2,
+      "policy_products": 38
+    },
+    {
+      "iteration": 2,
+      "residual": 0.059231464464558015,
+      "bellman_calls": 3,
+      "policy_products": 57
+    },
+    {
+      "iteration": 3,
+      "residual": 0.0518416910082001,
+      "bellman_calls": 4,
+      "policy_products": 76
+    },
+    {
+      "iteration": 4,
+      "residual": 0.020331469131534302,
+      "bellman_calls": 5,
+      "policy_products": 95
+    },
+    {
+      "iteration": 5,
+      "residual": 0.007473897842320276,
+      "bellman_calls": 6,
+      "policy_products": 114
+    },
+    {
+      "iteration": 6,
+      "residual": 0.0025781851090082575,
+      "bellman_calls": 7,
+      "policy_products": 133
+    },
+    {
+      "iteration": 7,
+      "residual": 0.0013350265860400112,
+      "bellman_calls": 8,
+      "policy_products": 152
+    },
+    {
+      "iteration": 8,
+      "residual": 0.0006744823565016933,
+      "bellman_calls": 9,
+      "policy_products": 171
+    },
+    {
+      "iteration": 9,
+      "residual": 0.00033846104254536824,
+      "bellman_calls": 10,
+      "policy_products": 190
+    },
+    {
+      "iteration": 10,
+      "residual": 0.00016951455027020002,
+      "bellman_calls": 11,
+      "policy_products": 209
+    },
+    {
+      "iteration": 11,
+      "residual": 8.485231229277135e-05,
+      "bellman_calls": 12,
+      "policy_products": 228
+    },
+    {
+      "iteration": 12,
+      "residual": 4.2466918122319175e-05,
+      "bellman_calls": 13,
+      "policy_products": 247
+    },
+    {
+      "iteration": 13,
+      "residual": 2.1252876852784208e-05,
+      "bellman_calls": 14,
+      "policy_products": 266
+    },
+    {
+      "iteration": 14,
+      "residual": 1.063601434631023e-05,
+      "bellman_calls": 15,
+      "policy_products": 285
+    },
+    {
+      "iteration": 15,
+      "residual": 5.322778971417197e-06,
+      "bellman_calls": 16,
+      "policy_products": 304
+    },
+    {
+      "iteration": 16,
+      "residual": 2.6637745699220616e-06,
+      "bellman_calls": 17,
+      "policy_products": 323
+    },
+    {
+      "iteration": 17,
+      "residual": 1.3330804691236153e-06,
+      "bellman_calls": 18,
+      "policy_products": 342
+    },
+    {
+      "iteration": 18,
+      "residual": 6.671372995148417e-07,
+      "bellman_calls": 19,
+      "policy_products": 361
+    },
+    {
+      "iteration": 19,
+      "residual": 3.338674408048803e-07,
+      "bellman_calls": 20,
+      "policy_products": 380
+    },
+    {
+      "iteration": 20,
+      "residual": 1.6708324840353228e-07,
+      "bellman_calls": 21,
+      "policy_products": 399
+    },
+    {
+      "iteration": 21,
+      "residual": 8.361645503773829e-08,
+      "bellman_calls": 22,
+      "policy_products": 418
+    },
+    {
+      "iteration": 22,
+      "residual": 4.184567636844605e-08,
+      "bellman_calls": 23,
+      "policy_products": 437
+    },
+    {
+      "iteration": 23,
+      "residual": 2.0941579415012512e-08,
+      "bellman_calls": 24,
+      "policy_products": 456
+    },
+    {
+      "iteration": 24,
+      "residual": 1.048016867732926e-08,
+      "bellman_calls": 25,
+      "policy_products": 475
+    }
+  ],
+  "stats": {
+    "bellman_calls": 26,
+    "policy_products": 475
+  },
+  "runtime_s": 0.018938209000000095,
+  "method": "MPI-20",
+  "trace": [
+    {
+      "k": 0,
+      "residual2": 0.3333333333333333,
+      "residual_inf": 0.3333333333333333,
+      "elapsed_s": 6.120900000006202e-05,
+      "event": "initial"
+    },
+    {
+      "k": 1,
+      "residual2": 0.18689133895582138,
+      "residual_inf": 0.16417910443909986,
+      "elapsed_s": 0.0005686250000001003,
+      "event": "accepted"
+    },
+    {
+      "k": 2,
+      "residual2": 0.10564464901877473,
+      "residual_inf": 0.059231464464558015,
+      "elapsed_s": 0.001309625000000203,
+      "event": "accepted"
+    },
+    {
+      "k": 3,
+      "residual2": 0.06663161187864058,
+      "residual_inf": 0.0518416910082001,
+      "elapsed_s": 0.002037875000000078,
+      "event": "accepted"
+    },
+    {
+      "k": 4,
+      "residual2": 0.024579768350549803,
+      "residual_inf": 0.020331469131534302,
+      "elapsed_s": 0.002765042000000051,
+      "event": "accepted"
+    },
+    {
+      "k": 5,
+      "residual2": 0.010302794457109266,
+      "residual_inf": 0.007473897842320276,
+      "elapsed_s": 0.003507959000000005,
+      "event": "accepted"
+    },
+    {
+      "k": 6,
+      "residual2": 0.005154922852024532,
+      "residual_inf": 0.0025781851090082575,
+      "elapsed_s": 0.0042334590000001615,
+      "event": "accepted"
+    },
+    {
+      "k": 7,
+      "residual2": 0.0026230420120252275,
+      "residual_inf": 0.0013350265860400112,
+      "elapsed_s": 0.004961167000000044,
+      "event": "accepted"
+    },
+    {
+      "k": 8,
+      "residual2": 0.0013189297475953185,
+      "residual_inf": 0.0006744823565016933,
+      "elapsed_s": 0.0056896250000002535,
+      "event": "accepted"
+    },
+    {
+      "k": 9,
+      "residual2": 0.0006609564366101472,
+      "residual_inf": 0.00033846104254536824,
+      "elapsed_s": 0.006711917000000289,
+      "event": "accepted"
+    },
+    {
+      "k": 10,
+      "residual2": 0.0003309043502739193,
+      "residual_inf": 0.00016951455027020002,
+      "elapsed_s": 0.007830334000000105,
+      "event": "accepted"
+    },
+    {
+      "k": 11,
+      "residual2": 0.00016561916110798683,
+      "residual_inf": 8.485231229277135e-05,
+      "elapsed_s": 0.00884837500000013,
+      "event": "accepted"
+    },
+    {
+      "k": 12,
+      "residual2": 8.288646742808453e-05,
+      "residual_inf": 4.2466918122319175e-05,
+      "elapsed_s": 0.009637125000000024,
+      "event": "accepted"
+    },
+    {
+      "k": 13,
+      "residual2": 4.148074712073686e-05,
+      "residual_inf": 2.1252876852784208e-05,
+      "elapsed_s": 0.0103800420000002,
+      "event": "accepted"
+    },
+    {
+      "k": 14,
+      "residual2": 2.075900784076233e-05,
+      "residual_inf": 1.063601434631023e-05,
+      "elapsed_s": 0.01110499999999992,
+      "event": "accepted"
+    },
+    {
+      "k": 15,
+      "residual2": 1.0388809309133133e-05,
+      "residual_inf": 5.322778971417197e-06,
+      "elapsed_s": 0.011812959000000012,
+      "event": "accepted"
+    },
+    {
+      "k": 16,
+      "residual2": 5.199058615485607e-06,
+      "residual_inf": 2.6637745699220616e-06,
+      "elapsed_s": 0.012521042000000149,
+      "event": "accepted"
+    },
+    {
+      "k": 17,
+      "residual2": 2.6018579536854177e-06,
+      "residual_inf": 1.3330804691236153e-06,
+      "elapsed_s": 0.013228792000000267,
+      "event": "accepted"
+    },
+    {
+      "k": 18,
+      "residual2": 1.30209428232272e-06,
+      "residual_inf": 6.671372995148417e-07,
+      "elapsed_s": 0.013942334,
+      "event": "accepted"
+    },
+    {
+      "k": 19,
+      "residual2": 6.516303071211557e-07,
+      "residual_inf": 3.338674408048803e-07,
+      "elapsed_s": 0.014651709000000013,
+      "event": "accepted"
+    },
+    {
+      "k": 20,
+      "residual2": 3.26106996417146e-07,
+      "residual_inf": 1.6708324840353228e-07,
+      "elapsed_s": 0.01535429200000027,
+      "event": "accepted"
+    },
+    {
+      "k": 21,
+      "residual2": 1.6319955018732405e-07,
+      "residual_inf": 8.361645503773829e-08,
+      "elapsed_s": 0.016064459000000086,
+      "event": "accepted"
+    },
+    {
+      "k": 22,
+      "residual2": 8.16728664660852e-08,
+      "residual_inf": 4.184567636844605e-08,
+      "elapsed_s": 0.016791209000000196,
+      "event": "accepted"
+    },
+    {
+      "k": 23,
+      "residual2": 4.087301169572811e-08,
+      "residual_inf": 2.0941579415012512e-08,
+      "elapsed_s": 0.01750300000000027,
+      "event": "accepted"
+    },
+    {
+      "k": 24,
+      "residual2": 2.0454811395246057e-08,
+      "residual_inf": 1.048016867732926e-08,
+      "elapsed_s": 0.01820995900000022,
+      "event": "accepted"
+    },
+    {
+      "k": 25,
+      "residual2": 1.0236566691144901e-08,
+      "residual_inf": 5.2447780563014135e-09,
+      "elapsed_s": 0.018931041999999954,
+      "event": "finished"
+    }
+  ],
+  "implementation": "curves",
+  "backend": "lsqn_baselines:MPI-20",
+  "spec": {
+    "suite": "public",
+    "family": "frozenlake4x4",
+    "n": 17,
+    "gamma": 0.99,
+    "seed": 0,
+    "initialization": "reward_lower_bound_all_states"
+  },
+  "model": {
+    "n_states": 17,
+    "n_actions": 4,
+    "gamma": 0.99,
+    "name": "FrozenLake-4x4",
+    "storage": "csr",
+    "transition_nnz": 156,
+    "model_sha256": "228b23637a465f5e40bf18e71dedc5013b7e7141345536cfe3643920beecf4d7",
+    "hash_schema": "lsqn-model-arrays-v1",
+    "source": "bundled_frozen",
+    "source_id": "scb_section6_rerun_2026-10-10/supplement/public_official.json.gz",
+    "file_sha256": "6dcd7e6c1c59ee11342fa2894dc672329e7713bc51265850f5bf827d87222eea",
+    "frozen_model_match": true,
+    "construction": "official Gymnasium 1.1.1 transition tuples"
+  },
+  "wall_seconds": 0.01898387499999976,
+  "wall_budget_seconds": 30.0,
+  "timeout": false,
+  "success": true,
+  "independent_verification": {
+    "passed": true,
+    "residual_inf": 5.2447780563014135e-09,
+    "residual2": 1.0236566691144901e-08,
+    "finite": true,
+    "tolerance": 1e-08,
+    "value_error_bound_inf": 5.244778056301409e-07
+  },
+  "baseline_settings": {
+    "tol": 1e-08,
+    "implementation": "lsqn_baselines",
+    "note": "Method-specific fixed parameters and iteration limits are documented in baselines-port-notes.txt"
+  },
+  "reference_pi": {
+    "status": "complete",
+    "iterations": 6,
+    "verification": {
+      "passed": true,
+      "residual_inf": 1.1102230246251565e-16,
+      "residual2": 2.0770370905276122e-16,
+      "finite": true,
+      "tolerance": 1e-08,
+      "value_error_bound_inf": 1.1102230246251556e-14
+    },
+    "diagnostic_wall_seconds": 0.004467459000000007,
+    "value_difference_inf": 1.541655477166337e-07,
+    "residual_error_bound": 5.244778167323712e-07,
+    "agrees_with_error_bound": true
+  },
+  "repeat": 0,
+  "run_id": "c6be79e5-9c57-4c7c-a460-12b9571cd6f3"
+}

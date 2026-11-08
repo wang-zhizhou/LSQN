@@ -1,0 +1,393 @@
+{
+  "cases": [
+    {
+      "family": "cluster",
+      "n": 512,
+      "gamma": 0.99,
+      "methods": [
+        "SCB",
+        "PI",
+        "iGMRES-PI",
+        "AA-I-S-5"
+      ]
+    },
+    {
+      "family": "cluster",
+      "n": 512,
+      "gamma": 0.999,
+      "methods": [
+        "SCB",
+        "iGMRES-PI",
+        "PI",
+        "AA-I-S-5"
+      ]
+    },
+    {
+      "family": "cluster",
+      "n": 1024,
+      "gamma": 0.99,
+      "methods": [
+        "SCB",
+        "AA-I-S-5",
+        "iGMRES-PI",
+        "PI"
+      ]
+    },
+    {
+      "family": "cluster",
+      "n": 1024,
+      "gamma": 0.999,
+      "methods": [
+        "SCB",
+        "iGMRES-PI",
+        "PI",
+        "AA-I-S-5"
+      ]
+    },
+    {
+      "family": "cluster",
+      "n": 2048,
+      "gamma": 0.99,
+      "methods": [
+        "SCB",
+        "AA-I-S-5",
+        "iGMRES-PI",
+        "PI"
+      ]
+    },
+    {
+      "family": "cluster",
+      "n": 2048,
+      "gamma": 0.999,
+      "methods": [
+        "SCB",
+        "iGMRES-PI",
+        "AA-I-S-5",
+        "PI"
+      ]
+    },
+    {
+      "family": "cluster",
+      "n": 4096,
+      "gamma": 0.99,
+      "methods": [
+        "SCB",
+        "AA-I-S-5",
+        "iGMRES-PI",
+        "PI"
+      ]
+    },
+    {
+      "family": "cluster",
+      "n": 4096,
+      "gamma": 0.999,
+      "methods": [
+        "SCB",
+        "AA-I-S-5",
+        "iGMRES-PI",
+        "PI"
+      ]
+    },
+    {
+      "family": "garnet",
+      "n": 512,
+      "gamma": 0.99,
+      "methods": [
+        "SCB",
+        "QPI-BT",
+        "QPI-U",
+        "AA-I-S-5"
+      ]
+    },
+    {
+      "family": "garnet",
+      "n": 512,
+      "gamma": 0.999,
+      "methods": [
+        "SCB",
+        "QPI-BT",
+        "QPI-U",
+        "AA-I-S-5"
+      ]
+    },
+    {
+      "family": "garnet",
+      "n": 1024,
+      "gamma": 0.99,
+      "methods": [
+        "SCB",
+        "QPI-BT",
+        "QPI-U",
+        "AA-I-S-5"
+      ]
+    },
+    {
+      "family": "garnet",
+      "n": 1024,
+      "gamma": 0.999,
+      "methods": [
+        "SCB",
+        "QPI-BT",
+        "QPI-U",
+        "AA-I-S-5"
+      ]
+    },
+    {
+      "family": "garnet",
+      "n": 2048,
+      "gamma": 0.99,
+      "methods": [
+        "SCB",
+        "QPI-U",
+        "QPI-BT",
+        "iGMRES-PI"
+      ]
+    },
+    {
+      "family": "garnet",
+      "n": 2048,
+      "gamma": 0.999,
+      "methods": [
+        "SCB",
+        "QPI-BT",
+        "QPI-U",
+        "AA-I-S-5"
+      ]
+    },
+    {
+      "family": "garnet",
+      "n": 4096,
+      "gamma": 0.99,
+      "methods": [
+        "SCB",
+        "QPI-BT",
+        "QPI-U",
+        "iGMRES-PI"
+      ]
+    },
+    {
+      "family": "garnet",
+      "n": 4096,
+      "gamma": 0.999,
+      "methods": [
+        "SCB",
+        "QPI-BT",
+        "QPI-U",
+        "iGMRES-PI"
+      ]
+    },
+    {
+      "family": "latent",
+      "n": 512,
+      "gamma": 0.99,
+      "methods": [
+        "SCB",
+        "QPI-BT",
+        "QPI-U",
+        "AA-I-S-5"
+      ]
+    },
+    {
+      "family": "latent",
+      "n": 512,
+      "gamma": 0.999,
+      "methods": [
+        "SCB",
+        "QPI-BT",
+        "QPI-U",
+        "AA-I-S-5"
+      ]
+    },
+    {
+      "family": "latent",
+      "n": 1024,
+      "gamma": 0.99,
+      "methods": [
+        "SCB",
+        "QPI-BT",
+        "QPI-U",
+        "AA-I-S-5"
+      ]
+    },
+    {
+      "family": "latent",
+      "n": 1024,
+      "gamma": 0.999,
+      "methods": [
+        "SCB",
+        "QPI-U",
+        "QPI-BT",
+        "AA-I-S-5"
+      ]
+    },
+    {
+      "family": "latent",
+      "n": 2048,
+      "gamma": 0.99,
+      "methods": [
+        "SCB",
+        "QPI-BT",
+        "QPI-U",
+        "AA-I-S-5"
+      ]
+    },
+    {
+      "family": "latent",
+      "n": 2048,
+      "gamma": 0.999,
+      "methods": [
+        "SCB",
+        "QPI-BT",
+        "QPI-U",
+        "AA-I-S-5"
+      ]
+    },
+    {
+      "family": "latent",
+      "n": 4096,
+      "gamma": 0.99,
+      "methods": [
+        "SCB",
+        "QPI-BT",
+        "QPI-U",
+        "AA-I-S-5"
+      ]
+    },
+    {
+      "family": "latent",
+      "n": 4096,
+      "gamma": 0.999,
+      "methods": [
+        "SCB",
+        "QPI-BT",
+        "QPI-U",
+        "AA-I-S-5"
+      ]
+    },
+    {
+      "family": "queue",
+      "n": 512,
+      "gamma": 0.99,
+      "methods": [
+        "SCB",
+        "PI",
+        "AA-I-S-5",
+        "MPI-20"
+      ]
+    },
+    {
+      "family": "queue",
+      "n": 512,
+      "gamma": 0.999,
+      "methods": [
+        "SCB",
+        "PI",
+        "QPI-U",
+        "MPI-20"
+      ]
+    },
+    {
+      "family": "queue",
+      "n": 1024,
+      "gamma": 0.99,
+      "methods": [
+        "SCB",
+        "PI",
+        "AA-I-S-5",
+        "MPI-20"
+      ]
+    },
+    {
+      "family": "queue",
+      "n": 1024,
+      "gamma": 0.999,
+      "methods": [
+        "SCB",
+        "PI",
+        "AA-I-S-5",
+        "MPI-20"
+      ]
+    },
+    {
+      "family": "queue",
+      "n": 2048,
+      "gamma": 0.99,
+      "methods": [
+        "SCB",
+        "PI",
+        "MPI-20",
+        "AA-I-S-5"
+      ]
+    },
+    {
+      "family": "queue",
+      "n": 2048,
+      "gamma": 0.999,
+      "methods": [
+        "SCB",
+        "PI",
+        "MPI-20",
+        "AA-I-S-5"
+      ]
+    },
+    {
+      "family": "queue",
+      "n": 4096,
+      "gamma": 0.99,
+      "methods": [
+        "SCB",
+        "PI",
+        "MPI-20",
+        "AA-I-S-5"
+      ]
+    },
+    {
+      "family": "queue",
+      "n": 4096,
+      "gamma": 0.999,
+      "methods": [
+        "SCB",
+        "PI",
+        "MPI-20",
+        "AA-I-S-5"
+      ]
+    }
+  ],
+  "seed": 130,
+  "repetitions": 3,
+  "timing": "Serial, rotated method order; one BLAS thread; medians; 30/60 second limits.",
+  "scope": "SCB versus the three fastest successful historical baselines per instance; NOT all-method ranking.",
+  "scb": "Uniform cache_reuse implementation; all mathematical parameters unchanged.",
+  "baselines": "Final published implementations unchanged; author iGMRES forcing .1 and restart 100.",
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "external-library/libopenblas64_.0.dylib",
+      "version": "0.3.23.dev",
+      "threading_layer": "pthreads",
+      "architecture": "armv8"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "external-library/libopenblas.0.dylib",
+      "version": "0.3.26.dev",
+      "threading_layer": "pthreads",
+      "architecture": "neoversen1"
+    }
+  ],
+  "hashes": {
+    "scb_section6_rerun_2026-10-10/compute_optimization/policy_cache_2026-10-14/compare_leaders.py": "b7cd565663e0757f01ef2ac18777f391ff7c3b64fbee7d350afe0931f8d72a17",
+    "scb_section6_rerun_2026-10-10/compute_optimization/policy_cache_2026-10-14/run_check.py": "1c49e1e8d21e7fc24a7eccc6a8316c6b686e93113f3ced121e0f42b1be3289fa",
+    "scb_section6_rerun_2026-10-10/compute_optimization/policy_cache_2026-10-14/policy_cache.py": "2410cb49d83bd0fe80b2fc94a589be5e2584e9f73934a52808286772ec628281",
+    "scb_section6_rerun_2026-10-10/compute_optimization/blocked_model.py": "0a7b66d392ca058dc0c7b4ca8f38b05c253379c70beda96f73e60c2d8e9130c9",
+    "scb_section6_rerun_2026-10-10/author_igmres.py": "7d113dcbc0d6419ccc02e78b1c70540aa2d6498b02c8619bc9dc9b26945d23f3",
+    "scb_section6_rerun_2026-10-10/run_study.py": "2ab9f3aed792a596b9b674db666152db1d64a2ebb53f864699e14cded2bcd7a4",
+    "scb_siopt_candidate_2026-09-20/code/solver.py": "d8a05c55fb1a2773536ef47e6f94368bc8c5419ee8fb30051f0f6219c1bf97da"
+  }
+}

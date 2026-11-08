@@ -1,0 +1,251 @@
+{
+  "converged": true,
+  "value": [
+    26.063717761556976,
+    26.052819154957966,
+    26.08645799952414,
+    26.057163276300834,
+    26.037244463725067,
+    25.948067954012625,
+    25.97677337251662,
+    25.983867884516545,
+    26.001416819334253,
+    26.03534658381937,
+    26.07238588892399,
+    26.04755452764018,
+    26.099588166470795,
+    26.022571985999793,
+    26.007436855520126,
+    26.010644770734565,
+    25.934312254266104,
+    26.063394792831232,
+    26.009281222359782,
+    26.01658842984151,
+    26.06906351155778,
+    26.071421359805377,
+    26.00847516016798,
+    25.99805157267518,
+    25.989141920280986,
+    25.913989624153878,
+    26.032549683617766,
+    26.020375197680327,
+    26.02573584935996,
+    25.995834657250967,
+    26.008480767695517,
+    26.045331326350603
+  ],
+  "policy": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    3,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    0,
+    3,
+    3,
+    3,
+    3,
+    3,
+    0
+  ],
+  "iterations": 9,
+  "stats": {
+    "restarts": 1,
+    "fallbacks": 0,
+    "bellman_calls": 10
+  },
+  "history": [
+    {
+      "iteration": 0,
+      "residual": 0.6767782945937242
+    },
+    {
+      "iteration": 1,
+      "residual": 0.6156685400570794
+    },
+    {
+      "iteration": 2,
+      "residual": 1.0118051652673188
+    },
+    {
+      "iteration": 3,
+      "residual": 0.17099535405355226
+    },
+    {
+      "iteration": 4,
+      "residual": 0.008545976112849019
+    },
+    {
+      "iteration": 5,
+      "residual": 7.098220624257578e-05
+    },
+    {
+      "iteration": 6,
+      "residual": 1.177527806106582e-05
+    },
+    {
+      "iteration": 7,
+      "residual": 2.5412478521502635e-07
+    },
+    {
+      "iteration": 8,
+      "residual": 3.650460556059443e-08
+    }
+  ],
+  "message": "converged",
+  "method": "AA-I-S-5",
+  "residual": 4.2248515796927677e-10,
+  "trace": [
+    {
+      "k": 0,
+      "residual2": 3.4289348493857448,
+      "residual_inf": 0.6767782945937242,
+      "elapsed_s": 3.166700000001299e-05,
+      "event": "initial"
+    },
+    {
+      "k": 1,
+      "residual2": 3.4324350629075235,
+      "residual_inf": 0.6156685400570794,
+      "elapsed_s": 8.675000000013533e-05,
+      "event": "accepted"
+    },
+    {
+      "k": 2,
+      "residual2": 2.305209876851975,
+      "residual_inf": 1.0118051652673188,
+      "elapsed_s": 0.00015333399999994946,
+      "event": "accepted"
+    },
+    {
+      "k": 3,
+      "residual2": 0.564578281351135,
+      "residual_inf": 0.17099535405355226,
+      "elapsed_s": 0.00021775000000001654,
+      "event": "accepted"
+    },
+    {
+      "k": 4,
+      "residual2": 0.02831135759234326,
+      "residual_inf": 0.008545976112849019,
+      "elapsed_s": 0.00028291700000004916,
+      "event": "accepted"
+    },
+    {
+      "k": 5,
+      "residual2": 0.00028847836288150176,
+      "residual_inf": 7.098220624257578e-05,
+      "elapsed_s": 0.00033562499999995055,
+      "event": "accepted"
+    },
+    {
+      "k": 6,
+      "residual2": 2.3824527252476126e-05,
+      "residual_inf": 1.177527806106582e-05,
+      "elapsed_s": 0.0004050840000000555,
+      "event": "accepted"
+    },
+    {
+      "k": 7,
+      "residual2": 7.036375026825101e-07,
+      "residual_inf": 2.5412478521502635e-07,
+      "elapsed_s": 0.0004651250000000662,
+      "event": "accepted"
+    },
+    {
+      "k": 8,
+      "residual2": 1.2844933097445724e-07,
+      "residual_inf": 3.650460556059443e-08,
+      "elapsed_s": 0.0005285420000000762,
+      "event": "accepted"
+    },
+    {
+      "k": 9,
+      "residual2": 1.4245856719113698e-09,
+      "residual_inf": 4.2248515796927677e-10,
+      "elapsed_s": 0.000616959000000028,
+      "event": "finished"
+    }
+  ],
+  "runtime_s": 0.0006233340000001419,
+  "implementation": "curves",
+  "backend": "lsqn_baselines:AA-I-S-5",
+  "spec": {
+    "suite": "main",
+    "family": "latent",
+    "n": 32,
+    "gamma": 0.99,
+    "seed": 130,
+    "initialization": "reward_lower_bound_all_states"
+  },
+  "model": {
+    "n_states": 32,
+    "n_actions": 4,
+    "gamma": 0.99,
+    "name": "latent_switching",
+    "storage": "dense",
+    "transition_nnz": 4096,
+    "model_sha256": "15f4b3bdb3c454f230f0b4fb65665f5e2d43765c9c04db58d0958df7f9796ef2",
+    "hash_schema": "lsqn-model-arrays-v1",
+    "source": "bundled_frozen",
+    "source_id": "original main generator; reduced smoke dimension n32",
+    "file_sha256": "b044ae7f03917e035d776b24d21c5249062888518913d83eadb460ae0d5c2ee2",
+    "frozen_model_match": true,
+    "construction": "unchanged original generator at n32"
+  },
+  "wall_seconds": 0.0006510419999998796,
+  "wall_budget_seconds": 30.0,
+  "timeout": false,
+  "success": true,
+  "independent_verification": {
+    "passed": true,
+    "residual_inf": 4.2248515796927677e-10,
+    "residual2": 1.4245856719113698e-09,
+    "finite": true,
+    "tolerance": 1e-08,
+    "value_error_bound_inf": 4.224851579692764e-08
+  },
+  "baseline_settings": {
+    "tol": 1e-08,
+    "implementation": "lsqn_baselines",
+    "note": "Method-specific fixed parameters and iteration limits are documented in baselines-port-notes.txt"
+  },
+  "reference_pi": {
+    "status": "complete",
+    "iterations": 1,
+    "verification": {
+      "passed": true,
+      "residual_inf": 7.105427357601002e-15,
+      "residual2": 2.537145046425895e-14,
+      "finite": true,
+      "tolerance": 1e-08,
+      "value_error_bound_inf": 7.105427357600996e-13
+    },
+    "diagnostic_wall_seconds": 0.0001292500000000807,
+    "value_difference_inf": 1.3326125980483994e-08,
+    "residual_error_bound": 4.22492263396634e-08,
+    "agrees_with_error_bound": true
+  },
+  "repeat": 0,
+  "run_id": "c6be79e5-9c57-4c7c-a460-12b9571cd6f3"
+}

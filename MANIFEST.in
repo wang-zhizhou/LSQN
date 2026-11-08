@@ -1,0 +1,13 @@
+include .gitignore MANIFEST.json
+recursive-include .github *.yml
+include README.md RUN_LINUX_ZH.md requirements-repro.txt LICENSE CITATION.cff
+include *-notes.txt THIRD_PARTY_NOTICES.md
+recursive-include scripts *.py
+recursive-include examples *.py
+recursive-include tests *.py
+recursive-include experiments/data *.json *.npz
+recursive-include src/lsqn/_native/sources *.c *.h
+recursive-include benchmarks *.json *.jsonl *.gz *.md *.png *.pdf *.tex
+recursive-include docs *.tex *.md
+recursive-include LICENSES *.txt
+recursive-include validation *.md *.json *.log

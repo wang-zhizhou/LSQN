@@ -1,0 +1,978 @@
+{
+  "schema": "lsqn-runtime-table-v1",
+  "platform": "macos",
+  "source_sha256": {
+    "benchmarks/macos-m2-paper/main.json": "7b4288efbc71f09e1b47d3bf703f9e521dac09ea3614131aecfc90a485cec720",
+    "benchmarks/macos-m2-paper/sources/final_cell_provenance.json": "d22bbbd46b91960aeff7683bbc6e7fb86aaadad0e96999e18d657b38d3cd9f3d"
+  },
+  "configurations": 32,
+  "cells": 320,
+  "ranks": {
+    "overall": [
+      {
+        "method": "AA-I-S-5",
+        "mean_rank": 3.453125,
+        "successful_configurations": 31,
+        "fastest_configurations": 0
+      },
+      {
+        "method": "LSQN",
+        "mean_rank": 3.53125,
+        "successful_configurations": 32,
+        "fastest_configurations": 8
+      },
+      {
+        "method": "QPI-BT",
+        "mean_rank": 3.5625,
+        "successful_configurations": 32,
+        "fastest_configurations": 13
+      },
+      {
+        "method": "QPI-U",
+        "mean_rank": 4.0625,
+        "successful_configurations": 32,
+        "fastest_configurations": 3
+      },
+      {
+        "method": "PI",
+        "mean_rank": 4.875,
+        "successful_configurations": 32,
+        "fastest_configurations": 8
+      },
+      {
+        "method": "iGMRES-PI",
+        "mean_rank": 5.03125,
+        "successful_configurations": 28,
+        "fastest_configurations": 0
+      },
+      {
+        "method": "MPI-20",
+        "mean_rank": 6.4375,
+        "successful_configurations": 30,
+        "fastest_configurations": 0
+      },
+      {
+        "method": "QPI-S",
+        "mean_rank": 7.015625,
+        "successful_configurations": 28,
+        "fastest_configurations": 0
+      },
+      {
+        "method": "VI",
+        "mean_rank": 8.1875,
+        "successful_configurations": 29,
+        "fastest_configurations": 0
+      },
+      {
+        "method": "MPI-4",
+        "mean_rank": 8.84375,
+        "successful_configurations": 30,
+        "fastest_configurations": 0
+      }
+    ],
+    "by_family": {
+      "cluster": {
+        "LSQN": 1.0,
+        "VI": 9.75,
+        "PI": 3.5,
+        "MPI-4": 9.125,
+        "MPI-20": 7.875,
+        "QPI-U": 6.875,
+        "QPI-BT": 6.375,
+        "QPI-S": 4.875,
+        "iGMRES-PI": 2.75,
+        "AA-I-S-5": 2.875
+      },
+      "garnet": {
+        "LSQN": 3.0,
+        "VI": 8.125,
+        "PI": 8.25,
+        "MPI-4": 9.375,
+        "MPI-20": 6.875,
+        "QPI-U": 1.875,
+        "QPI-BT": 1.125,
+        "QPI-S": 7.375,
+        "iGMRES-PI": 4.625,
+        "AA-I-S-5": 4.375
+      },
+      "latent": {
+        "LSQN": 4.0,
+        "VI": 9.875,
+        "PI": 6.75,
+        "MPI-4": 9.0,
+        "MPI-20": 8.125,
+        "QPI-U": 1.75,
+        "QPI-BT": 1.25,
+        "QPI-S": 6.25,
+        "iGMRES-PI": 5.0,
+        "AA-I-S-5": 3.0
+      },
+      "queue": {
+        "LSQN": 6.125,
+        "VI": 5.0,
+        "PI": 1.0,
+        "MPI-4": 7.875,
+        "MPI-20": 2.875,
+        "QPI-U": 5.75,
+        "QPI-BT": 5.5,
+        "QPI-S": 9.5625,
+        "iGMRES-PI": 7.75,
+        "AA-I-S-5": 3.5625
+      }
+    },
+    "cases": [
+      {
+        "family": "cluster",
+        "n": 512,
+        "gamma": 0.99,
+        "ranks": {
+          "LSQN": 1.0,
+          "PI": 2.0,
+          "iGMRES-PI": 3.0,
+          "AA-I-S-5": 4.0,
+          "QPI-S": 5.0,
+          "MPI-20": 6.0,
+          "QPI-BT": 7.0,
+          "QPI-U": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "cluster",
+        "n": 512,
+        "gamma": 0.999,
+        "ranks": {
+          "LSQN": 1.0,
+          "PI": 2.0,
+          "iGMRES-PI": 3.0,
+          "AA-I-S-5": 4.0,
+          "QPI-S": 5.0,
+          "QPI-BT": 6.0,
+          "QPI-U": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "cluster",
+        "n": 1024,
+        "gamma": 0.99,
+        "ranks": {
+          "LSQN": 1.0,
+          "AA-I-S-5": 2.0,
+          "iGMRES-PI": 3.0,
+          "PI": 4.0,
+          "QPI-S": 5.0,
+          "QPI-BT": 6.0,
+          "QPI-U": 7.0,
+          "MPI-20": 8.0,
+          "VI": 9.0,
+          "MPI-4": 10.0
+        }
+      },
+      {
+        "family": "cluster",
+        "n": 1024,
+        "gamma": 0.999,
+        "ranks": {
+          "LSQN": 1.0,
+          "iGMRES-PI": 2.0,
+          "PI": 3.0,
+          "AA-I-S-5": 4.0,
+          "QPI-S": 5.0,
+          "QPI-U": 6.0,
+          "QPI-BT": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "cluster",
+        "n": 2048,
+        "gamma": 0.99,
+        "ranks": {
+          "LSQN": 1.0,
+          "AA-I-S-5": 2.0,
+          "iGMRES-PI": 3.0,
+          "PI": 4.0,
+          "QPI-S": 5.0,
+          "QPI-BT": 6.0,
+          "QPI-U": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "cluster",
+        "n": 2048,
+        "gamma": 0.999,
+        "ranks": {
+          "LSQN": 1.0,
+          "iGMRES-PI": 2.0,
+          "AA-I-S-5": 3.0,
+          "PI": 4.0,
+          "QPI-S": 5.0,
+          "QPI-BT": 6.0,
+          "QPI-U": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "cluster",
+        "n": 4096,
+        "gamma": 0.99,
+        "ranks": {
+          "LSQN": 1.0,
+          "AA-I-S-5": 2.0,
+          "iGMRES-PI": 3.0,
+          "QPI-S": 4.0,
+          "PI": 5.0,
+          "QPI-U": 6.0,
+          "QPI-BT": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "cluster",
+        "n": 4096,
+        "gamma": 0.999,
+        "ranks": {
+          "LSQN": 1.0,
+          "AA-I-S-5": 2.0,
+          "iGMRES-PI": 3.0,
+          "PI": 4.0,
+          "QPI-S": 5.0,
+          "QPI-BT": 6.0,
+          "QPI-U": 7.0,
+          "VI": 9.0,
+          "MPI-4": 9.0,
+          "MPI-20": 9.0
+        }
+      },
+      {
+        "family": "garnet",
+        "n": 512,
+        "gamma": 0.99,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "LSQN": 3.0,
+          "AA-I-S-5": 4.0,
+          "iGMRES-PI": 5.0,
+          "PI": 6.0,
+          "QPI-S": 7.0,
+          "MPI-20": 8.0,
+          "VI": 9.0,
+          "MPI-4": 10.0
+        }
+      },
+      {
+        "family": "garnet",
+        "n": 512,
+        "gamma": 0.999,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "LSQN": 3.0,
+          "AA-I-S-5": 4.0,
+          "iGMRES-PI": 5.0,
+          "PI": 6.0,
+          "QPI-S": 7.0,
+          "MPI-20": 8.0,
+          "VI": 9.0,
+          "MPI-4": 10.0
+        }
+      },
+      {
+        "family": "garnet",
+        "n": 1024,
+        "gamma": 0.99,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "LSQN": 3.0,
+          "AA-I-S-5": 4.0,
+          "iGMRES-PI": 5.0,
+          "MPI-20": 6.0,
+          "VI": 7.0,
+          "QPI-S": 8.0,
+          "PI": 9.0,
+          "MPI-4": 10.0
+        }
+      },
+      {
+        "family": "garnet",
+        "n": 1024,
+        "gamma": 0.999,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "LSQN": 3.0,
+          "AA-I-S-5": 4.0,
+          "iGMRES-PI": 5.0,
+          "QPI-S": 6.0,
+          "PI": 7.0,
+          "MPI-20": 8.0,
+          "VI": 9.0,
+          "MPI-4": 10.0
+        }
+      },
+      {
+        "family": "garnet",
+        "n": 2048,
+        "gamma": 0.99,
+        "ranks": {
+          "QPI-U": 1.0,
+          "QPI-BT": 2.0,
+          "LSQN": 3.0,
+          "iGMRES-PI": 4.0,
+          "AA-I-S-5": 5.0,
+          "MPI-20": 6.0,
+          "VI": 7.0,
+          "MPI-4": 8.0,
+          "QPI-S": 9.0,
+          "PI": 10.0
+        }
+      },
+      {
+        "family": "garnet",
+        "n": 2048,
+        "gamma": 0.999,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "LSQN": 3.0,
+          "AA-I-S-5": 4.0,
+          "iGMRES-PI": 5.0,
+          "QPI-S": 6.0,
+          "MPI-20": 7.0,
+          "PI": 8.0,
+          "VI": 9.0,
+          "MPI-4": 10.0
+        }
+      },
+      {
+        "family": "garnet",
+        "n": 4096,
+        "gamma": 0.99,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "LSQN": 3.0,
+          "iGMRES-PI": 4.0,
+          "AA-I-S-5": 5.0,
+          "MPI-20": 6.0,
+          "VI": 7.0,
+          "MPI-4": 8.0,
+          "QPI-S": 9.0,
+          "PI": 10.0
+        }
+      },
+      {
+        "family": "garnet",
+        "n": 4096,
+        "gamma": 0.999,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "LSQN": 3.0,
+          "iGMRES-PI": 4.0,
+          "AA-I-S-5": 5.0,
+          "MPI-20": 6.0,
+          "QPI-S": 7.0,
+          "VI": 8.0,
+          "MPI-4": 9.0,
+          "PI": 10.0
+        }
+      },
+      {
+        "family": "latent",
+        "n": 512,
+        "gamma": 0.99,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "AA-I-S-5": 3.0,
+          "LSQN": 4.0,
+          "iGMRES-PI": 5.0,
+          "PI": 6.0,
+          "QPI-S": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "latent",
+        "n": 512,
+        "gamma": 0.999,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "AA-I-S-5": 3.0,
+          "LSQN": 4.0,
+          "iGMRES-PI": 5.0,
+          "PI": 6.0,
+          "QPI-S": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "latent",
+        "n": 1024,
+        "gamma": 0.99,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "AA-I-S-5": 3.0,
+          "LSQN": 4.0,
+          "iGMRES-PI": 5.0,
+          "QPI-S": 6.0,
+          "PI": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "latent",
+        "n": 1024,
+        "gamma": 0.999,
+        "ranks": {
+          "QPI-U": 1.0,
+          "QPI-BT": 2.0,
+          "AA-I-S-5": 3.0,
+          "LSQN": 4.0,
+          "iGMRES-PI": 5.0,
+          "QPI-S": 6.0,
+          "PI": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "latent",
+        "n": 2048,
+        "gamma": 0.99,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "AA-I-S-5": 3.0,
+          "LSQN": 4.0,
+          "iGMRES-PI": 5.0,
+          "QPI-S": 6.0,
+          "PI": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "latent",
+        "n": 2048,
+        "gamma": 0.999,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "AA-I-S-5": 3.0,
+          "LSQN": 4.0,
+          "iGMRES-PI": 5.0,
+          "QPI-S": 6.0,
+          "PI": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "latent",
+        "n": 4096,
+        "gamma": 0.99,
+        "ranks": {
+          "QPI-U": 1.0,
+          "QPI-BT": 2.0,
+          "AA-I-S-5": 3.0,
+          "LSQN": 4.0,
+          "iGMRES-PI": 5.0,
+          "QPI-S": 6.0,
+          "PI": 7.0,
+          "MPI-20": 8.0,
+          "MPI-4": 9.0,
+          "VI": 10.0
+        }
+      },
+      {
+        "family": "latent",
+        "n": 4096,
+        "gamma": 0.999,
+        "ranks": {
+          "QPI-BT": 1.0,
+          "QPI-U": 2.0,
+          "AA-I-S-5": 3.0,
+          "LSQN": 4.0,
+          "iGMRES-PI": 5.0,
+          "QPI-S": 6.0,
+          "PI": 7.0,
+          "VI": 9.0,
+          "MPI-4": 9.0,
+          "MPI-20": 9.0
+        }
+      },
+      {
+        "family": "queue",
+        "n": 512,
+        "gamma": 0.99,
+        "ranks": {
+          "PI": 1.0,
+          "AA-I-S-5": 2.0,
+          "LSQN": 3.0,
+          "MPI-20": 4.0,
+          "VI": 5.0,
+          "QPI-BT": 6.0,
+          "QPI-U": 7.0,
+          "iGMRES-PI": 8.0,
+          "MPI-4": 9.0,
+          "QPI-S": 10.0
+        }
+      },
+      {
+        "family": "queue",
+        "n": 512,
+        "gamma": 0.999,
+        "ranks": {
+          "PI": 1.0,
+          "LSQN": 2.0,
+          "QPI-U": 3.0,
+          "MPI-20": 4.0,
+          "VI": 5.0,
+          "QPI-BT": 6.0,
+          "MPI-4": 7.0,
+          "QPI-S": 8.0,
+          "iGMRES-PI": 9.5,
+          "AA-I-S-5": 9.5
+        }
+      },
+      {
+        "family": "queue",
+        "n": 1024,
+        "gamma": 0.99,
+        "ranks": {
+          "PI": 1.0,
+          "AA-I-S-5": 2.0,
+          "MPI-20": 3.0,
+          "VI": 4.0,
+          "QPI-BT": 5.0,
+          "QPI-U": 6.0,
+          "iGMRES-PI": 7.0,
+          "LSQN": 8.0,
+          "MPI-4": 9.0,
+          "QPI-S": 10.0
+        }
+      },
+      {
+        "family": "queue",
+        "n": 1024,
+        "gamma": 0.999,
+        "ranks": {
+          "PI": 1.0,
+          "LSQN": 2.0,
+          "AA-I-S-5": 3.0,
+          "MPI-20": 4.0,
+          "QPI-U": 5.0,
+          "VI": 6.0,
+          "QPI-BT": 7.0,
+          "MPI-4": 8.0,
+          "QPI-S": 9.5,
+          "iGMRES-PI": 9.5
+        }
+      },
+      {
+        "family": "queue",
+        "n": 2048,
+        "gamma": 0.99,
+        "ranks": {
+          "PI": 1.0,
+          "MPI-20": 2.0,
+          "AA-I-S-5": 3.0,
+          "QPI-BT": 4.0,
+          "iGMRES-PI": 5.0,
+          "VI": 6.0,
+          "QPI-U": 7.0,
+          "MPI-4": 8.0,
+          "LSQN": 9.0,
+          "QPI-S": 10.0
+        }
+      },
+      {
+        "family": "queue",
+        "n": 2048,
+        "gamma": 0.999,
+        "ranks": {
+          "PI": 1.0,
+          "MPI-20": 2.0,
+          "AA-I-S-5": 3.0,
+          "VI": 4.0,
+          "QPI-U": 5.0,
+          "QPI-BT": 6.0,
+          "MPI-4": 7.0,
+          "LSQN": 8.0,
+          "QPI-S": 9.5,
+          "iGMRES-PI": 9.5
+        }
+      },
+      {
+        "family": "queue",
+        "n": 4096,
+        "gamma": 0.99,
+        "ranks": {
+          "PI": 1.0,
+          "MPI-20": 2.0,
+          "AA-I-S-5": 3.0,
+          "iGMRES-PI": 4.0,
+          "QPI-BT": 5.0,
+          "VI": 6.0,
+          "QPI-U": 7.0,
+          "MPI-4": 8.0,
+          "LSQN": 9.0,
+          "QPI-S": 10.0
+        }
+      },
+      {
+        "family": "queue",
+        "n": 4096,
+        "gamma": 0.999,
+        "ranks": {
+          "PI": 1.0,
+          "MPI-20": 2.0,
+          "AA-I-S-5": 3.0,
+          "VI": 4.0,
+          "QPI-BT": 5.0,
+          "QPI-U": 6.0,
+          "MPI-4": 7.0,
+          "LSQN": 8.0,
+          "QPI-S": 9.5,
+          "iGMRES-PI": 9.5
+        }
+      }
+    ]
+  },
+  "failed_cells": [
+    {
+      "family": "queue",
+      "n": 512,
+      "gamma": 0.999,
+      "method": "iGMRES-PI",
+      "display": "TO"
+    },
+    {
+      "family": "queue",
+      "n": 512,
+      "gamma": 0.999,
+      "method": "AA-I-S-5",
+      "display": "F(0/3)"
+    },
+    {
+      "family": "queue",
+      "n": 1024,
+      "gamma": 0.999,
+      "method": "QPI-S",
+      "display": "TO"
+    },
+    {
+      "family": "queue",
+      "n": 1024,
+      "gamma": 0.999,
+      "method": "iGMRES-PI",
+      "display": "TO"
+    },
+    {
+      "family": "queue",
+      "n": 2048,
+      "gamma": 0.999,
+      "method": "QPI-S",
+      "display": "TO"
+    },
+    {
+      "family": "queue",
+      "n": 2048,
+      "gamma": 0.999,
+      "method": "iGMRES-PI",
+      "display": "TO"
+    },
+    {
+      "family": "queue",
+      "n": 4096,
+      "gamma": 0.99,
+      "method": "QPI-S",
+      "display": "TO"
+    },
+    {
+      "family": "queue",
+      "n": 4096,
+      "gamma": 0.999,
+      "method": "QPI-S",
+      "display": "TO"
+    },
+    {
+      "family": "queue",
+      "n": 4096,
+      "gamma": 0.999,
+      "method": "iGMRES-PI",
+      "display": "TO"
+    },
+    {
+      "family": "cluster",
+      "n": 4096,
+      "gamma": 0.999,
+      "method": "VI",
+      "display": "TO"
+    },
+    {
+      "family": "cluster",
+      "n": 4096,
+      "gamma": 0.999,
+      "method": "MPI-4",
+      "display": "TO"
+    },
+    {
+      "family": "cluster",
+      "n": 4096,
+      "gamma": 0.999,
+      "method": "MPI-20",
+      "display": "TO"
+    },
+    {
+      "family": "latent",
+      "n": 2048,
+      "gamma": 0.999,
+      "method": "VI",
+      "display": "F(2/3)"
+    },
+    {
+      "family": "latent",
+      "n": 4096,
+      "gamma": 0.999,
+      "method": "VI",
+      "display": "TO"
+    },
+    {
+      "family": "latent",
+      "n": 4096,
+      "gamma": 0.999,
+      "method": "MPI-4",
+      "display": "TO"
+    },
+    {
+      "family": "latent",
+      "n": 4096,
+      "gamma": 0.999,
+      "method": "MPI-20",
+      "display": "TO"
+    }
+  ],
+  "fastest_cells": [
+    {
+      "family": "queue",
+      "n": 512,
+      "gamma": 0.99,
+      "method": "PI"
+    },
+    {
+      "family": "queue",
+      "n": 512,
+      "gamma": 0.999,
+      "method": "PI"
+    },
+    {
+      "family": "queue",
+      "n": 1024,
+      "gamma": 0.99,
+      "method": "PI"
+    },
+    {
+      "family": "queue",
+      "n": 1024,
+      "gamma": 0.999,
+      "method": "PI"
+    },
+    {
+      "family": "queue",
+      "n": 2048,
+      "gamma": 0.99,
+      "method": "PI"
+    },
+    {
+      "family": "queue",
+      "n": 2048,
+      "gamma": 0.999,
+      "method": "PI"
+    },
+    {
+      "family": "queue",
+      "n": 4096,
+      "gamma": 0.99,
+      "method": "PI"
+    },
+    {
+      "family": "queue",
+      "n": 4096,
+      "gamma": 0.999,
+      "method": "PI"
+    },
+    {
+      "family": "cluster",
+      "n": 512,
+      "gamma": 0.99,
+      "method": "LSQN"
+    },
+    {
+      "family": "cluster",
+      "n": 512,
+      "gamma": 0.999,
+      "method": "LSQN"
+    },
+    {
+      "family": "cluster",
+      "n": 1024,
+      "gamma": 0.99,
+      "method": "LSQN"
+    },
+    {
+      "family": "cluster",
+      "n": 1024,
+      "gamma": 0.999,
+      "method": "LSQN"
+    },
+    {
+      "family": "cluster",
+      "n": 2048,
+      "gamma": 0.99,
+      "method": "LSQN"
+    },
+    {
+      "family": "cluster",
+      "n": 2048,
+      "gamma": 0.999,
+      "method": "LSQN"
+    },
+    {
+      "family": "cluster",
+      "n": 4096,
+      "gamma": 0.99,
+      "method": "LSQN"
+    },
+    {
+      "family": "cluster",
+      "n": 4096,
+      "gamma": 0.999,
+      "method": "LSQN"
+    },
+    {
+      "family": "garnet",
+      "n": 512,
+      "gamma": 0.99,
+      "method": "QPI-BT"
+    },
+    {
+      "family": "garnet",
+      "n": 512,
+      "gamma": 0.999,
+      "method": "QPI-BT"
+    },
+    {
+      "family": "garnet",
+      "n": 1024,
+      "gamma": 0.99,
+      "method": "QPI-BT"
+    },
+    {
+      "family": "garnet",
+      "n": 1024,
+      "gamma": 0.999,
+      "method": "QPI-BT"
+    },
+    {
+      "family": "garnet",
+      "n": 2048,
+      "gamma": 0.99,
+      "method": "QPI-U"
+    },
+    {
+      "family": "garnet",
+      "n": 2048,
+      "gamma": 0.999,
+      "method": "QPI-BT"
+    },
+    {
+      "family": "garnet",
+      "n": 4096,
+      "gamma": 0.99,
+      "method": "QPI-BT"
+    },
+    {
+      "family": "garnet",
+      "n": 4096,
+      "gamma": 0.999,
+      "method": "QPI-BT"
+    },
+    {
+      "family": "latent",
+      "n": 512,
+      "gamma": 0.99,
+      "method": "QPI-BT"
+    },
+    {
+      "family": "latent",
+      "n": 512,
+      "gamma": 0.999,
+      "method": "QPI-BT"
+    },
+    {
+      "family": "latent",
+      "n": 1024,
+      "gamma": 0.99,
+      "method": "QPI-BT"
+    },
+    {
+      "family": "latent",
+      "n": 1024,
+      "gamma": 0.999,
+      "method": "QPI-U"
+    },
+    {
+      "family": "latent",
+      "n": 2048,
+      "gamma": 0.99,
+      "method": "QPI-BT"
+    },
+    {
+      "family": "latent",
+      "n": 2048,
+      "gamma": 0.999,
+      "method": "QPI-BT"
+    },
+    {
+      "family": "latent",
+      "n": 4096,
+      "gamma": 0.99,
+      "method": "QPI-U"
+    },
+    {
+      "family": "latent",
+      "n": 4096,
+      "gamma": 0.999,
+      "method": "QPI-BT"
+    }
+  ]
+}

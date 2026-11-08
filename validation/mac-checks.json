@@ -1,0 +1,101 @@
+{
+  "status": "verified-on-macOS; Linux execution pending user run",
+  "version": "0.1.0rc2",
+  "installed_wheel_sha256": "9e790c82ebc615c1ec2cd788b6ca6f0f329cca3cf7b1902d75629a49e0477a31",
+  "installation": {
+    "separate_venv": true,
+    "checks_outside_source_tree": true,
+    "numerical_dependencies_reused": true,
+    "clean_linux_install_tested": false
+  },
+  "unit_tests": {
+    "passed": 27,
+    "skipped": 0
+  },
+  "native_kernel_identity_checks": {
+    "LP64": 15,
+    "ILP64": 15
+  },
+  "installed_all_method_smoke": {
+    "executions": 60,
+    "all_passed": true,
+    "source_hashes_match_current": true
+  },
+  "installed_largest_models": {
+    "n": 4096,
+    "gamma": 0.999,
+    "executions": 4,
+    "all_passed": true,
+    "results": [
+      {
+        "case_id": "main_queue_n4096_g0p999_seed130",
+        "backend": "native_query",
+        "residual_inf": 1.4551915228366852e-11,
+        "query_summary": {
+          "completed_outer_iterations": 203,
+          "mean": 29.482758620689655,
+          "maximum": 563,
+          "total": 5985,
+          "zero": 31,
+          "full_dimension": 0
+        }
+      },
+      {
+        "case_id": "main_cluster_n4096_g0p999_seed130",
+        "backend": "cache_reuse",
+        "residual_inf": 7.318590178329032e-13,
+        "query_summary": {
+          "completed_outer_iterations": 7,
+          "mean": 3.4285714285714284,
+          "maximum": 6,
+          "total": 24,
+          "zero": 2,
+          "full_dimension": 0
+        }
+      },
+      {
+        "case_id": "main_garnet_n4096_g0p999_seed130",
+        "backend": "fused_sparse",
+        "residual_inf": 6.730260793119669e-10,
+        "query_summary": {
+          "completed_outer_iterations": 12,
+          "mean": 2.25,
+          "maximum": 8,
+          "total": 27,
+          "zero": 6,
+          "full_dimension": 0
+        }
+      },
+      {
+        "case_id": "main_latent_n4096_g0p999_seed130",
+        "backend": "native",
+        "residual_inf": 1.5688783605583012e-11,
+        "query_summary": {
+          "completed_outer_iterations": 4,
+          "mean": 0.75,
+          "maximum": 2,
+          "total": 3,
+          "zero": 2,
+          "full_dimension": 0
+        }
+      }
+    ]
+  },
+  "earlier_profile_checks": {
+    "executions": 134,
+    "all_passed": true,
+    "details": "implementation-checks.json"
+  },
+  "frozen_inputs_verified": 48,
+  "archive_query_records": 44,
+  "full_paper_plan_solves": 1020,
+  "full_main_comparison_rerun_here": false,
+  "linux_executed_here": false,
+  "github_upload": false,
+  "notes": [
+    "All numerical optimization paths used for the archived residual figures and final runtime table are included.",
+    "Main profiles are explicit; public and scaling preserve their original reference implementation.",
+    "Reference rc1 verification is separate and not substituted for optimized implementation verification.",
+    "Local times are health checks, not a controlled performance study."
+  ]
+}
